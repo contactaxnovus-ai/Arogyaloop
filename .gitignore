@@ -1,7 +1,10 @@
-node_modules/
-.pnpm-store/
 .env
 .env.*
 !.env.example
+node_modules/
+**/node_modules/
 dist/
-apps/backend/data/demo-state.json
+**/dist/
+.pnpm-store/
+*.log
+demo-state.backup.json

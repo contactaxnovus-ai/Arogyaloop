@@ -25,7 +25,9 @@ services:
       context: .
       dockerfile: docker/frontend.Dockerfile
       args:
-        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-}
+        # The browser and API share this Nginx origin in the production image.
+        # Do not pass localhost or a private backend URL into the browser bundle.
+        VITE_API_BASE_URL: ""
     restart: unless-stopped
     ports:
       - "${APP_PORT:-5173}:80"

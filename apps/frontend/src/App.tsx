@@ -96,7 +96,7 @@ function App() {
   const [publicKiosk, setPublicKiosk] = useState<PublicKioskState | null>(null);
   const [staffLoginMode, setStaffLoginMode] = useState(() => new URLSearchParams(window.location.search).get("staff") === "1");
   const [activeStage, setActiveStage] = useState<StageId>("kiosk");
-  const [adminMode, setAdminMode] = useState(false);
+  const [adminMode, setAdminMode] = useState(() => window.location.hash === "#admin-setup");
   const [adminSetup, setAdminSetup] = useState<AdminSetupResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [working, setWorking] = useState(false);
@@ -163,12 +163,14 @@ function App() {
 
   useEffect(() => {
     function syncHash() {
-      setAdminMode(session?.user.role === "ADMIN" && window.location.hash === "#admin-setup");
+      const isAdmin = session?.user.role === "ADMIN";
+      const setupPending = config?.hospitalName === "Hospital setup pending";
+      setAdminMode(Boolean(isAdmin && (window.location.hash === "#admin-setup" || setupPending)));
     }
     syncHash();
     window.addEventListener("hashchange", syncHash);
     return () => window.removeEventListener("hashchange", syncHash);
-  }, [session?.user.role]);
+  }, [session?.user.role, config?.hospitalName]);
 
   const completedStages = useMemo(() => new Set(visit?.completedStages || []), [visit]);
   const visibleConfig = useMemo(() => config && session ? filterConfigForRole(config, session.user.role) : config, [config, session]);
@@ -207,6 +209,8 @@ function App() {
       const nextVisit = await saveAdminSetup(nextSetup);
       setVisit(nextVisit);
       setAdminSetup(await loadAdminSetup());
+      setAdminMode(false);
+      if (window.location.hash) window.history.replaceState(null, "", window.location.pathname);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Setup save failed");
     } finally {
