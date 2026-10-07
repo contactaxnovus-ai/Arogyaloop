@@ -1,6 +1,6 @@
 import type { AdminSetup, AdminSetupResponse, AppConfig, AuthSession, DoctorAvailability, HospitalUser, PublicKioskState, PublicPatientRecord, Role, Visit } from "../types";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:4000";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? (import.meta.env.DEV ? "http://127.0.0.1:4000" : "");
 const VISIT_ID = "current";
 
 interface ApiVisitResponse {
