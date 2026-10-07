@@ -1,0 +1,528 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-fixed-variant":"#054c69","on-surface":"#0b1c30","on-secondary":"#ffffff","outline":"#71787e","on-tertiary-fixed":"#002113","surface-bright":"#f8f9ff","on-error":"#ffffff","on-tertiary":"#ffffff","surface-container-high":"#dce9ff","primary-fixed":"#c5e7ff","surface-container":"#e5eeff","primary-fixed-dim":"#97cdef","inverse-surface":"#213145","inverse-on-surface":"#eaf1ff","tertiary-fixed-dim":"#4edea3","secondary-fixed-dim":"#77d4e5","on-secondary-fixed":"#001f24","inverse-primary":"#97cdef","on-secondary-fixed-variant":"#004e59","primary":"#00374e","on-primary":"#ffffff","tertiary-fixed":"#6ffbbe","on-tertiary-fixed-variant":"#005236","surface":"#f8f9ff","surface-variant":"#d3e4fe","secondary-container":"#92edff","on-primary-container":"#8ac0e1","on-surface-variant":"#41484d","on-background":"#0b1c30","outline-variant":"#c0c7ce","surface-dim":"#cbdbf5","tertiary":"#003c27","secondary":"#006876","tertiary-container":"#005539","surface-tint":"#2a6482","on-error-container":"#93000a","surface-container-highest":"#d3e4fe","surface-container-low":"#eff4ff","background":"#f8f9ff","on-primary-fixed":"#001e2d","error-container":"#ffdad6","on-tertiary-container":"#3dd197","surface-container-lowest":"#ffffff","primary-container":"#0b4f6c","error":"#ba1a1a","on-secondary-container":"#006d7b","secondary-fixed":"#9eefff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-desktop":"2rem","gutter":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2rem","margin":"1rem","gutter-desktop":"1.5rem","space-md":"1rem","space-lg":"1.5rem"},"fontFamily":{"label-md":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"currency-bold":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"currency-bold":["15px",{"lineHeight":"20px","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"30px","letterSpacing":"0em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(11,79,108,0.06)]"><div class="h-16 px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">local_hospital</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight">Arogya City Hospital</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Clinical Workstation Hub · Jaipur</span></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[14px] text-secondary">sync_saved_locally</span><span class="">ABDM Live Sync</span></div><div class="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-container/40 text-secondary font-label-sm text-label-sm"><span class="material-symbols-outlined text-[14px]">auto_awesome</span><span class="">AI-assisted, staff-reviewed</span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md text-on-surface leading-tight">Dr. Ananya Rao</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-tight">OPD Physician</div></div><div class="w-9 h-9 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-md text-label-md">AR</div></div></div></div></header><aside class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-60 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md shadow-[1px_0_6px_rgba(11,79,108,0.03)]"><nav class="space-y-1 px-3" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm"><div class="px-3 pb-2 text-[10px] font-label-sm tracking-wider uppercase text-outline">Workspaces</div><a class="block px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="reception-omni-channel-hub" href="#">Reception Omni-Channel Hub</a><a class="block px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="doctor-clinical-workspace" href="#">Doctor Clinical Workspace</a><a class="block px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="pathology-diagnostics" href="#">Pathology Diagnostics</a><a aria-current="page" class="block px-3 py-2 rounded transition-all bg-primary-container text-on-primary font-bold shadow-sm" data-path="pharmacy-dispensing" href="#">Pharmacy Dispensing</a><a class="block px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="admin-control-center" href="#">Admin Control Center</a></nav><div class="px-4 py-3 mx-3 bg-surface-container-low rounded-lg space-y-1"><div class="font-label-sm text-label-sm text-on-surface-variant">Hospital Network Status</div><div class="font-body-sm text-body-sm text-secondary font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">verified</span>HIS/FHIR Connected</div></div></aside><div class="pl-60"><main class="relative min-h-screen bg-background p-space-md lg:p-gutter-desktop" style="padding-top: 5rem;"><div class="flex flex-col w-full gap-space-md">
+<!-- Operational Sub-Header Banner (Seamless Integration with App Shell) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">medication</span>
+</div>
+<div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-md text-headline-md text-on-surface">Arogya OPD Pharmacy &amp; Cashier Desk</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm font-semibold">Counter #01 (Priority OPD)</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Shift: Morning (08:00 - 16:00)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Licensed Pharmacist: <span class="font-semibold text-on-surface">Priyanka Sharma, R.Ph</span> (Reg: #RJ-PH-44910) · Station ID: RX-POS-NORTH-01
+        </p>
+</div>
+</div>
+<!-- Quick Stats Bar -->
+<div class="flex items-center gap-space-lg self-start xl:self-auto overflow-x-auto w-full xl:w-auto pb-1 xl:pb-0">
+<div class="flex items-center gap-2.5 bg-surface-container-low px-3 py-2 rounded-lg shrink-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">pending_actions</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Queue Depth</span>
+<span class="font-currency-bold text-currency-bold text-on-surface">7 Prescriptions</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 bg-surface-container-low px-3 py-2 rounded-lg shrink-0">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">price_check</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Shift Collection</span>
+<span class="font-currency-bold text-currency-bold text-on-surface">₹48,920.00</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+<span class="">e-Prescription Socket Active</span>
+</div>
+</div>
+</div>
+<!-- Primary 3-Column Clinical Dispensing Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<!-- COLUMN 1: PRESCRIPTION DISPENSING QUEUE (3 Cols) -->
+<section class="lg:col-span-3 flex flex-col gap-space-md">
+<!-- Section Header -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">format_list_numbered</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Rx Queue</h2>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-container text-on-primary">Live (3 Active)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time prescription orders routed from OPD consultation chambers.</p>
+</div>
+<!-- Active / Selected Order Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md bg-gradient-to-br from-surface-container-lowest to-surface-container-low flex flex-col gap-space-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex items-start justify-between">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm">Active Workspace</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10:45 AM</span>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Token #B-14</h3>
+<span class="font-label-md text-label-md text-secondary">Rx #PH-8821</span>
+</div>
+<p class="font-headline-sm text-[16px] text-on-surface font-semibold mt-1">Meera Sharma</p>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="">46 Y / Female</span>
+<span class="">•</span>
+<span class="text-primary font-medium">UHID: AL-2026-1048</span>
+</div>
+</div>
+<div class="bg-surface-container-high/60 p-2.5 rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="">Consultant:</span>
+<span class="text-on-surface font-semibold">Dr. Ananya Rao</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="">Department:</span>
+<span class="text-on-surface">General Medicine</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="">Diagnosis:</span>
+<span class="text-on-surface truncate">Iron Deficiency Anemia</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 text-on-secondary-container bg-secondary-container/60 px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">checklist</span> Ready for Verification
+          </span>
+<span class="font-label-sm text-label-sm text-primary font-bold">2 Rx Items</span>
+</div>
+</div>
+<!-- Subsequent Queue List -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<h4 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Next in Line</h4>
+<!-- Queue Item 2 -->
+<div class="p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-primary font-bold">Token #B-15</span>
+<span class="text-outline text-label-sm">·</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rx #PH-8822</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-variant text-on-surface-variant font-label-sm text-label-sm">Waiting Verification</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Rajesh Pareek (58 M)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10:51 AM</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center justify-between">
+<span class="">Dr. Vikramaditya (Cardio)</span>
+<span class="">4 Meds</span>
+</div>
+</div>
+<!-- Queue Item 3 -->
+<div class="p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-primary font-bold">Token #B-16</span>
+<span class="text-outline text-label-sm">·</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rx #PH-8823</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">In Dispensing</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Kavita Singhal (31 F)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10:54 AM</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center justify-between">
+<span class="">Dr. Nidhi Soni (OB-GYN)</span>
+<span class="">3 Meds</span>
+</div>
+</div>
+<!-- Queue Item 4 -->
+<div class="p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-primary font-bold">Token #B-11</span>
+<span class="text-outline text-label-sm">·</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rx #PH-8818</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">Ready for Collection</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Deepak Verma (22 M)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10:32 AM</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center justify-between">
+<span class="">Paid (Counter #01)</span>
+<span class="">Billed ₹420.00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- COLUMN 2: CLINICAL REVIEW & SAFETY CHECKLIST (5.5 Cols) -->
+<section class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Patient Banner with ABDM & Allergy Context -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">health_and_safety</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Clinical Prescription Verification</h2>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-container/40 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span class="">AI-assisted, staff-reviewed</span>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-surface-container-low p-3 rounded-lg text-left">
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Current Weight</span>
+<span class="font-label-md text-label-md text-on-surface">54.2 kg</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">GFR / Renal</span>
+<span class="font-label-md text-label-md text-on-surface">92 mL/min (Normal)</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Known Allergies</span>
+<span class="font-label-md text-label-md text-error">NKDA (None Documented)</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">ABDM Record</span>
+<span class="font-label-md text-label-md text-tertiary">91-4402-9912 (Linked)</span>
+</div>
+</div>
+</div>
+<!-- Prescribed Medications High-Density Verification Table -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">vaccines</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Prescribed Items Formulation Check</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Barcoded Batch Scan Match: 2/2</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<th class="py-2.5 px-3 rounded-l-lg">Medication &amp; Brand</th>
+<th class="py-2.5 px-2">Dispense Qty</th>
+<th class="py-2.5 px-2">Batch / Exp</th>
+<th class="py-2.5 px-2">Rack Locator</th>
+<th class="py-2.5 px-3 text-right">Amount</th>
+<th class="py-2.5 px-3 text-center rounded-r-lg">Signoff</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Item 1 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-3">
+<div class="font-label-md text-label-md text-on-surface">Tab Ferrous Ascorbate 100mg + Folic Acid 1.5mg</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Brand Dispensed: Livogen-Z (Orofer XT compatible)</div>
+<div class="font-label-sm text-label-sm text-secondary font-medium">Sig: 1 Tab OD after lunch x 30 days</div>
+</td>
+<td class="py-3 px-2 font-currency-bold text-currency-bold text-on-surface">30 Tabs</td>
+<td class="py-3 px-2">
+<div class="font-label-sm text-label-sm text-on-surface font-semibold">#FA-2024-09</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Exp: Dec 2026</div>
+</td>
+<td class="py-3 px-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-bold">Rack A4</span>
+<div class="font-label-sm text-label-sm text-tertiary">Avail: 420</div>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="font-currency-bold text-currency-bold text-on-surface">₹195.00</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">@ ₹6.50/tab</div>
+</td>
+<td class="py-3 px-3 text-center">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center mx-auto shadow-sm">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+</div>
+</td>
+</tr>
+<!-- Spacer row for visual separation without borders -->
+<tr class="h-2 bg-transparent"></tr>
+<!-- Item 2 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-3">
+<div class="font-label-md text-label-md text-on-surface">Tab Multivitamin &amp; Zinc</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Brand Dispensed: Becosules Z (Capsule)</div>
+<div class="font-label-sm text-label-sm text-secondary font-medium">Sig: 1 Cap OD with breakfast x 30 days</div>
+</td>
+<td class="py-3 px-2 font-currency-bold text-currency-bold text-on-surface">30 Caps</td>
+<td class="py-3 px-2">
+<div class="font-label-sm text-label-sm text-on-surface font-semibold">#BZ-8812</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Exp: Aug 2027</div>
+</td>
+<td class="py-3 px-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-bold">Rack B2</span>
+<div class="font-label-sm text-label-sm text-tertiary">Avail: 180</div>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="font-currency-bold text-currency-bold text-on-surface">₹94.50</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">@ ₹3.15/cap</div>
+</td>
+<td class="py-3 px-3 text-center">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center mx-auto shadow-sm">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Co-Medication Interaction Cross-Check -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">sync_saved_locally</span>
+<h4 class="font-headline-sm text-[15px] text-on-surface">Co-Medication Cross-Check &amp; Clinical Advisory</h4>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">tips_and_updates</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface">Thyronorm 50mcg (Patient's Chronic Therapy)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Verified: No toxic interaction. <strong class="text-on-surface">Crucial Timing Rule:</strong> Advised patient to space Ferrous Ascorbate at least 4 hours apart from Levothyroxine to prevent impaired thyroid absorption. (Take Thyronorm empty stomach at 07:00 AM; take Iron after lunch at 01:30 PM).
+              </p>
+</div>
+</div>
+</div>
+<!-- Mandatory Safety & Pharmacist Signoff Box -->
+<div class="bg-surface-container-high/50 p-space-md rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">verified_user</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold">Mandatory Dispensing Protocol Verified</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                No unauthorized drug substitution applied. Verified against physical doctor signature token.
+              </div>
+</div>
+</div>
+<div class="bg-surface-container-lowest px-3 py-1.5 rounded-lg text-right shrink-0">
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Signed Electronically:</span>
+<span class="font-label-md text-label-md text-primary font-bold">Priyanka Sharma, R.Ph</span>
+</div>
+</div>
+</div>
+<!-- Bilingual Patient Instruction Strip -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">translate</span>
+<h4 class="font-label-md text-label-md text-on-surface">Bilingual Labeling Preview / द्विभाषी निर्देश</h4>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Ready for thermal print</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg font-body-sm text-body-sm text-on-surface flex flex-col gap-1">
+<div class="font-semibold text-primary">1. Livogen-Z: दोपहर के खाने के बाद एक गोली पानी के साथ लें।</div>
+<div class="font-semibold text-primary">2. Becosules-Z: सुबह नाश्ते के बाद एक कैप्सूल लें।</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">थायरोनॉर्म दवा सुबह खाली पेट लें और आयरन की गोली दोपहर को लें। दोनों में 4 घंटे का अंतर रखें।</p>
+</div>
+</div>
+</section>
+<!-- COLUMN 3: BILLING & CASHLESS PAYMENT TERMINAL (3.5 Cols) -->
+<section class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Unified Visit Invoice Breakdown -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">receipt_long</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Visit Invoice Summary</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Bill #INV-26-9041</span>
+</div>
+<!-- Itemized Ledger -->
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between py-1.5 px-2 rounded hover:bg-surface-container-low transition-colors">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Consultation Fee</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dr. Ananya Rao (OPD Gen Med)</span>
+</div>
+<span class="font-currency-bold text-currency-bold text-on-surface">₹600.00</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 rounded hover:bg-surface-container-low transition-colors">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Laboratory Diagnostic</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Complete Blood Count (CBC w/ ESR)</span>
+</div>
+<span class="font-currency-bold text-currency-bold text-on-surface">₹450.00</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 rounded hover:bg-surface-container-low transition-colors">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Pharmacy Medications</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Livogen-Z + Becosules Z (2 items)</span>
+</div>
+<span class="font-currency-bold text-currency-bold text-on-surface">₹289.50</span>
+</div>
+<div class="bg-surface-container-high/40 p-2 rounded-lg flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="">Hospital Discount / CGHS Applicable:</span>
+<span class="text-tertiary font-semibold">₹0.00 (Private Non-Empaneled)</span>
+</div>
+</div>
+<!-- Grand Total Highlight Card -->
+<div class="bg-surface-container-high p-4 rounded-xl flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Total Amount Payable</span>
+<span class="font-label-sm text-label-sm text-primary">GST Exempt under Healthcare Act</span>
+</div>
+<div class="text-right">
+<span class="font-display-lg text-display-lg text-primary leading-none">₹1,339.50</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">INR (Indian Rupee)</span>
+</div>
+</div>
+</div>
+<!-- Scan-to-Pay Dynamic UPI Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">qr_code_2</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Integrated Cashless POS</h3>
+</div>
+<span class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-ping"></span> Live Link
+          </span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col sm:flex-row items-center gap-4">
+<!-- Stylized Inline SVG QR Code -->
+<div class="w-36 h-36 bg-surface-container-lowest p-2 rounded-lg shadow-sm shrink-0 flex items-center justify-center">
+<svg class="w-full h-full text-primary" fill="currentColor" viewBox="0 0 120 120">
+<!-- Corner finder patterns -->
+<rect fill="currentColor" height="30" rx="4" width="30" x="10" y="10"></rect>
+<rect fill="#ffffff" height="18" width="18" x="16" y="16"></rect>
+<rect fill="currentColor" height="10" width="10" x="20" y="20"></rect>
+<rect fill="currentColor" height="30" rx="4" width="30" x="80" y="10"></rect>
+<rect fill="#ffffff" height="18" width="18" x="86" y="16"></rect>
+<rect fill="currentColor" height="10" width="10" x="90" y="20"></rect>
+<rect fill="currentColor" height="30" rx="4" width="30" x="10" y="80"></rect>
+<rect fill="#ffffff" height="18" width="18" x="16" y="86"></rect>
+<rect fill="currentColor" height="10" width="10" x="20" y="90"></rect>
+<!-- Simulated data modules -->
+<rect fill="currentColor" height="6" width="6" x="46" y="12"></rect>
+<rect fill="currentColor" height="6" width="6" x="56" y="12"></rect>
+<rect fill="currentColor" height="6" width="6" x="66" y="12"></rect>
+<rect fill="currentColor" height="6" width="6" x="46" y="22"></rect>
+<rect fill="currentColor" height="6" width="6" x="66" y="22"></rect>
+<rect fill="currentColor" height="6" width="6" x="56" y="32"></rect>
+<rect fill="currentColor" height="6" width="6" x="12" y="46"></rect>
+<rect fill="currentColor" height="6" width="6" x="22" y="46"></rect>
+<rect fill="currentColor" height="6" width="6" x="32" y="46"></rect>
+<rect fill="currentColor" height="8" width="8" x="44" y="44"></rect>
+<rect fill="currentColor" height="8" width="8" x="56" y="44"></rect>
+<rect fill="currentColor" height="8" width="8" x="68" y="44"></rect>
+<rect fill="currentColor" height="6" width="6" x="80" y="46"></rect>
+<rect fill="currentColor" height="6" width="6" x="92" y="46"></rect>
+<rect fill="currentColor" height="6" width="6" x="102" y="46"></rect>
+<rect fill="currentColor" height="8" width="8" x="44" y="56"></rect>
+<rect fill="currentColor" height="8" width="8" x="56" y="56"></rect>
+<rect fill="currentColor" height="8" width="8" x="68" y="56"></rect>
+<rect fill="currentColor" height="6" width="6" x="12" y="58"></rect>
+<rect fill="currentColor" height="6" width="6" x="26" y="66"></rect>
+<rect fill="currentColor" height="6" width="6" x="46" y="68"></rect>
+<rect fill="currentColor" height="6" width="6" x="60" y="68"></rect>
+<rect fill="currentColor" height="6" width="6" x="74" y="68"></rect>
+<rect fill="currentColor" height="6" width="6" x="88" y="58"></rect>
+<rect fill="currentColor" height="6" width="6" x="102" y="58"></rect>
+<rect fill="currentColor" height="6" width="6" x="46" y="80"></rect>
+<rect fill="currentColor" height="6" width="6" x="56" y="80"></rect>
+<rect fill="currentColor" height="6" width="6" x="66" y="90"></rect>
+<rect fill="currentColor" height="6" width="6" x="56" y="100"></rect>
+<rect fill="currentColor" height="6" width="6" x="82" y="82"></rect>
+<rect fill="currentColor" height="6" width="6" x="94" y="82"></rect>
+<rect fill="currentColor" height="6" width="6" x="82" y="94"></rect>
+<rect fill="currentColor" height="6" width="6" x="94" y="94"></rect>
+<rect fill="currentColor" height="6" width="6" x="104" y="94"></rect>
+</svg>
+</div>
+<div class="flex flex-col gap-1 text-center sm:text-left">
+<span class="font-label-md text-label-md text-on-surface">Dynamic Hospital VPA QR</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">arogyacity.pos01@icici</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Supports BHIM, Google Pay, PhonePe, Paytm, and all Indian Bank UPI apps.
+            </p>
+<div class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+<span class="">Awaiting UPI Confirmation / Cash Tender</span>
+</div>
+</div>
+</div>
+<!-- Cash Tender / Alternative Payment Radio Bar -->
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2 px-1 text-center rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold flex flex-col items-center justify-center gap-0.5 focus:outline-none" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">qr_code</span>
+            UPI QR (Active)
+          </button>
+<button class="py-2 px-1 text-center rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex flex-col items-center justify-center gap-0.5 focus:outline-none" type="button">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+            Cash Tender
+          </button>
+<button class="py-2 px-1 text-center rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex flex-col items-center justify-center gap-0.5 focus:outline-none" type="button">
+<span class="material-symbols-outlined text-[18px]">credit_card</span>
+            Debit / Credit Card
+          </button>
+</div>
+<!-- Primary Action Triggers -->
+<div class="flex flex-col gap-space-sm mt-2">
+<button class="w-full h-11 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.99]" id="btn-confirm-dispense" type="button">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+<span class="">Confirm Payment (₹1,339.50) &amp; Dispense</span>
+</button>
+<button class="w-full h-11 rounded-lg bg-surface-container-low hover:bg-surface-container text-secondary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-all" id="btn-print-invoice" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span class="">Print Bilingual Schedule &amp; Tax Invoice</span>
+</button>
+</div>
+<!-- Compliance & Regulatory Footer Note -->
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant pt-1">
+          Compliant with Pharmacy Council of India (PCI) &amp; ABDM M3 Direct Claims.
+        </div>
+</div>
+</section>
+</div>
+<!-- Notification Toast (Hidden by default, triggered on interactive action) -->
+<div class="hidden fixed bottom-6 right-6 z-50 bg-inverse-surface text-inverse-on-surface p-space-md rounded-xl shadow-xl flex items-center gap-3" id="dispense-toast">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md">Rx #PH-8821 Successfully Settled &amp; Dispensed</span>
+<span class="font-body-sm text-body-sm text-surface-variant">Thermal slip sent to Printer #01. Queue moving to Token #B-15.</span>
+</div>
+</div>
+</div>
+<script>
+  // Interactive micro-behavior for the Pharmacist POS workspace
+  const confirmBtn = document.getElementById('btn-confirm-dispense');
+  const printBtn = document.getElementById('btn-print-invoice');
+  const toast = document.getElementById('dispense-toast');
+
+  if (confirmBtn) {
+    confirmBtn.addEventListener('click', () => {
+      confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span> Processing Cashless Settlement...';
+      confirmBtn.classList.add('opacity-80', 'cursor-not-allowed');
+      
+      setTimeout(() => {
+        confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span> Dispensed & Billed';
+        confirmBtn.classList.remove('bg-primary');
+        confirmBtn.classList.add('bg-tertiary-container', 'text-on-tertiary');
+        
+        if (toast) {
+          toast.classList.remove('hidden');
+          setTimeout(() => {
+            toast.classList.add('hidden');
+          }, 4500);
+        }
+      }, 900);
+    });
+  }
+
+  if (printBtn) {
+    printBtn.addEventListener('click', () => {
+      const origText = printBtn.innerHTML;
+      printBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span> Sending to EPSON Thermal POS...';
+      setTimeout(() => {
+        printBtn.innerHTML = origText;
+      }, 2000);
+    });
+  }
+</script></main></div>
+
+</body></html>

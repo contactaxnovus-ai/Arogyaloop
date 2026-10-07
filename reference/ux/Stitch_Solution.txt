@@ -1,0 +1,52 @@
+Here is the complete, high-fidelity, 8-screen connected prototype for ArogyaLoop by Axnovus, designed specifically for an Indian hospital context (Arogya City Hospital, Jaipur).
+
+The entire experience demonstrates a cohesive clinical journey for one single patient — Meera Sharma (Age 46, Visit ID: AL-2026-1048) — guided by Dr. Ananya Rao (General Medicine), maintaining strict continuity of 
+care plan, visit data, lab requests, prescriptions, and follow-ups.
+
+Connected Screen Flow Overview
+Reception Kiosk — Patient Arrival (Reception Kiosk - Patient Arrival)
+
+Context: Touch-friendly, bilingual self-service kiosk (English & हिन्दी).
+Key Features: High-contrast, tactile cards for "I have an appointment", "I need help finding a doctor" (highlighted demo path for Meera), and "Register as a new patient". Includes wheelchair assistance and nurse 
+helpdesk shortcuts.
+Handoff: Advances Meera directly into AI-guided department intake.
+Guided Intake & Department Routing (Guided Intake & Routing)
+
+Context: Triage questionnaire capturing Meera’s 3-week fatigue, postural dizziness, and hypothyroid history.
+Clinical Safety & Governance: Clearly designated as "AI-assisted, staff-reviewed" with explicit notice that it is not a medical diagnosis. Recommends General Medicine (Dr. Ananya Rao, Room 108) with layman rationale
+ and a manual staff-override dropdown.
+Reception Staff Workspace (Reception Staff Workspace)
+
+Context: OPD registration and queue management desk for Desk Officer Sunil Verma.
+Key Features: Live arrivals queue showing Meera Sharma at the top (Token #B-14, 10:30 AM slot). Shows a discreet "ABDM: Integration in progress" badge, pre-populated symptoms, and one-click "Check-in Meera Sharma & 
+Generate Token Slip" with printed physical and digital wayfinding to Room 108.
+Doctor Workspace — Consultation & Orders (Doctor Workspace - Consultation & Orders)
+
+Context: Dr. Ananya Rao’s high-efficiency clinical EMR interface.
+Key Features: SOAP clinical encounter notes with vitals (BP 118/76 mmHg, SpO2 99%), physical exam findings showing conjunctival pallor, and provisional assessment of Microcytic Hypochromic Anemia.
+Human-in-the-Loop CPOE: Doctor places a Complete Blood Count (CBC) with Peripheral Smear order for Arogya Pathology Lab, prescribes Ferrous Ascorbate + Folic Acid and B-Complex, and clicks "Transmit CBC Order & 
+Queue Rx".
+Pathology Lab — CBC Processing & Report (Pathology Lab - CBC Processing & Report)
+
+Context: Diagnostic bench showing specimen lifecycle from Requested → Sample Collected (EDTA Lavender Top) → Authorized & Synced.
+Clinical Report: Automated hematology analyzer output showing low Hemoglobin (10.2 g/dL), low RBC (3.8 mill/cumm), and low MCV/MCH, accompanied by a pathologist microscopic review note. Broadcasts report back into 
+Dr. Rao’s consult and Meera’s record.
+Pharmacy & Payment Workspace (Pharmacy & Payment Workspace)
+
+Context: OPD pharmacy counter and cashier desk.
+Safety & Verification: Mandatory human pharmacist review checklist for batch, expiry, and dosage (no automated medicine substitution). Includes printed patient counseling guidelines.
+Billing: Itemized demo billing in INR (₹600 consult + ₹450 lab + ₹290 meds = ₹1,340 total) with a scan-to-pay dynamic UPI QR code and instant invoice generation.
+Patient View & Follow-up Care (Patient View & Follow-up Care)
+
+Context: Arogya Patient Portal & Care Companion (previewed on desktop alongside a mobile PWA companion).
+Patient Empowerment: Bilingual doctor's summary in plain Hindi & English, ready-to-download CBC PDF, scheduled medication tracker with WhatsApp reminder alerts, digital receipt, and a confirmed in-person follow-up 
+review for Day 14 with Dr. Ananya Rao.
+Hospital Operations — End-to-End Journey Command (Hospital Operations - End-to-End Journey Command)
+
+Context: Executive closing screen for Medical Superintendents and hospital leadership.
+Core Thesis Delivered: Summarizes all 7 completed touchpoints in 63 active minutes with a zero-paper handoff audit trail, role ownership matrix (Patient → Sister Mary → Sunil V. → Dr. Rao → Rajesh K. → 
+Priyanka S. → Automated Care Bot), and departmental turnaround KPIs (-42% wait time, <45s lab-to-doctor alert).
+Design System & Continuity Highlights
+Palette: Deep clinical teal (#0B4F6C, #028090), hospital neutral surfaces (#F8FAFC), and clean status accents.
+Presenter Utility: Every screen includes a Demo Tour / Next Step controller so presenters can walk through the entire 8-stage loop in 3–5 minutes.
+Regulatory Precision: Standardized discreet badges ("ABDM: Integration in progress" and "AI-assisted, staff-reviewed") without premature compliance claims.

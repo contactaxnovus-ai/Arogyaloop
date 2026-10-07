@@ -1,0 +1,616 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-lowest":"#ffffff","on-error-container":"#93000a","secondary-container":"#92edff","secondary-fixed":"#9eefff","on-secondary":"#ffffff","on-tertiary-fixed":"#002113","primary-container":"#0b4f6c","error-container":"#ffdad6","on-tertiary-container":"#3dd197","surface-tint":"#2a6482","primary":"#00374e","tertiary":"#003c27","secondary-fixed-dim":"#77d4e5","surface-container-highest":"#d3e4fe","on-surface-variant":"#41484d","surface-container-high":"#dce9ff","on-secondary-fixed-variant":"#004e59","on-tertiary-fixed-variant":"#005236","primary-fixed":"#c5e7ff","tertiary-fixed":"#6ffbbe","surface-dim":"#cbdbf5","on-primary-fixed":"#001e2d","on-tertiary":"#ffffff","background":"#f8f9ff","on-secondary-container":"#006d7b","inverse-surface":"#213145","error":"#ba1a1a","on-surface":"#0b1c30","on-secondary-fixed":"#001f24","surface":"#f8f9ff","on-primary-container":"#8ac0e1","on-error":"#ffffff","tertiary-container":"#005539","secondary":"#006876","outline-variant":"#c0c7ce","tertiary-fixed-dim":"#4edea3","surface-container-low":"#eff4ff","inverse-primary":"#97cdef","surface-variant":"#d3e4fe","surface-bright":"#f8f9ff","primary-fixed-dim":"#97cdef","on-primary-fixed-variant":"#054c69","on-primary":"#ffffff","outline":"#71787e","surface-container":"#e5eeff","on-background":"#0b1c30","inverse-on-surface":"#eaf1ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","space-sm":"0.5rem","margin-desktop":"2rem","gutter":"1rem","gutter-desktop":"1.5rem","margin":"1rem","space-lg":"1.5rem","space-md":"1rem","space-xl":"2rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"currency-bold":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["22px",{"lineHeight":"28px","fontWeight":"600"}],"currency-bold":["15px",{"lineHeight":"20px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"30px","letterSpacing":"0em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(11,79,108,0.06)]"><div class="h-[88px] px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><div class="w-11 h-11 rounded-xl bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[24px]">local_hospital</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight font-bold">Arogya City Hospital</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">NABH Accredited Tertiary Center · ABDM Enabled</span></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm shadow-sm"><span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim ring-2 ring-tertiary/20 animate-pulse"></span><span class="font-semibold text-primary">ABDM Live Sync:</span><span class="text-secondary font-medium">Connected (M3 Bridge)</span></div><div class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-secondary-container/40 text-secondary font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px]">auto_awesome</span><span class="">AI-assisted, staff-reviewed</span></div><div class="flex items-center gap-space-sm pl-space-sm bg-surface-container-low px-3 py-1.5 rounded-xl cursor-pointer hover:bg-surface-container transition-colors"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Dr. Ananya Rao</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-tight flex items-center justify-end gap-1"><span class="">OPD Physician · Shift A</span><span class="material-symbols-outlined text-[14px]">expand_more</span></div></div><div class="w-9 h-9 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-md text-label-md font-bold ring-2 ring-primary-fixed">AR</div></div></div></div></header><aside class="fixed left-0 top-[88px] h-[calc(100vh-88px)] w-64 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md shadow-[1px_0_6px_rgba(11,79,108,0.03)]"><nav class="space-y-1 px-3 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm"><div class="px-3 pb-2 text-[10px] font-label-sm tracking-wider uppercase text-outline font-bold">Clinical &amp; Front Desk</div><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="reception-omni-channel-hub" href="#">Reception Omni-Channel Hub</a><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="doctor-clinical-workspace" href="#">Doctor Clinical Workspace</a><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="pathology-diagnostics" href="#">Pathology Diagnostics</a><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="pharmacy-dispensing" href="#">Pharmacy Dispensing</a><div class="px-3 pt-3 pb-2 text-[10px] font-label-sm tracking-wider uppercase text-outline font-bold">Revenue &amp; Operations</div><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="central-billing-accounts" href="#">Central Billing &amp; Accounts</a><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="admin-operations-hub" href="#">Admin Operations Hub</a><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="hospital-system-settings-application-setup" href="#">Hospital System Settings / Application Setup</a></nav><div class="px-4 py-3 mx-3 bg-surface-container-low rounded-lg space-y-1 shrink-0"><div class="font-label-sm text-label-sm text-on-surface-variant">Hospital Network Status</div><div class="font-body-sm text-body-sm text-secondary font-semibold flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-tertiary-container">verified</span>HIS/FHIR Live Gateway</div></div></aside><div class="pl-64"><main class="relative min-h-screen bg-background p-space-md lg:p-gutter-desktop pt-28"><div class="flex flex-col w-full">
+<!-- Top spacing cushion to clear sticky top nav and guarantee visual breathing room -->
+<div class="mt-7 flex flex-col gap-space-lg w-full">
+<!-- Top Operational Banner & Metrics Header -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-lg flex flex-col gap-space-md">
+<!-- Title & Cashier Context Row -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex items-start sm:items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[28px]">point_of_sale</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-primary font-bold">Central Billing &amp; Cashier Desk</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal">/ केंद्रीय बिलिंग एवं राजस्व विभाग</span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container/60 text-secondary font-label-sm text-label-sm font-bold">Counter #03 (All Services)</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+                POS Terminal Active
+              </span>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">badge</span>
+                Cashier: <strong class="text-on-surface font-semibold">Rajeshwari Iyer</strong> (Sr. Billing Executive)
+              </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+                Shift: <span class="font-medium text-on-surface">Morning (08:00 – 16:00 IST)</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">receipt_long</span>
+                Counter Receipt Series: <span class="font-medium text-on-surface">AR-BL-2026-N3</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Quick Summary Cards (Asymmetric Bento Cluster) -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm shrink-0">
+<div class="bg-surface-container-low px-3.5 py-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Today's Collections</span>
+<span class="font-currency-bold text-headline-sm text-primary font-bold mt-0.5">₹4,82,450</span>
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> 118 Settled
+            </span>
+</div>
+<div class="bg-surface-container-low px-3.5 py-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Pending Clearances</span>
+<span class="font-currency-bold text-headline-sm text-error font-bold mt-0.5">14 Invoices</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5 Discharge / 9 OPD</span>
+</div>
+<div class="bg-surface-container-low px-3.5 py-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">TPA Claims In-Flight</span>
+<span class="font-currency-bold text-headline-sm text-secondary font-bold mt-0.5">28 Claims</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">₹12.40 Lakh Auth</span>
+</div>
+<div class="bg-surface-container-low px-3.5 py-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">ABDM Fast-Track</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-currency-bold text-headline-sm text-tertiary-container font-bold">92%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sync</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-container font-medium">M3 Auto-Reconciled</span>
+</div>
+</div>
+</div>
+<!-- Universal Patient Search & Filter Rail -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-sm pt-space-xs bg-surface-container rounded-lg p-2">
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full pl-10 pr-24 py-2.5 bg-surface-container-lowest text-on-surface rounded-lg font-body-md text-body-md outline-none focus:bg-surface-container-lowest transition-all placeholder:text-outline" placeholder="Universal Search by UHID, Token #, Bill ID, Mobile (+91), or ABHA Address (e.g., meera@sbx)..." type="text" value="AL-2026-1048">
+<div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 bg-surface-container-high text-on-surface-variant rounded text-[10px] font-mono">⌘K</kbd>
+<button class="p-1 text-outline hover:text-primary transition-colors" title="Scan Barcode / QR">
+<span class="material-symbols-outlined text-[18px]">qr_code_scanner</span>
+</button>
+</div>
+</div>
+<!-- Filter Pills -->
+<div class="flex items-center gap-1.5 overflow-x-auto py-1">
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold shrink-0 shadow-sm flex items-center gap-1.5">
+<span class="">All Pending</span>
+<span class="bg-primary/40 px-1.5 py-0.2 rounded-full text-[10px]">14</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium shrink-0 transition-colors flex items-center gap-1.5">
+<span class="">Discharge Billing</span>
+<span class="bg-surface-container px-1.5 py-0.2 rounded-full text-[10px] text-primary">5</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium shrink-0 transition-colors flex items-center gap-1.5">
+<span class="">OPD Combined</span>
+<span class="bg-surface-container px-1.5 py-0.2 rounded-full text-[10px] text-primary">6</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium shrink-0 transition-colors flex items-center gap-1.5">
+<span class="">Emergency / Daycare</span>
+<span class="bg-surface-container px-1.5 py-0.2 rounded-full text-[10px] text-error font-bold">3</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-outline hover:text-primary transition-colors shrink-0" title="Filter Settings">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main 3-Column Enterprise Billing Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- ========================================================================= -->
+<!-- COLUMN 1 (3 Cols): Queue & Patient Context -->
+<!-- ========================================================================= -->
+<div class="lg:col-span-3 flex flex-col gap-space-md">
+<!-- Active Patient in Focus Card -->
+<div class="rounded-xl bg-surface-container-lowest shadow-md p-space-md flex flex-col gap-space-sm relative overflow-hidden">
+<!-- Top Accent Badge -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Active at Window</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-md text-label-md font-bold">Token #B-14</span>
+</div>
+<!-- Patient Identity -->
+<div class="flex items-start gap-space-sm pt-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-primary flex items-center justify-center font-bold text-headline-sm shrink-0">
+              MS
+            </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Meera Sharma</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary-container" title="ABHA &amp; Aadhaar eKYC Verified">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">46 Y / Female · Ward OPD-4</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">UHID: AL-2026-1048</span>
+</div>
+</div>
+<!-- ABHA & Ayushman Credentials -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1 text-[11px]">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">health_metrics</span>
+                ABHA ID
+              </span>
+<span class="font-mono text-primary font-bold">91-2091-8841-0021</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Benefit Scheme</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-container/10 text-tertiary-container font-semibold">PM-JAY Ayushman Linked</span>
+</div>
+</div>
+<!-- Clinical Routing Details -->
+<div class="space-y-1.5 pt-1 text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="">Attending Doctor</span>
+<strong class="text-on-surface font-semibold">Dr. Ananya Rao</strong>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="">Specialty</span>
+<span class="text-on-surface">General Medicine</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="">Encounter Type</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary font-medium">Multi-Service Walk-in</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="">Admission / Time</span>
+<span class="text-on-surface">Today, 10:15 AM</span>
+</div>
+</div>
+<!-- Status Alert -->
+<div class="mt-2 p-2.5 rounded-lg bg-secondary-container/30 text-on-secondary-container flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">receipt</span>
+<div class="font-label-sm text-label-sm leading-tight">
+<strong>Status:</strong> Ready for Consolidation &amp; Payment Collection. Lab results reported.
+            </div>
+</div>
+</div>
+<!-- Next in Line Patient Queue -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Upcoming Queue</span>
+<span class="px-2 py-0.2 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold">3 waiting</span>
+</div>
+<button class="text-secondary hover:underline font-label-sm text-label-sm font-semibold flex items-center gap-0.5">
+<span class="">Recall</span>
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+</button>
+</div>
+<div class="space-y-2">
+<!-- Queue Item 1 -->
+<div class="p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer flex flex-col gap-1.5 group">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold px-1.5 py-0.5 rounded bg-primary-container/10 text-primary">Token #B-15</span>
+<span class="font-currency-bold text-headline-sm text-primary font-bold">₹2,150.00</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface group-hover:text-primary transition-colors">Rajesh Pareek</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">58Y / M</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                Cardio Consult + ECG + Acute Meds
+              </div>
+<div class="flex items-center justify-between text-[11px] pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-medium">Unbilled · Desk 02</span>
+<span class="text-outline">Wait: ~4 min</span>
+</div>
+</div>
+<!-- Queue Item 2 -->
+<div class="p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer flex flex-col gap-1.5 group">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold px-1.5 py-0.5 rounded bg-secondary-container/50 text-secondary">Token #A-08</span>
+<span class="font-currency-bold text-headline-sm text-primary font-bold">₹1,800.00</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface group-hover:text-primary transition-colors">Rajesh Gupta</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">34Y / M</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                Orthopaedics Consult + Knee X-Ray
+              </div>
+<div class="flex items-center justify-between text-[11px] pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-semibold">Awaiting Insurance Auth</span>
+<span class="text-outline">Wait: ~8 min</span>
+</div>
+</div>
+<!-- Queue Item 3 -->
+<div class="p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer flex flex-col gap-1.5 group">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold px-1.5 py-0.5 rounded bg-tertiary-container/15 text-tertiary-container">Token #IP-402</span>
+<span class="font-currency-bold text-headline-sm text-primary font-bold">₹42,500.00</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface group-hover:text-primary transition-colors">Sunita Devi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">61Y / F</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                IPD Daycare Discharge (Surgery Ward - Bed 304)
+              </div>
+<div class="flex items-center justify-between text-[11px] pt-1">
+<span class="px-2 py-0.5 rounded bg-tertiary-container/10 text-tertiary-container font-semibold">TPA Pre-Auth Verified</span>
+<span class="text-outline">Discharge Ready</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-1 py-2 text-center text-primary font-label-md text-label-md font-semibold bg-surface-container hover:bg-surface-container-high rounded-lg transition-colors flex items-center justify-center gap-1">
+<span class="">View All 14 Pending Queues</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- COLUMN 2 (5 Cols): Itemized Multi-Service Bill Consolidation -->
+<!-- ========================================================================= -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="rounded-xl bg-surface-container-lowest shadow-md p-space-md flex flex-col gap-space-md">
+<!-- Invoice Header Strip -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-sm gap-2 bg-surface-container-low -mx-space-md -mt-space-md p-space-md rounded-t-xl">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Master Tax Invoice</span>
+<span class="font-mono font-bold text-on-surface text-label-lg">#INV-2026-9041</span>
+</div>
+<div class="flex flex-wrap items-center gap-2 text-on-surface-variant text-[11px] mt-0.5">
+<span class="">Date: <strong class="text-on-surface">17 Oct 2026, 11:05 AM</strong></span>
+<span class="">•</span>
+<span class="">SAC Code: <strong class="text-on-surface">999312</strong> (Healthcare - GST Exempt)</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 self-start sm:self-center">
+<span class="px-2 py-1 rounded bg-secondary-container/40 text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span class="">Auto-Aggregated</span>
+</span>
+<button class="p-1 text-on-surface-variant hover:text-primary" title="Refresh Aggregator">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</button>
+</div>
+</div>
+<!-- Section A: Consultation & Registration -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md text-primary uppercase font-bold tracking-wider">A. Consultation &amp; Clinical Evaluation</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Desk: Reception OPD</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">General Medicine OPD Consult</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Dr. Ananya Rao, MD (Shift A) · Room #104</div>
+</div>
+<div class="text-right">
+<div class="font-currency-bold text-label-lg text-on-surface font-bold">₹600.00</div>
+<div class="text-[10px] text-tertiary-container font-medium">Disc: ₹0.00</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-1">
+<span class="font-mono">Item Code: OP-CON-GENMED</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-primary font-medium">Clinical Cleared</span>
+</div>
+</div>
+</div>
+<!-- Section B: Diagnostics & Laboratory -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-secondary uppercase font-bold tracking-wider">B. Laboratory &amp; Pathology (Arogya Lab)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Central Lab (LIS Linked)</span>
+</div>
+<!-- Lab Test 1 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">Complete Blood Count (CBC) + Peripheral Smear</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Barcode: <span class="font-mono font-medium">#LAB-90412</span> · Sysmex XN-1000 Bench</div>
+</div>
+<div class="text-right">
+<div class="font-currency-bold text-label-lg text-on-surface font-bold">₹450.00</div>
+<div class="text-[10px] text-outline">Rate: ₹450 | Qty: 1</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-1">
+<span class="flex items-center gap-1 text-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Result Validated (Pathologist Signed)
+                </span>
+<span class="font-mono text-outline">LIS-SYNC-OK</span>
+</div>
+</div>
+<!-- Lab Test 2 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">ESR Automated Test (Westergren Method)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Order ref: <span class="font-mono">ORD-LAB-449</span> · Sample: Whole Blood EDTA</div>
+</div>
+<div class="text-right">
+<div class="font-currency-bold text-label-lg text-on-surface font-bold">₹150.00</div>
+<div class="text-[10px] text-outline">Rate: ₹150 | Qty: 1</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-1">
+<span class="flex items-center gap-1 text-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Report Published to ABDM
+                </span>
+<span class="font-mono text-outline">LIS-SYNC-OK</span>
+</div>
+</div>
+</div>
+<!-- Section C: Pharmacy Dispensation -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span class="font-label-md text-label-md text-tertiary-container uppercase font-bold tracking-wider">C. OPD Pharmacy Dispense</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Pharmacy Counter #01</span>
+</div>
+<!-- Med 1 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">Tab Ferrous Ascorbate 100mg + Folic Acid</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Livogen-Z · Strip of 30 · Batch: <span class="font-mono">FA-2024-09</span> (Exp: 08/27)</div>
+</div>
+<div class="text-right">
+<div class="font-currency-bold text-label-lg text-on-surface font-bold">₹195.00</div>
+<div class="text-[10px] text-outline">MRP: ₹210 (Discounted)</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-1">
+<span class="">Dispensed by Pharmacist: Priya S.</span>
+<span class="font-mono text-secondary font-medium">PHARM-DISP-PACKED</span>
+</div>
+</div>
+<!-- Med 2 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">Tab Multivitamin with Zinc (Becosules-Z)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Strip of 30 · Batch: <span class="font-mono">BZ-8812</span> (Exp: 11/27)</div>
+</div>
+<div class="text-right">
+<div class="font-currency-bold text-label-lg text-on-surface font-bold">₹94.50</div>
+<div class="text-[10px] text-outline">Rate: ₹3.15 / Tab</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-1">
+<span class="">Dispensed with patient counseling flyer</span>
+<span class="font-mono text-secondary font-medium">PHARM-DISP-PACKED</span>
+</div>
+</div>
+</div>
+<!-- Interactive Action Modifiers (Add Procedure, Apply Concession) -->
+<div class="pt-2 flex flex-wrap items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span class="">+ Add Hospital Dressing / Procedure</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">medication</span>
+<span class="">+ Add Consumables</span>
+</button>
+<div class="relative ml-auto">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">percent</span>
+<span class="">Apply Concession</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Bill Financial Summary Calculation Box -->
+<div class="mt-2 p-4 rounded-xl bg-surface-container text-on-surface flex flex-col gap-2">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Gross Line Item Subtotal (5 Items):</span>
+<span class="font-mono font-semibold">₹1,489.50</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Hospital Institutional Concession:</span>
+<span class="font-mono text-tertiary-container font-semibold">- ₹0.00</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">GST (CGST 0% + SGST 0% Under SAC 999312):</span>
+<span class="font-mono text-outline font-medium">Exempt</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Patient Wallet / Prior Deposit:</span>
+<span class="font-mono text-outline">₹0.00</span>
+</div>
+<div class="h-px bg-outline-variant/30 my-1"></div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Net Payable Amount</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Indian Rupees One Thousand Four Hundred Eighty-Nine and 50/100 only</span>
+</div>
+<div class="text-right">
+<span class="font-currency-bold text-headline-lg text-primary font-bold">₹1,489.50</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- COLUMN 3 (4 Cols): Payment Gateway, QR, POS & Receipt Execution -->
+<!-- ========================================================================= -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Payment Settlement Multi-tab Workspace -->
+<div class="rounded-xl bg-surface-container-lowest shadow-md p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Tender &amp; Settlement</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/40 text-secondary font-label-sm text-label-sm font-bold">Instant Gateway</span>
+</div>
+<!-- Payment Mode Selection Tabs -->
+<div class="grid grid-cols-3 gap-1 bg-surface-container p-1 rounded-xl">
+<button class="py-2 px-1 text-center rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold shadow-sm flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">qr_code_2</span>
+<span class="">UPI / Bharat QR</span>
+</button>
+<button class="py-2 px-1 text-center rounded-lg hover:bg-surface-container-lowest/60 text-on-surface-variant font-label-sm text-label-sm font-medium transition-colors flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+<span class="">Cash Tender</span>
+</button>
+<button class="py-2 px-1 text-center rounded-lg hover:bg-surface-container-lowest/60 text-on-surface-variant font-label-sm text-label-sm font-medium transition-colors flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">credit_card</span>
+<span class="">Card / POS</span>
+</button>
+</div>
+<!-- Auxiliary Secondary Mode Switch -->
+<div class="grid grid-cols-2 gap-1.5">
+<button class="py-1.5 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold text-center flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span class="">TPA / Cashless (PM-JAY)</span>
+</button>
+<button class="py-1.5 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold text-center flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">call_split</span>
+<span class="">Split Tender Payment</span>
+</button>
+</div>
+<!-- Active Panel: Unified UPI Dynamic QR Code Interface -->
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col items-center text-center gap-3 relative overflow-hidden">
+<!-- Background Radial Glow -->
+<div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-secondary-container/30 blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between w-full">
+<div class="flex items-center gap-1.5 text-left">
+<span class="material-symbols-outlined text-[20px] text-primary">smartphone</span>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">Dynamic Bharat QR</div>
+<div class="text-[10px] text-on-surface-variant">Auto-tagged with Bill #INV-2026-9041</div>
+</div>
+</div>
+<span class="font-currency-bold text-headline-sm text-primary font-bold">₹1,489.50</span>
+</div>
+<!-- Stylized Crisp QR Representation (Inline SVG) -->
+<div class="p-3 bg-surface-container-lowest rounded-xl shadow-md flex flex-col items-center">
+<svg class="w-40 h-40 text-primary" fill="currentColor" viewBox="0 0 160 160">
+<!-- QR Corner Finder 1 -->
+<rect fill="currentColor" height="40" rx="4" width="40" x="10" y="10"></rect>
+<rect fill="#ffffff" height="24" rx="2" width="24" x="18" y="18"></rect>
+<rect fill="currentColor" height="12" width="12" x="24" y="24"></rect>
+<!-- QR Corner Finder 2 -->
+<rect fill="currentColor" height="40" rx="4" width="40" x="110" y="10"></rect>
+<rect fill="#ffffff" height="24" rx="2" width="24" x="118" y="18"></rect>
+<rect fill="currentColor" height="12" width="12" x="124" y="24"></rect>
+<!-- QR Corner Finder 3 -->
+<rect fill="currentColor" height="40" rx="4" width="40" x="10" y="110"></rect>
+<rect fill="#ffffff" height="24" rx="2" width="24" x="18" y="118"></rect>
+<rect fill="currentColor" height="12" width="12" x="24" y="124"></rect>
+<!-- Data Matrix Elements -->
+<rect height="8" rx="1" width="8" x="60" y="15"></rect>
+<rect height="8" rx="1" width="8" x="75" y="15"></rect>
+<rect height="8" rx="1" width="8" x="90" y="25"></rect>
+<rect height="8" rx="1" width="8" x="60" y="35"></rect>
+<rect height="8" rx="1" width="8" x="80" y="40"></rect>
+<rect height="8" rx="1" width="8" x="15" y="65"></rect>
+<rect height="8" rx="1" width="8" x="35" y="75"></rect>
+<rect height="12" rx="2" width="12" x="60" y="60"></rect>
+<rect height="10" rx="2" width="10" x="85" y="65"></rect>
+<rect height="8" rx="1" width="8" x="110" y="60"></rect>
+<rect height="8" rx="1" width="8" x="135" y="75"></rect>
+<rect height="8" rx="1" width="8" x="60" y="90"></rect>
+<rect height="8" rx="1" width="8" x="80" y="95"></rect>
+<rect height="8" rx="1" width="8" x="100" y="90"></rect>
+<rect height="8" rx="1" width="8" x="125" y="100"></rect>
+<rect height="8" rx="1" width="8" x="60" y="115"></rect>
+<rect height="8" rx="1" width="8" x="75" y="130"></rect>
+<rect height="8" rx="1" width="8" x="95" y="120"></rect>
+<rect height="8" rx="1" width="8" x="115" y="135"></rect>
+<rect height="8" rx="1" width="8" x="135" y="125"></rect>
+</svg>
+<div class="mt-2 text-[11px] font-mono text-outline">UPI ID: arogyacity.billing@icici</div>
+</div>
+<!-- Webhook Listener Spinner -->
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm font-medium w-full justify-center">
+<svg class="animate-spin h-3.5 w-3.5 text-secondary" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8v8H4z" fill="currentColor"></path>
+</svg>
+<span class="">Awaiting UPI Webhook Notification (ICICI Gateway)...</span>
+</div>
+</div>
+<!-- Cash Tender Calculator Quick Strip -->
+<div class="p-3 rounded-lg bg-surface-container flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase">Cash Tender Quick Calculator</span>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="text-[10px] text-outline font-semibold">CASH RECEIVED (₹)</label>
+<input class="w-full mt-0.5 px-2.5 py-1.5 rounded bg-surface-container-lowest text-on-surface font-currency-bold font-bold text-headline-sm outline-none" type="number" value="2000">
+</div>
+<div>
+<label class="text-[10px] text-outline font-semibold">CHANGE TO RETURN</label>
+<div class="w-full mt-0.5 px-2.5 py-1.5 rounded bg-surface-container-high text-tertiary font-currency-bold font-bold text-headline-sm flex items-center">
+                  ₹510.50
+                </div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 pt-1">
+<button class="px-2 py-0.5 rounded bg-surface-container-lowest text-[11px] font-mono font-semibold text-primary hover:bg-surface-container-high transition-colors">Exact ₹1,489.50</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-lowest text-[11px] font-mono font-semibold text-primary hover:bg-surface-container-high transition-colors">₹1,500</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-lowest text-[11px] font-mono font-semibold text-primary hover:bg-surface-container-high transition-colors">₹2,000</button>
+</div>
+</div>
+<!-- Insurance Pre-Auth & PM-JAY Status Panel -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">security</span>
+                Empaneled Payer / Scheme
+              </span>
+<span class="px-2 py-0.2 rounded bg-tertiary-container/10 text-tertiary-container font-label-sm text-label-sm font-bold">PM-JAY Gold Linked</span>
+</div>
+<div class="flex items-center justify-between text-body-sm pt-0.5">
+<span class="text-on-surface-variant">Pre-auth Claim ID:</span>
+<span class="font-mono text-primary font-bold">CLM-883921-IN</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Eligible Co-Pay:</span>
+<span class="font-mono text-tertiary-container font-bold">0% (Nil Patient Liability)</span>
+</div>
+</div>
+<!-- Primary Settlement Action Buttons -->
+<div class="flex flex-col gap-2 pt-1">
+<!-- Action 1: Settle & Collect -->
+<button class="w-full py-3.5 px-4 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-container transition-all shadow-md active:scale-[0.99] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+<span class="">Collect &amp; Settle Bill (₹1,489.50) &amp; Issue Clearance</span>
+</button>
+<!-- Action 2: Print GST Tax Invoice -->
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md font-bold transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span class="">Print Tax Invoice (A4)</span>
+</button>
+<button class="py-2.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md font-bold transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span class="">Thermal 80mm Slip</span>
+</button>
+</div>
+<!-- Action 3: Digital ABDM & WhatsApp Dispatch -->
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container-low hover:bg-surface-container text-secondary font-label-md text-label-md font-bold transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">send_to_mobile</span>
+<span class="">Push to WhatsApp &amp; ABDM Health Locker</span>
+</button>
+</div>
+<!-- Compliance Footer Note -->
+<div class="flex items-center justify-center gap-1.5 text-[10px] text-outline pt-1 text-center">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="">Digitally certified by Arogya Financial Crypt-Signer · NABH &amp; GST Compliant</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div>
+
+</body></html>

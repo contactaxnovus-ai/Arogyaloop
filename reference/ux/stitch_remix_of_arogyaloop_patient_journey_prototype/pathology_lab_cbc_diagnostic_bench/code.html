@@ -1,0 +1,535 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-fixed-variant":"#054c69","on-surface":"#0b1c30","on-secondary":"#ffffff","outline":"#71787e","on-tertiary-fixed":"#002113","surface-bright":"#f8f9ff","on-error":"#ffffff","on-tertiary":"#ffffff","surface-container-high":"#dce9ff","primary-fixed":"#c5e7ff","surface-container":"#e5eeff","primary-fixed-dim":"#97cdef","inverse-surface":"#213145","inverse-on-surface":"#eaf1ff","tertiary-fixed-dim":"#4edea3","secondary-fixed-dim":"#77d4e5","on-secondary-fixed":"#001f24","inverse-primary":"#97cdef","on-secondary-fixed-variant":"#004e59","primary":"#00374e","on-primary":"#ffffff","tertiary-fixed":"#6ffbbe","on-tertiary-fixed-variant":"#005236","surface":"#f8f9ff","surface-variant":"#d3e4fe","secondary-container":"#92edff","on-primary-container":"#8ac0e1","on-surface-variant":"#41484d","on-background":"#0b1c30","outline-variant":"#c0c7ce","surface-dim":"#cbdbf5","tertiary":"#003c27","secondary":"#006876","tertiary-container":"#005539","surface-tint":"#2a6482","on-error-container":"#93000a","surface-container-highest":"#d3e4fe","surface-container-low":"#eff4ff","background":"#f8f9ff","on-primary-fixed":"#001e2d","error-container":"#ffdad6","on-tertiary-container":"#3dd197","surface-container-lowest":"#ffffff","primary-container":"#0b4f6c","error":"#ba1a1a","on-secondary-container":"#006d7b","secondary-fixed":"#9eefff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-desktop":"2rem","gutter":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2rem","margin":"1rem","gutter-desktop":"1.5rem","space-md":"1rem","space-lg":"1.5rem"},"fontFamily":{"label-md":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"currency-bold":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"currency-bold":["15px",{"lineHeight":"20px","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"30px","letterSpacing":"0em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(11,79,108,0.06)]"><div class="h-16 px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">local_hospital</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight">Arogya City Hospital</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Clinical Workstation Hub · Jaipur</span></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[14px] text-secondary">sync_saved_locally</span><span class="">ABDM Live Sync</span></div><div class="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-container/40 text-secondary font-label-sm text-label-sm"><span class="material-symbols-outlined text-[14px]">auto_awesome</span><span class="">AI-assisted, staff-reviewed</span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md text-on-surface leading-tight">Dr. Ananya Rao</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-tight">OPD Physician</div></div><div class="w-9 h-9 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-md text-label-md">AR</div></div></div></div></header><aside class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-60 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md shadow-[1px_0_6px_rgba(11,79,108,0.03)]"><nav class="space-y-1 px-3" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm"><div class="px-3 pb-2 text-[10px] font-label-sm tracking-wider uppercase text-outline">Workspaces</div><a class="block px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="reception-omni-channel-hub" href="#">Reception Omni-Channel Hub</a><a class="block px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="doctor-clinical-workspace" href="#">Doctor Clinical Workspace</a><a aria-current="page" class="block px-3 py-2 rounded transition-all bg-primary-container text-on-primary font-bold shadow-sm" data-path="pathology-diagnostics" href="#">Pathology Diagnostics</a><a class="block px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="pharmacy-dispensing" href="#">Pharmacy Dispensing</a><a class="block px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="admin-control-center" href="#">Admin Control Center</a></nav><div class="px-4 py-3 mx-3 bg-surface-container-low rounded-lg space-y-1"><div class="font-label-sm text-label-sm text-on-surface-variant">Hospital Network Status</div><div class="font-body-sm text-body-sm text-secondary font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">verified</span>HIS/FHIR Connected</div></div></aside><div class="pl-60"><main class="relative min-h-screen bg-background p-space-md lg:p-gutter-desktop" style="padding-top: 5rem;"><div class="flex flex-col w-full gap-space-md">
+<!-- Top Diagnostics Bench Metadata & System Status Strip -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-on-primary text-[26px]">biotech</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h1 class="font-headline-md text-headline-md text-primary leading-tight">Arogya Pathology Lab — Hematology &amp; Clinical Biochemistry</h1>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm uppercase tracking-wide flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+            Online LIS-FHIR
+          </span>
+</div>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-primary">badge</span>
+            Dr. Ramesh Iyer, MD (Pathology)
+          </span>
+<span class="">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">science</span>
+            Bench Tech: Suresh Kumar (Grade-I)
+          </span>
+<span class="">•</span>
+<span class="text-outline">Station: Sysmex Workcell 02</span>
+<span class="">•</span>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">NABL Acc. #MC-2849</span>
+</div>
+</div>
+</div>
+<!-- Live Quick Telemetry & Device Sync Counter -->
+<div class="flex items-center gap-space-md self-end lg:self-center">
+<div class="hidden sm:flex items-center gap-3 px-3 py-1.5 rounded-lg bg-surface-container-low">
+<div class="text-right">
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">LIS Accession Mode</div>
+<div class="font-label-md text-label-md text-primary font-bold">HL7 v2.8 / Auto-Query</div>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">dns</span>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-secondary-container/30 text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px] text-secondary">auto_awesome</span>
+<div class="leading-tight">
+<div class="font-label-sm text-label-sm font-bold">Morphology AI-Assist</div>
+<div class="font-label-sm text-label-sm text-secondary">Calibrated 08:30 AM IST</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main 3-Column Diagnostic Workspace Layout (Direct View) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md">
+<!-- Column 1: Live Accessioning & Specimen Queue (3.5 cols) -->
+<div class="xl:col-span-3 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm h-full">
+<!-- Queue Header & Filter Chips -->
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">inventory_2</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Accession Queue</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm">8 Pending</span>
+</div>
+<!-- Specimen Category Filters -->
+<div class="flex flex-wrap gap-1.5 py-1">
+<button class="px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-primary text-on-primary shadow-xs" type="button">All</button>
+<button class="px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" type="button">EDTA Blood</button>
+<button class="px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" type="button">Serum</button>
+<button class="px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" type="button">Urine</button>
+<button class="px-2.5 py-1 rounded-md text-label-sm font-label-sm bg-error-container text-error font-bold flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">bolt</span>STAT
+          </button>
+</div>
+<!-- Specimen Queue List -->
+<div class="flex flex-col gap-2.5 mt-1 overflow-y-auto max-h-[calc(100vh-280px)] pr-0.5">
+<!-- Active Target Specimen: Meera Sharma -->
+<div class="rounded-xl p-3 bg-surface-container-low shadow-sm flex flex-col gap-2 cursor-pointer transition-all">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm tracking-wide">#LAB-90412</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-variant text-on-surface-variant font-label-sm text-label-sm">Token #B-14</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-secondary font-label-sm text-label-sm flex items-center gap-1 font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+                Processing
+              </span>
+</div>
+<div>
+<div class="font-headline-sm text-[16px] text-on-surface font-bold leading-snug">Meera Sharma</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">46 Y / Female • UHID: AL-2026-1048</div>
+</div>
+<div class="flex flex-col gap-1 pt-1 bg-surface-container-lowest/80 rounded-lg p-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline">Test Ordered:</span>
+<span class="font-label-md text-label-md text-primary font-bold">Complete Blood Count (CBC)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline">Ref Physician:</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Dr. Ananya Rao (OPD)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline">Vial Type:</span>
+<span class="font-label-sm text-label-sm text-on-primary-fixed-variant bg-primary-fixed px-1.5 py-0.2 rounded font-medium">EDTA K2 Lavender</span>
+</div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline pt-0.5">
+<span class="">Drawn: Today 09:12 AM</span>
+<span class="text-secondary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">barcode_scanner</span> Auto-read
+              </span>
+</div>
+</div>
+<!-- Queue Item 2: Stat Blood Culture -->
+<div class="rounded-xl p-3 bg-surface-container-lowest hover:bg-surface-container-low transition-colors shadow-xs flex flex-col gap-2 cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">#LAB-90413</span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-error font-label-sm text-label-sm font-bold">STAT</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Awaiting Bench</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Rajesh Verma (58 M)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">UHID: AL-2026-0982 • ICU Bay 4</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm pt-1">
+<span class="text-outline">Test:</span>
+<span class="text-on-surface font-medium">Blood Urea, Serum Creatinine</span>
+</div>
+</div>
+<!-- Queue Item 3: Routine Coagulation -->
+<div class="rounded-xl p-3 bg-surface-container-lowest hover:bg-surface-container-low transition-colors shadow-xs flex flex-col gap-2 cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">#LAB-90414</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-variant text-on-surface-variant font-label-sm text-label-sm">Token #B-15</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Queued</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Pooja Devi (32 F)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">UHID: AL-2026-1102 • Antenatal OPD</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm pt-1">
+<span class="text-outline">Test:</span>
+<span class="text-on-surface font-medium">PT/INR &amp; Platelet Count</span>
+</div>
+</div>
+<!-- Queue Item 4: Urine Routine -->
+<div class="rounded-xl p-3 bg-surface-container-lowest hover:bg-surface-container-low transition-colors shadow-xs flex flex-col gap-2 cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">#LAB-90415</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Centrifuged</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Govind Ram (64 M)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">UHID: AL-2026-0811 • Nephrology</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm pt-1">
+<span class="text-outline">Test:</span>
+<span class="text-on-surface font-medium">Urine R/M &amp; Microalbumin</span>
+</div>
+</div>
+</div>
+<!-- Accession Bench Footnote -->
+<div class="mt-auto pt-2 bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">barcode_reader</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Scanner: Honeywell Xenon (Ready)</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span>
+</div>
+</div>
+</div>
+<!-- Column 2: Analyzer Integration & CBC Results Entry (6 cols) -->
+<div class="xl:col-span-6 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Analyzer Sync Bar & Selected Specimen Header -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm bg-primary text-on-primary px-2 py-0.5 rounded uppercase font-bold tracking-wider">Automated Stream</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Sysmex XN-1000 Automated Hematology Line</h3>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Run ID: <code class="font-mono text-on-surface font-semibold">XN1K-20261024-0492</code> • Completed: 09:34:11 AM • Calibration Pass
+            </div>
+</div>
+<div class="flex items-center gap-2 self-start md:self-auto shrink-0">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-highest text-primary font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px] text-primary">sync</span> Direct Interface Active
+            </span>
+</div>
+</div>
+<!-- CBC Analyzed Parameter Table -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[16px] text-primary font-bold">Complete Blood Profile (CBC / Hemogram)</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">/ पूर्ण रक्त गणना</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-error"></span> Flagged Values (3)</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary"></span> Within Ref Interval</span>
+</div>
+</div>
+<!-- Parameter Results Table -->
+<div class="overflow-x-auto rounded-lg shadow-xs">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<th class="py-2.5 px-3">Analyte / Investigation</th>
+<th class="py-2.5 px-3">Observed Result</th>
+<th class="py-2.5 px-3">Clinical Flag</th>
+<th class="py-2.5 px-3">Biological Reference</th>
+<th class="py-2.5 px-3 text-right">Raw Differential</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y divide-surface-container">
+<!-- Hemoglobin: LOW -->
+<tr class="bg-error-container/20 hover:bg-error-container/30 transition-colors">
+<td class="py-2 px-3 font-label-md text-label-md text-on-surface">
+                    Hemoglobin (Hb) <span class="text-outline text-label-sm">/ हीमोग्लोबिन</span>
+</td>
+<td class="py-2 px-3">
+<span class="font-currency-bold text-currency-bold text-error font-bold">10.2</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant ml-1">g/dL</span>
+</td>
+<td class="py-2 px-3">
+<span class="px-2 py-0.5 rounded bg-error text-on-error font-label-sm text-label-sm font-bold flex items-center gap-1 w-fit shadow-xs">
+<span class="material-symbols-outlined text-[12px]">arrow_downward</span> LOW
+                    </span>
+</td>
+<td class="py-2 px-3 font-body-sm text-body-sm text-on-surface-variant">12.0 – 15.5 g/dL</td>
+<td class="py-2 px-3 text-right">
+<!-- Inline mini spark visual bar -->
+<div class="w-24 ml-auto h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 58%;"></div>
+</div>
+</td>
+</tr>
+<!-- RBC Count: LOW -->
+<tr class="bg-error-container/15 hover:bg-error-container/25 transition-colors">
+<td class="py-2 px-3 font-label-md text-label-md text-on-surface">
+                    Total RBC Count <span class="text-outline text-label-sm">/ लाल रक्त कणिका</span>
+</td>
+<td class="py-2 px-3">
+<span class="font-currency-bold text-currency-bold text-error font-bold">3.8</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant ml-1">mill/cumm</span>
+</td>
+<td class="py-2 px-3">
+<span class="px-2 py-0.5 rounded bg-error text-on-error font-label-sm text-label-sm font-bold flex items-center gap-1 w-fit shadow-xs">
+<span class="material-symbols-outlined text-[12px]">arrow_downward</span> LOW
+                    </span>
+</td>
+<td class="py-2 px-3 font-body-sm text-body-sm text-on-surface-variant">4.0 – 5.2 mill/cumm</td>
+<td class="py-2 px-3 text-right">
+<div class="w-24 ml-auto h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 62%;"></div>
+</div>
+</td>
+</tr>
+<!-- PCV / Hematocrit: LOW -->
+<tr class="bg-error-container/10 hover:bg-error-container/20 transition-colors">
+<td class="py-2 px-3 font-label-md text-label-md text-on-surface">
+                    PCV / Hematocrit <span class="text-outline text-label-sm">/ पीसीवी</span>
+</td>
+<td class="py-2 px-3">
+<span class="font-currency-bold text-currency-bold text-error font-bold">31.4</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant ml-1">%</span>
+</td>
+<td class="py-2 px-3">
+<span class="px-2 py-0.5 rounded bg-error text-on-error font-label-sm text-label-sm font-bold flex items-center gap-1 w-fit shadow-xs">
+<span class="material-symbols-outlined text-[12px]">arrow_downward</span> LOW
+                    </span>
+</td>
+<td class="py-2 px-3 font-body-sm text-body-sm text-on-surface-variant">36.0 – 46.0 %</td>
+<td class="py-2 px-3 text-right">
+<div class="w-24 ml-auto h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 52%;"></div>
+</div>
+</td>
+</tr>
+<!-- MCV: LOW Microcytic -->
+<tr class="bg-surface-container-low/40 hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-3 font-label-md text-label-md text-on-surface">
+                    MCV (Mean Corpuscular Vol)
+                  </td>
+<td class="py-2 px-3">
+<span class="font-currency-bold text-currency-bold text-primary font-bold">74.2</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant ml-1">fL</span>
+</td>
+<td class="py-2 px-3">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+                      Microcytic
+                    </span>
+</td>
+<td class="py-2 px-3 font-body-sm text-body-sm text-on-surface-variant">80 – 96 fL</td>
+<td class="py-2 px-3 text-right font-label-sm text-label-sm text-outline">Laser Deflect</td>
+</tr>
+<!-- MCH: LOW Hypochromic -->
+<tr class="bg-surface-container-low/40 hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-3 font-label-md text-label-md text-on-surface">
+                    MCH (Mean Corpuscular Hb)
+                  </td>
+<td class="py-2 px-3">
+<span class="font-currency-bold text-currency-bold text-primary font-bold">24.1</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant ml-1">pg</span>
+</td>
+<td class="py-2 px-3">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+                      Hypochromic
+                    </span>
+</td>
+<td class="py-2 px-3 font-body-sm text-body-sm text-on-surface-variant">27 – 33 pg</td>
+<td class="py-2 px-3 text-right font-label-sm text-label-sm text-outline">Flow Optical</td>
+</tr>
+<!-- Total WBC: Normal -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-2 px-3 font-label-md text-label-md text-on-surface">
+                    Total WBC Count <span class="text-outline text-label-sm">/ श्वेत रक्त कणिका</span>
+</td>
+<td class="py-2 px-3">
+<span class="font-currency-bold text-currency-bold text-on-surface font-semibold">7,400</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant ml-1">/cumm</span>
+</td>
+<td class="py-2 px-3">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">
+                      NORMAL
+                    </span>
+</td>
+<td class="py-2 px-3 font-body-sm text-body-sm text-on-surface-variant">4,000 – 10,000 /cumm</td>
+<td class="py-2 px-3 text-right font-label-sm text-label-sm text-tertiary font-bold">Optimal</td>
+</tr>
+<!-- Platelets: Normal -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-2 px-3 font-label-md text-label-md text-on-surface">
+                    Platelet Count <span class="text-outline text-label-sm">/ प्लेटलेट्स</span>
+</td>
+<td class="py-2 px-3">
+<span class="font-currency-bold text-currency-bold text-on-surface font-semibold">2.45</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant ml-1">Lakh/cumm</span>
+</td>
+<td class="py-2 px-3">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">
+                      NORMAL
+                    </span>
+</td>
+<td class="py-2 px-3 font-body-sm text-body-sm text-on-surface-variant">1.5 – 4.5 Lakh/cumm</td>
+<td class="py-2 px-3 text-right font-label-sm text-label-sm text-tertiary font-bold">Optimal</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Peripheral Blood Smear Examination (PS) Card -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">smb_share</span>
+<span class="font-headline-sm text-[16px] text-primary font-bold">Peripheral Blood Smear (PBS) Examination</span>
+<span class="text-label-sm font-label-sm text-outline">/ परिधीय रक्त स्मीयर</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span> AI-assisted, staff-reviewed
+            </span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-3">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+<span class="font-semibold text-primary">Microscopic Impression:</span> Microcytic hypochromic red blood cells with mild anisopoikilocytosis. Platelets adequate on smear. No hemoparasites or abnormal blast cells seen. Suggestive of Iron Deficiency Anemia / Microcytic Anemia profile.
+            </p>
+</div>
+<!-- Smear Bench Diagnostics Tags -->
+<div class="flex flex-wrap items-center gap-2 pt-1 font-label-sm text-label-sm">
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">check_circle</span> RBC Series: Hypochromia (+)
+            </span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">check_circle</span> Leishman Stain Lot: #LSH-2491
+            </span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">analytics</span> Microscopic Field 100x Oil
+            </span>
+</div>
+</div>
+<!-- Rich Clinical Context: Differential Distribution Inline SVG Bar -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-xs flex flex-col gap-2">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface font-semibold uppercase tracking-wider">Five-Part Differential Fraction</span>
+<span class="text-outline">Sysmex Fluorocell WDF Channel</span>
+</div>
+<!-- Visual Distribution Progress -->
+<div class="w-full h-4 rounded-lg bg-surface-container flex overflow-hidden">
+<div class="bg-primary h-full" style="width: 62%;" title="Neutrophils: 62%"></div>
+<div class="bg-secondary h-full" style="width: 28%;" title="Lymphocytes: 28%"></div>
+<div class="bg-secondary-fixed-dim h-full" style="width: 5%;" title="Monocytes: 5%"></div>
+<div class="bg-tertiary-fixed-dim h-full" style="width: 4%;" title="Eosinophils: 4%"></div>
+<div class="bg-outline-variant h-full" style="width: 1%;" title="Basophils: 1%"></div>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-primary"></span> Neutrophils: 62%</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-secondary"></span> Lymphocytes: 28%</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-secondary-fixed-dim"></span> Monocytes: 5%</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-tertiary-fixed-dim"></span> Eosinophils: 4%</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-outline-variant"></span> Basophils: 1%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Column 3: Quality Control & Validation Action Dashboard (3.5 cols) -->
+<div class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- Specimen Integrity Verification Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-2 pb-1">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Specimen Integrity (QC)</h2>
+</div>
+<!-- Specimen Pre-analytical Parameters -->
+<div class="space-y-2.5">
+<!-- Hemolysis Check -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">water_drop</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Hemolysis Index</div>
+<div class="font-label-sm text-label-sm text-outline">Pre-analytical Check</div>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check</span> Negative (0 mg/dL)
+            </span>
+</div>
+<!-- Micro-clots -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">grain</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Micro-Clot Inspection</div>
+<div class="font-label-sm text-label-sm text-outline">EDTA Inversion Mixer</div>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check</span> None Detected
+            </span>
+</div>
+<!-- Tube Color/Type Verification -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">colorize</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Container Verification</div>
+<div class="font-label-sm text-label-sm text-outline">Vacuum Vacutainer 3ml</div>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+              EDTA Lavender (Verified)
+            </span>
+</div>
+<!-- Delta Check Flag -->
+<div class="p-2.5 rounded-lg bg-surface-container-high/60 flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">history_toggle_off</span>
+<div class="text-body-sm font-body-sm text-on-surface">
+<span class="font-semibold text-primary">Delta Check:</span> Hb dropped 1.1 g/dL since previous visit on 12-Nov-2025 (11.3 g/dL). Consistent with clinical history of menorrhagia.
+            </div>
+</div>
+</div>
+<!-- Sign-off Authority Protocol -->
+<div class="p-3 rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Validation Pathway</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-label-sm">
+                RI
+              </div>
+<div class="leading-tight">
+<div class="font-label-sm text-label-sm font-bold text-on-surface">Dr. Ramesh Iyer</div>
+<div class="text-[10px] text-on-surface-variant font-label-sm">Certifying Pathologist</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="flex flex-col gap-2.5 pt-1">
+<!-- Primary CTA: High contrast Authorize & Push Report -->
+<button class="w-full h-11 px-4 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[20px]">approval_delegation</span>
+            Authorize &amp; Push CBC Report
+          </button>
+<div class="font-label-sm text-label-sm text-center text-outline">
+            Will notify Dr. Ananya Rao &amp; update ABHA record
+          </div>
+<!-- Secondary Actions -->
+<button class="w-full h-11 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+            Print Barcoded Laboratory Slip
+          </button>
+<button class="w-full h-11 px-4 rounded-xl bg-error-container/60 hover:bg-error-container text-error font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+            Request Sample Recollection
+          </button>
+</div>
+<!-- ABDM Quick Link Telemetry -->
+<div class="pt-2 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">cloud_done</span>
+            ABDM Token: ABHA-SYNC-OK
+          </span>
+<span class="font-mono text-outline text-label-sm">LOINC: 58410-2</span>
+</div>
+</div>
+<!-- Compact Diagnostic Quality Assurance Mini Widget -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Sysmex QC Level 2 (Normal)</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">Westgard 1:2s Pass</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-outline">
+<span class="">Daily Levey-Jennings Bias:</span>
+<span class="text-tertiary font-bold">+0.32% SD</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div>
+
+</body></html>

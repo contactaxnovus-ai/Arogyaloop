@@ -1,0 +1,69 @@
+Design a high-fidelity, clickable prototype for ArogyaLoop by Axnovus, a hospital patient-journey platform for Indian hospitals. The purpose is to demonstrate how one patient moves from arrival at reception to 
+follow-up after the visit.
+Create a connected product experience, not a marketing website or a collection of unrelated dashboard screens. Every screen must use the same patient, visit ID, doctor, and care plan. Provide realistic sample 
+data and make the main actions clickable so a presenter can walk through the journey in order.
+Demo patient and visit
+
+
+Patient: Meera Sharma, age 46
+
+Visit ID: AL-2026-1048
+
+Hospital: Arogya City Hospital, Jaipur
+
+Reason for visit: Persistent fatigue and dizziness
+
+Assigned doctor: Dr Ananya Rao, General Medicine
+
+Appointment: 10:30 AM today
+
+Doctor’s sample plan: Complete blood count (CBC), follow-up consultation after the report, and a prescription sent to the hospital pharmacy
+
+All information is fictional demo data. Do not present AI guidance as a medical diagnosis.
+Create these connected screens and interactions:
+
+
+Reception kiosk — patient arrival. A welcoming, touch-friendly screen with clear options for “I have an appointment,” “I need help finding a doctor,” and “Register a patient.” Show English and Hindi language 
+choices, large text, and a simple accessibility-first layout. In the demo, Meera chooses help finding a doctor.
+Guided intake and department routing. Ask a small number of plain-language questions about the reason for the visit. Show a recommendation for General Medicine, a short explanation in patient-friendly language, and 
+an obvious option for reception staff to review or change the recommendation. Avoid diagnostic claims and emergency triage promises. Meera proceeds to Dr Ananya Rao.
+
+Reception staff workspace. Show Meera’s arrival, registration details, appointment, assigned department, and current queue status in one compact view. Include a clear “Check in patient” action. After check-in, 
+update the journey tracker and provide patient-facing directions to the correct department.
+
+Doctor workspace. Show Meera’s relevant history, current reason for visit, consultation notes, and today’s visit on one screen. The doctor records the sample care plan and sends a CBC request to pathology and a 
+prescription to pharmacy. Make the next steps visible, with human review before orders are confirmed.
+
+Pathology workspace. Show the CBC request arriving with Meera’s visit ID. Demonstrate status changes from “Requested” to “Sample collected” to “Report ready.” Display a clearly labeled sample report, then show that 
+the report is available in the doctor’s view and Meera’s patient timeline.
+
+Pharmacy and payment workspace. Show the prescription associated with the same visit, a pharmacist review step, fulfilment status, and a payment summary. Use sample amounts in INR and label them as demo data. Do 
+not imply automatic medicine substitution or dispensing without pharmacist review.
+
+Patient view and follow-up. Show a simple visit summary with consultation, report, prescription, payment, and follow-up appointment. Include a sample reminder and patient communication screen. Show the follow-up 
+as scheduled and the patient history updated with this visit.
+
+Hospital operations overview. End with a compact view of the same patient journey: arrival → department guidance → consultation → pathology → pharmacy/payment → follow-up. Highlight completed steps, pending actions,
+and who owns each next action. This is the closing screen for a hospital buyer presentation.Interaction and presentation requirements
+
+
+Add a persistent, readable journey tracker across the staff-facing screens. Meera’s visit ID must remain consistent throughout.
+
+Provide a “Next step” action on each screen so the full demonstration can be completed in 3–5 minutes.
+
+Show distinct kiosk, reception, doctor, pathology, pharmacy, patient, and operations views, with appropriate information for each role.
+
+Use realistic hospital interface details without cluttering the demo with unrelated HIS modules.
+
+Design for an Indian hospital setting: familiar terminology, INR, mobile-friendly patient screens, and usable desktop staff screens.
+
+Use a professional, calm visual style: deep teal or blue, warm neutral backgrounds, clear status colours, generous spacing, and strong typography.
+
+Use the product name ArogyaLoop by Axnovus consistently.
+
+Where useful, label the reception guidance as “AI-assisted, staff-reviewed.”
+
+If mentioning ABDM, show only a discreet “Integration in progress” label. Do not show a completed government certification, live ABHA exchange, or any unsupported compliance badge.
+
+The central message of the prototype should be: “Guide the patient from arrival to follow-up, with each care team seeing what needs to happen next.”
+Generate all screens as one coherent prototype with clickable navigation and consistent sample data. Prioritise the patient journey and handoffs between teams over decorative charts.

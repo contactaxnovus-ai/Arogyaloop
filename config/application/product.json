@@ -1,0 +1,9 @@
+{
+  "productName": "ArogyaLoop",
+  "hospitalName": "Arogya City Hospital",
+  "locale": "en-IN",
+  "currency": "INR",
+  "integrationLabel": "ABDM: Integration in progress",
+  "aiReviewLabel": "AI-assisted routing; staff reviewed",
+  "demoLabel": "Fictional demo data"
+}

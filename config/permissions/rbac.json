@@ -1,0 +1,11 @@
+{
+  "PATIENT": ["visit:read", "demo:doctorFinder"],
+  "RECEPTIONIST": ["visit:read", "intake:review", "visit:checkIn"],
+  "DOCTOR": ["visit:read", "consultation:order"],
+  "LAB_TECHNICIAN": ["visit:read", "pathology:update"],
+  "PHARMACIST": ["visit:read", "pharmacy:review"],
+  "CASHIER": ["visit:read", "payment:record"],
+  "CARE_COORDINATOR": ["visit:read", "followup:schedule"],
+  "OPERATIONS_MANAGER": ["visit:read", "audit:read"],
+  "ADMIN": ["visit:read", "demo:reset", "audit:read"]
+}

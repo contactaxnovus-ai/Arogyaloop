@@ -1,0 +1,14 @@
+{
+  "name": "arogyaloop",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/frontend",
+    "apps/backend"
+  ],
+  "scripts": {
+    "dev": "pnpm --filter @arogyaloop/frontend dev",
+    "build": "pnpm --filter @arogyaloop/frontend build",
+    "backend": "pnpm --filter @arogyaloop/backend dev"
+  }
+}

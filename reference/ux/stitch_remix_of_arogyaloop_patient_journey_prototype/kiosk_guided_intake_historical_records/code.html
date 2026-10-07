@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed-dim":"#97cdef","on-tertiary-container":"#3dd197","on-surface-variant":"#41484d","secondary-fixed-dim":"#77d4e5","outline":"#71787e","surface-dim":"#cbdbf5","on-secondary":"#ffffff","tertiary-fixed-dim":"#4edea3","inverse-primary":"#97cdef","on-primary-fixed":"#001e2d","surface":"#f8f9ff","on-tertiary-fixed":"#002113","on-primary-container":"#8ac0e1","secondary-container":"#92edff","outline-variant":"#c0c7ce","primary-fixed":"#c5e7ff","on-primary":"#ffffff","on-surface":"#0b1c30","surface-container-low":"#eff4ff","error":"#ba1a1a","tertiary":"#003c27","secondary-fixed":"#9eefff","background":"#f8f9ff","on-primary-fixed-variant":"#054c69","tertiary-container":"#005539","primary":"#00374e","on-secondary-container":"#006d7b","secondary":"#006876","surface-variant":"#d3e4fe","on-error-container":"#93000a","surface-tint":"#2a6482","error-container":"#ffdad6","on-secondary-fixed-variant":"#004e59","surface-container-high":"#dce9ff","surface-container-lowest":"#ffffff","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#005236","surface-bright":"#f8f9ff","on-error":"#ffffff","on-background":"#0b1c30","inverse-surface":"#213145","on-secondary-fixed":"#001f24","tertiary-fixed":"#6ffbbe","surface-container":"#e5eeff","primary-container":"#0b4f6c","surface-container-highest":"#d3e4fe","inverse-on-surface":"#eaf1ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-desktop":"1.5rem","space-lg":"1.5rem","space-xl":"2rem",gutter:"1rem","space-md":"1rem","space-xs":"0.25rem",margin:"1rem","space-sm":"0.5rem","margin-desktop":"2rem"},fontFamily:{"label-lg":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"currency-bold":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},fontSize:{"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"display-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"currency-bold":["15px",{lineHeight:"20px",fontWeight:"700"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"headline-md":["22px",{lineHeight:"28px",fontWeight:"600"}],"headline-lg-mobile":["22px",{lineHeight:"30px",letterSpacing:"0em",fontWeight:"600"}],"headline-sm":["18px",{lineHeight:"24px",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"600"}],"display-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-lg text-body-lg text-on-surface antialiased select-none"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-gutter-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="w-11 h-11 rounded-xl bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[26px]">local_hospital</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Arogya City Hospital</span><span class="font-label-sm text-label-sm text-on-surface-variant">आरोग्य सिटी हॉस्पिटल • Jaipur Terminal</span></div></div><div class="hidden md:flex items-center gap-space-lg"><nav class="flex items-center gap-space-xs bg-surface-container-high p-space-xs rounded-xl" data-active-classes="bg-primary-container text-on-primary font-label-md text-label-md rounded-lg"><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-label-md text-label-md rounded-lg" data-path="kiosk-home" href="#">Kiosk Home</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="opd-registration" href="#">OPD Registration</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="find-doctor-ward" href="#">Find Doctor &amp; Ward</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="diagnostic-reports" href="#">Reports &amp; Billing</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="abdm-abha-checkin" href="#">ABHA Check-in</a></nav></div><div class="flex items-center gap-space-sm"><div class="hidden lg:flex flex-col text-right mr-space-xs"><span class="font-currency-bold text-currency-bold text-primary">10:42 AM</span><span class="font-label-sm text-label-sm text-on-surface-variant">Thu, 24 Oct</span></div><button class="min-h-[44px] min-w-[44px] px-space-md rounded-xl bg-surface-container flex items-center gap-space-xs text-primary hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">volume_up</span><span class="font-label-md text-label-md">Audio Assist / आवाज़</span></button><div class="flex items-center bg-surface-container-low rounded-xl p-space-xs"><button class="min-h-[44px] px-space-sm rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-[0_1px_3px_rgba(0,0,0,0.04)]" type="button">EN</button><button class="min-h-[44px] px-space-sm rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">हिंदी</button><button class="min-h-[44px] px-space-sm rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">Hinglish</button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Touch Kiosk Main Container -->
+<div class="max-w-7xl mx-auto w-full px-gutter-desktop py-space-md flex flex-col gap-space-lg">
+<!-- Patient Identification Banner (Prominent Kiosk Header Ribbon) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-primary-fixed flex items-center justify-center text-primary font-headline-md text-headline-md">
+          MS
+        </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">Meera Sharma</h1>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">(46 Y / Female • महिला)</span>
+<span class="inline-flex items-center gap-1 bg-surface-container px-space-sm py-0.5 rounded-full text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
+              Verified Patient / सत्यापित मरीज
+            </span>
+</div>
+<div class="flex items-center gap-space-md mt-1 text-on-surface-variant font-label-md text-label-md flex-wrap">
+<span>UHID: <strong class="text-on-surface font-semibold">AL-2026-1048</strong></span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span>ABHA: <strong class="text-on-surface font-semibold">91-8472-9104-1849</strong></span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span>Mobile: <strong class="text-on-surface font-semibold">+91 98452 71092</strong></span>
+</div>
+</div>
+</div>
+<!-- Live Token Allocation Pill -->
+<div class="flex items-center gap-space-md self-stretch md:self-auto bg-surface-container-low px-space-lg py-space-sm rounded-xl">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Queue Token / टोकन</span>
+<span class="font-headline-lg text-headline-lg text-primary leading-none font-bold">#B-14</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">confirmation_number</span>
+</div>
+</div>
+</div>
+<!-- 2-Column Responsive Touch Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Previous Clinical History & Past Prescriptions (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Previous Records Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<!-- Section Title Header -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">history_edu</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Previous Records</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">पिछले स्वास्थ्य रिकॉर्ड एवं दवाइयाँ</span>
+</div>
+<span class="inline-flex items-center gap-1 bg-surface-container-high text-primary font-label-sm text-label-sm px-space-sm py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">cloud_done</span>
+              3 Synced Records
+            </span>
+</div>
+<!-- Last Consultation Summary -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-secondary font-semibold">Last OPD Consultation / पिछली सलाह</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">12 Aug 2025</span>
+</div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold">Dr. Rajesh Mehta, MD</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Dept of General Medicine • Room 104</div>
+<div class="mt-1 bg-surface-container-lowest rounded-lg p-space-xs px-space-sm font-body-sm text-body-sm text-on-surface">
+<span class="font-medium text-primary">Reason:</span> Preventive Health Assessment &amp; Post-Viral Fatigue
+            </div>
+</div>
+<!-- Past Prescriptions -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]">prescriptions</span>
+                Active Medication History / सक्रिय दवाइयाँ
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 Prescribed</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">medication</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Thyronorm 50 mcg</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1 tab • Once Daily (OD - Empty Stomach)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded">Thyroid</span>
+</div>
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">medication</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Shelcal 500 mg</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1 tab • Daily (Post Lunch / खाने के बाद)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2 py-0.5 rounded">Calcium</span>
+</div>
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">medication</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Pantocid 40 mg</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">As needed (SOS for Acidity / जरूरत पड़ने पर)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2 py-0.5 rounded">Antacid</span>
+</div>
+</div>
+</div>
+<!-- Past Lab Investigations -->
+<div class="flex flex-col gap-space-xs mt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">science</span>
+                Previous Lab Reports / पिछली जांच रिपोर्ट
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Archived in ABHA</span>
+</div>
+<div class="space-y-2">
+<!-- Report 1: CBC -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Complete Blood Count (CBC)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(14 Mo ago)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface">Hemoglobin: <strong class="text-error font-medium">11.4 g/dL</strong> (Mild microcytic trend)</span>
+</div>
+<button class="min-h-[44px] min-w-[44px] px-space-sm bg-surface-container-lowest rounded-lg flex items-center gap-1 text-primary hover:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span class="font-label-sm text-label-sm">PDF</span>
+</button>
+</div>
+<!-- Report 2: TSH -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Thyroid Profile (TSH)</span>
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-1.5 rounded">Normal</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface">TSH: <strong>4.8 mIU/L</strong> (Baseline normal on 50 mcg)</span>
+</div>
+<button class="min-h-[44px] min-w-[44px] px-space-sm bg-surface-container-lowest rounded-lg flex items-center gap-1 text-primary hover:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span class="font-label-sm text-label-sm">PDF</span>
+</button>
+</div>
+<!-- Report 3: Lipid -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Lipid Profile Screen</span>
+<span class="font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed px-1.5 rounded">Borderline</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface">Total Cholesterol: <strong>210 mg/dL</strong> • Triglycerides: 168</span>
+</div>
+<button class="min-h-[44px] min-w-[44px] px-space-sm bg-surface-container-lowest rounded-lg flex items-center gap-1 text-primary hover:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span class="font-label-sm text-label-sm">PDF</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ABDM Consent Status Footer -->
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface">ABDM Gateway Consent ID: <strong>91-8472-9104-1849</strong></span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold">Active • मान्य</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Symptom-Based Doctor Discovery & Guided Intake (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Guided Intake & Symptoms Questionnaire Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<!-- Header with AI Badge -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pb-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">stethoscope</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Describe Today's Symptoms</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">आज की शारीरिक समस्या एवं लक्षण बताएं</span>
+</div>
+<!-- Stylized AI-assisted staff-reviewed badge -->
+<div class="inline-flex items-center gap-1.5 bg-surface-container-high px-space-md py-1 rounded-full text-primary font-label-sm text-label-sm self-start sm:self-auto">
+<span class="material-symbols-outlined text-[16px] text-secondary">auto_awesome</span>
+<span>AI-assisted, staff-reviewed</span>
+</div>
+</div>
+<!-- Chief Complaint Pill Input View -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase font-semibold tracking-wider text-on-surface-variant">
+              Current Chief Complaint / मुख्य लक्षण
+            </span>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">"Persistent fatigue and dizziness upon standing"</span>
+<span class="font-body-md text-body-md text-on-surface-variant">अवसाद, चक्कर और खड़े होने पर अत्यधिक थकान की शिकायत</span>
+</div>
+<button class="min-h-[44px] min-w-[44px] px-space-sm rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container transition-colors shadow-sm flex items-center gap-1 font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+<span>Edit</span>
+</button>
+</div>
+</div>
+<!-- Quick Touch Response Questionnaire (Triage Responses) -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold">
+              Kiosk Triage Question Responses / पूछे गए प्रश्न
+            </span>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Question 1 -->
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col justify-between min-h-[92px]">
+<span class="font-label-sm text-label-sm text-on-surface-variant">1. Duration / अवधि</span>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">3+ Weeks</span>
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 सप्ताह से अधिक</span>
+</div>
+<!-- Question 2 -->
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col justify-between min-h-[92px]">
+<span class="font-label-sm text-label-sm text-on-surface-variant">2. Lightheadedness / चक्कर</span>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Yes, Moderate</span>
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">खड़े होने पर मध्यम चक्कर</span>
+</div>
+<!-- Question 3 -->
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col justify-between min-h-[92px]">
+<span class="font-label-sm text-label-sm text-on-surface-variant">3. Stair Climbs / सांस फूलना</span>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Mild on stairs</span>
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">सीढ़ियाँ चढ़ने पर हल्का</span>
+</div>
+</div>
+</div>
+<!-- RECOMMENDED SPECIALIST MATCH CARD -->
+<div class="mt-1 bg-surface-container-high rounded-xl p-space-md flex flex-col gap-space-md relative overflow-hidden">
+<!-- Subtle accent bar -->
+<div class="absolute left-0 top-0 bottom-0 w-2 bg-secondary"></div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pl-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">psychology_alt</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Recommended Department / सुझाई गई विशेषज्ञता</span>
+<span class="font-headline-sm text-headline-sm text-primary">General Medicine (जनरल मेडिसिन)</span>
+</div>
+</div>
+<span class="bg-surface-container-lowest text-secondary font-label-sm text-label-sm px-space-sm py-1 rounded-full shadow-sm self-start sm:self-auto font-medium">
+                High Clinical Relevance (94%)
+              </span>
+</div>
+<!-- Doctor Profile Card with Real-time Kiosk Queue -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A professional Indian female physician in her late 30s wearing a clinical white lab coat with a stethoscope around her neck, standing in a brightly lit modern hospital corridor, soft teal and white lighting, warm compassionate smile, photorealistic medical portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjFNzzn7l6krTOTw_gtm113R7gMKxQnL807U2D1QS6VAI9YiAk7t3Fk4b_rvMeF87BFQkmn2qJhAaFRP9B-bQ2X9Nbp0tCpR2ODNIUStkrPDcGXG-VGh1rxiLRSCe6glXbw9xLcIVYSvtl2BPZ9Unlr07nS47csNG7ZnSnQ3D4HIxMbgJ9SZb42y8B89kH4tCkaPDtkf_P69jYu03VrVBWaWaIPT9i7dECJzrmHsON0Wx-aWHHqf8s"/>
+<span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-tertiary-fixed-dim ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Dr. Ananya Rao</span>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded">MD • Senior Consultant</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">General Medicine, Diabetology &amp; Fatigue Evaluation</span>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-md text-label-md mt-1">
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                      OPD Wing B, Room 108
+                    </span>
+<span>•</span>
+<span class="text-tertiary font-medium">On Duty Today (9:00 AM - 2:00 PM)</span>
+</div>
+</div>
+</div>
+<!-- Live Queue Metrics -->
+<div class="bg-surface-container-low px-space-md py-space-sm rounded-xl flex md:flex-col items-center md:items-end justify-between w-full md:w-auto gap-space-xs shrink-0">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[20px] text-tertiary">groups</span>
+<span class="font-label-lg text-label-lg font-bold">2 Ahead</span>
+</div>
+<div class="flex flex-col md:text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">~8 mins wait time</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">प्रतीक्षा समय: ~८ मिनट</span>
+</div>
+</div>
+</div>
+<!-- Clinical Matching Rationale -->
+<div class="bg-surface-container-low/70 rounded-lg p-space-sm flex items-start gap-space-sm pl-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Intake Clinical Justification / मिलान का कारण:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Evaluation of chronic postural fatigue in relation to preexisting Thyronorm therapy and borderline historical anemia (Hb 11.4 g/dL). Dr. Ananya Rao specializes in thyroid metabolism and ambulatory hemodynamic screening.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- BOTTOM ACTION TOUCH BAR (Generous 44px+ Touch Targets) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col sm:flex-row items-center justify-between gap-space-md mt-space-xs">
+<!-- Left Secondary Buttons -->
+<div class="flex items-center gap-space-md w-full sm:w-auto">
+<!-- Back Button -->
+<button class="min-h-[52px] px-space-lg rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-space-xs active:scale-[0.98] w-1/2 sm:w-auto" type="button">
+<span class="material-symbols-outlined text-[22px]">arrow_back</span>
+<span class="flex flex-col text-left">
+<span>Back</span>
+<span class="font-label-sm text-label-sm opacity-80 leading-tight">पीछे जाएं</span>
+</span>
+</button>
+<!-- Change Doctor Button -->
+<button class="min-h-[52px] px-space-lg rounded-xl bg-surface-container-low text-secondary font-label-lg text-label-lg hover:bg-surface-container transition-colors flex items-center justify-center gap-space-xs active:scale-[0.98] w-1/2 sm:w-auto" type="button">
+<span class="material-symbols-outlined text-[22px]">swap_horiz</span>
+<span class="flex flex-col text-left">
+<span>Change Doctor / Ward</span>
+<span class="font-label-sm text-label-sm opacity-80 leading-tight">डॉक्टर / वार्ड बदलें</span>
+</span>
+</button>
+</div>
+<!-- Primary Confirmation Button with Live Print Simulation Microinteraction -->
+<div class="w-full sm:w-auto">
+<button class="w-full sm:w-auto min-h-[56px] px-space-xl rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm hover:bg-primary-container transition-all flex items-center justify-center gap-space-md shadow-md active:scale-[0.98] group" id="confirmKioskBtn" onclick="handleTokenPrint()" type="button">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest/15 flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[24px] group-hover:animate-bounce">print</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-lg text-label-lg font-bold">Confirm &amp; Print OPD Slip #B-14 (Dr. Rao)</span>
+<span class="font-label-sm text-label-sm opacity-90 leading-tight">टोकन पर्ची प्रिंट करें एवं परामर्श कक्ष में जाएं</span>
+</div>
+<span class="material-symbols-outlined text-[26px] ml-space-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Print Modal Overlay Simulation -->
+<div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm hidden items-center justify-center p-space-md" id="printSuccessModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-md w-full p-space-xl shadow-xl flex flex-col items-center text-center gap-space-md animate-in fade-in zoom-in-95 duration-200">
+<div class="w-20 h-20 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[44px]">print</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-lg text-headline-lg text-primary font-bold">Printing Token Slip...</h3>
+<p class="font-label-lg text-label-lg text-on-surface">टोकन पर्ची प्रिंट हो रही है</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+            Please collect your printed token slip <strong>#B-14</strong> from the slot below. Proceed to <strong>OPD Wing B, Room 108</strong> for Dr. Ananya Rao.
+          </p>
+</div>
+<div class="w-full bg-surface-container-low rounded-xl p-space-md flex flex-col gap-2 text-left">
+<div class="flex justify-between text-label-sm text-label-sm">
+<span class="text-on-surface-variant">Patient Name:</span>
+<span class="font-bold text-on-surface">Meera Sharma (F/46)</span>
+</div>
+<div class="flex justify-between text-label-sm text-label-sm">
+<span class="text-on-surface-variant">UHID / ABHA:</span>
+<span class="font-bold text-on-surface">AL-2026-1048</span>
+</div>
+<div class="flex justify-between text-label-sm text-label-sm">
+<span class="text-on-surface-variant">Consulting Doctor:</span>
+<span class="font-bold text-on-surface">Dr. Ananya Rao (Room 108)</span>
+</div>
+<div class="flex justify-between text-label-sm text-label-sm">
+<span class="text-on-surface-variant">Estimated Consult:</span>
+<span class="font-bold text-tertiary">10:52 AM (Wait ~8m)</span>
+</div>
+</div>
+<button class="w-full min-h-[48px] rounded-xl bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors" onclick="closePrintModal()" type="button">
+          Done / संपन्न (Tap to Finish)
+        </button>
+</div>
+</div>
+</div>
+<script>
+    function handleTokenPrint() {
+      const modal = document.getElementById('printSuccessModal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+
+    function closePrintModal() {
+      const modal = document.getElementById('printSuccessModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+  </script>
+</div></main><footer class="fixed bottom-0 left-0 w-full z-40 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.06)]"><div class="h-20 w-full px-gutter-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><button class="min-h-[44px] px-space-lg rounded-xl bg-error-container text-on-error-container flex items-center gap-space-sm font-label-lg text-label-lg hover:bg-error hover:text-on-error transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">support_agent</span><span>Call Attendant / सहायक बुलाएं</span></button><button class="min-h-[44px] px-space-lg rounded-xl bg-surface-container-high text-on-surface flex items-center gap-space-sm font-label-lg text-label-lg hover:bg-surface-container-highest hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">accessible</span><span>Request Wheelchair / व्हीलचेयर अनुरोध</span></button></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs bg-surface-container px-space-md py-space-xs rounded-full"><span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim inline-block"></span><span class="font-label-sm text-label-sm text-on-surface">Triage Kiosk #03 • Ground Floor Atrium</span></div><button class="min-h-[44px] px-space-md rounded-xl bg-surface-container-low text-secondary flex items-center gap-space-xs font-label-md text-label-md hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span><span>SOS Emergency Help</span></button></div></div></footer></body></html>

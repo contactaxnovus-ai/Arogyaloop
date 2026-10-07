@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-lowest":"#ffffff","on-error-container":"#93000a","secondary-container":"#92edff","secondary-fixed":"#9eefff","on-secondary":"#ffffff","on-tertiary-fixed":"#002113","primary-container":"#0b4f6c","error-container":"#ffdad6","on-tertiary-container":"#3dd197","surface-tint":"#2a6482","primary":"#00374e","tertiary":"#003c27","secondary-fixed-dim":"#77d4e5","surface-container-highest":"#d3e4fe","on-surface-variant":"#41484d","surface-container-high":"#dce9ff","on-secondary-fixed-variant":"#004e59","on-tertiary-fixed-variant":"#005236","primary-fixed":"#c5e7ff","tertiary-fixed":"#6ffbbe","surface-dim":"#cbdbf5","on-primary-fixed":"#001e2d","on-tertiary":"#ffffff","background":"#f8f9ff","on-secondary-container":"#006d7b","inverse-surface":"#213145","error":"#ba1a1a","on-surface":"#0b1c30","on-secondary-fixed":"#001f24","surface":"#f8f9ff","on-primary-container":"#8ac0e1","on-error":"#ffffff","tertiary-container":"#005539","secondary":"#006876","outline-variant":"#c0c7ce","tertiary-fixed-dim":"#4edea3","surface-container-low":"#eff4ff","inverse-primary":"#97cdef","surface-variant":"#d3e4fe","surface-bright":"#f8f9ff","primary-fixed-dim":"#97cdef","on-primary-fixed-variant":"#054c69","on-primary":"#ffffff","outline":"#71787e","surface-container":"#e5eeff","on-background":"#0b1c30","inverse-on-surface":"#eaf1ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","space-sm":"0.5rem","margin-desktop":"2rem","gutter":"1rem","gutter-desktop":"1.5rem","margin":"1rem","space-lg":"1.5rem","space-md":"1rem","space-xl":"2rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"currency-bold":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["22px",{"lineHeight":"28px","fontWeight":"600"}],"currency-bold":["15px",{"lineHeight":"20px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"30px","letterSpacing":"0em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(11,79,108,0.06)]"><div class="h-[88px] px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><div class="w-11 h-11 rounded-xl bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[24px]">local_hospital</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight font-bold">Arogya City Hospital</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">NABH Accredited Tertiary Center · ABDM Enabled</span></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm shadow-sm"><span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim ring-2 ring-tertiary/20 animate-pulse"></span><span class="font-semibold text-primary">ABDM Live Sync:</span><span class="text-secondary font-medium">Connected (M3 Bridge)</span></div><div class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-secondary-container/40 text-secondary font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px]">auto_awesome</span><span>AI-assisted, staff-reviewed</span></div><div class="flex items-center gap-space-sm pl-space-sm bg-surface-container-low px-3 py-1.5 rounded-xl cursor-pointer hover:bg-surface-container transition-colors"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Dr. Ananya Rao</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-tight flex items-center justify-end gap-1"><span>OPD Physician · Shift A</span><span class="material-symbols-outlined text-[14px]">expand_more</span></div></div><div class="w-9 h-9 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-md text-label-md font-bold ring-2 ring-primary-fixed">AR</div></div></div></div></header><aside class="fixed left-0 top-[88px] h-[calc(100vh-88px)] w-64 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md shadow-[1px_0_6px_rgba(11,79,108,0.03)]"><nav class="space-y-1 px-3 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm"><div class="px-3 pb-2 text-[10px] font-label-sm tracking-wider uppercase text-outline font-bold">Clinical &amp; Front Desk</div><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="reception-omni-channel-hub" href="#">Reception Omni-Channel Hub</a><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="doctor-clinical-workspace" href="#">Doctor Clinical Workspace</a><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="pathology-diagnostics" href="#">Pathology Diagnostics</a><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="pharmacy-dispensing" href="#">Pharmacy Dispensing</a><div class="px-3 pt-3 pb-2 text-[10px] font-label-sm tracking-wider uppercase text-outline font-bold">Revenue &amp; Operations</div><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="central-billing-accounts" href="#">Central Billing &amp; Accounts</a><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="admin-operations-hub" href="#">Admin Operations Hub</a><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="hospital-system-settings-application-setup" href="#">Hospital System Settings / Application Setup</a></nav><div class="px-4 py-3 mx-3 bg-surface-container-low rounded-lg space-y-1 shrink-0"><div class="font-label-sm text-label-sm text-on-surface-variant">Hospital Network Status</div><div class="font-body-sm text-body-sm text-secondary font-semibold flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-tertiary-container">verified</span>HIS/FHIR Live Gateway</div></div></aside><div class="pl-64"><main class="relative min-h-screen bg-background p-space-md lg:p-gutter-desktop pt-[88px]"><div class="flex flex-col w-full">
+<div class="pt-28 flex flex-col gap-space-lg w-full max-w-[1600px] mx-auto pb-16">
+<!-- Top Breadcrumb & Setup Suite Tabs Header -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>Hospital Application Setup</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Terminal Fleet &amp; Kiosk Gateway (v4.2.1-Edge)</span>
+</div>
+<div class="flex items-center gap-3">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Kiosk &amp; Reception Terminal Configuration</h1>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">cell_tower</span>
+              ABDM M3 Mesh Active
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+            Configure standalone lobby self-check kiosks, assisted POS reception desks, optical barcode/ABHA scanners, thermal ticket printer formatters, and emergency priority auto-bump rules.
+          </p>
+</div>
+<!-- Global Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="h-11 px-4 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md flex items-center gap-2 shadow-sm transition-all duration-150 active:scale-95" id="btn-ping-terminals">
+<span class="material-symbols-outlined text-[18px]">network_ping</span>
+<span>Ping All Edge Terminals</span>
+</button>
+<button class="h-11 px-4 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-secondary font-label-md text-label-md flex items-center gap-2 shadow-sm transition-all duration-150 active:scale-95" id="btn-ota-update">
+<span class="material-symbols-outlined text-[18px]">system_update_alt</span>
+<span>Push OTA UI Update</span>
+</button>
+<button class="h-11 px-5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-2 shadow-md transition-all duration-150 active:scale-95">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Add Terminal Node</span>
+</button>
+</div>
+</div>
+<!-- Arogya City Setup Suite 5-Tab Bar -->
+<div class="p-1.5 rounded-2xl bg-surface-container-low flex flex-wrap gap-1 shadow-sm">
+<a class="px-4 py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">apartment</span>
+<span>Tab 1: Facility &amp; Department Masters</span>
+</a>
+<a class="px-4 py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">medical_services</span>
+<span>Tab 2: Doctor Roster &amp; Chambers</span>
+</a>
+<a class="px-4 py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Tab 3: Tariff &amp; Billing Master</span>
+</a>
+<a class="px-4 py-2.5 rounded-xl font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm font-bold flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px] text-secondary">touch_app</span>
+<span>Tab 4: Kiosk &amp; Reception Config</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+</a>
+<a class="px-4 py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">vaccines</span>
+<span>Tab 5: Pathology &amp; Pharmacy Master</span>
+</a>
+</div>
+</div>
+<!-- Live Telemetry KPI Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Deployed Nodes</span>
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight">5 / 5</span>
+<span class="font-body-sm text-body-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 100% Edge Node Uptime
+          </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">devices</span>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Avg Touch Latency</span>
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight">13<span class="text-headline-md font-body-md text-on-surface-variant">ms</span></span>
+<span class="font-body-sm text-body-sm text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">speed</span> Sub-20ms threshold met
+          </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">touch_app</span>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Avg Thermal Roll Status</span>
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight">79<span class="text-headline-md font-body-md text-on-surface-variant">%</span></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary-container">receipt</span> Min node is 62% (ER Kiosk)
+          </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">print</span>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Today's Token Throughput</span>
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight">1,842</span>
+<span class="font-body-sm text-body-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">qr_code_scanner</span> 73% ABHA / QR Instant
+          </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">confirmation_number</span>
+</div>
+</div>
+</div>
+<!-- Section 2: Hardware & Station Fleet Manager -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-6 rounded-full bg-primary"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Edge Kiosk Hardware &amp; Station Fleet Manager</h2>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">5 Hardware Units</span>
+</div>
+<div class="hidden sm:flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span> Online</span>
+<span class="flex items-center gap-1 ml-2"><span class="w-2 h-2 rounded-full bg-secondary-fixed"></span> Assisted POS</span>
+</div>
+</div>
+<!-- Fleet Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-md">
+<!-- Terminal 01: Main Lobby -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[22px]">smart_display</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Terminal 01</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse"></span> Online
+                    </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Main Lobby Standalone Kiosk</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Floor G</span>
+</div>
+<!-- Hardware Specs & Diagnostics -->
+<div class="p-3 rounded-xl bg-surface-container-low flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>IP Address:</span>
+<span class="font-semibold text-on-surface font-mono">192.168.1.101</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>MAC Address:</span>
+<span class="font-mono text-on-surface">00:1A:2B:3C:4D:5E</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Touchscreen Latency:</span>
+<span class="font-semibold text-tertiary font-mono">12ms (Optimal)</span>
+</div>
+</div>
+<!-- Peripheral Statuses -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="p-2.5 rounded-xl bg-surface-container-high/60 flex flex-col gap-1">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">qr_code_scanner</span>
+<span>Optical Scanner</span>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-bold">Active &amp; Calibrated</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-high/60 flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">print</span>
+<span>Thermal Printer</span>
+</span>
+<span class="font-bold text-on-surface">84%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-fixed-dim rounded-full" style="width: 84%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm px-1">
+<span>Language Default:</span>
+<span class="font-semibold text-primary">Bilingual (EN / HI)</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">sensors</span> Ping Node
+            </button>
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+</button>
+</div>
+</div>
+<!-- Terminal 02: Emergency Wing Check-in -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[22px]">emergency</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Terminal 02</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse"></span> Online
+                    </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Emergency Wing Check-in</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-error-container/60 text-error font-label-sm text-label-sm font-semibold">Triage Red</span>
+</div>
+<!-- Hardware Specs -->
+<div class="p-3 rounded-xl bg-surface-container-low flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>IP Address:</span>
+<span class="font-semibold text-on-surface font-mono">192.168.1.102</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Priority Triage Mode:</span>
+<span class="font-bold text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Enabled (Direct Bump)
+                </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Touch Latency:</span>
+<span class="font-semibold text-tertiary font-mono">9ms (High-Speed)</span>
+</div>
+</div>
+<!-- Peripheral Statuses -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="p-2.5 rounded-xl bg-surface-container-high/60 flex flex-col gap-1">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">qr_code_scanner</span>
+<span>Scanner</span>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-bold">Active (Rapid-Read)</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-high/60 flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">print</span>
+<span>Paper Roll</span>
+</span>
+<span class="font-bold text-on-surface">62%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 62%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm px-1">
+<span>Failover Route:</span>
+<span class="font-semibold text-on-surface">ER Desk 01 Biometric</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">sensors</span> Ping Node
+            </button>
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+</button>
+</div>
+</div>
+<!-- Terminal 03: OPD Wing B -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[22px]">co_present</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Terminal 03</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse"></span> Online
+                    </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">OPD Wing B Self-Check</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Floor 2</span>
+</div>
+<!-- Hardware Specs -->
+<div class="p-3 rounded-xl bg-surface-container-low flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>IP Address:</span>
+<span class="font-semibold text-on-surface font-mono">192.168.1.103</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Associated Clinics:</span>
+<span class="font-medium text-on-surface">Pediatrics &amp; Orthopedics</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Touch Latency:</span>
+<span class="font-semibold text-tertiary font-mono">15ms (Healthy)</span>
+</div>
+</div>
+<!-- Peripheral Statuses -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="p-2.5 rounded-xl bg-surface-container-high/60 flex flex-col gap-1">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">qr_code_scanner</span>
+<span>Scanner</span>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-bold">Active (Wide-Angle)</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-high/60 flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">print</span>
+<span>Paper Roll</span>
+</span>
+<span class="font-bold text-on-surface">91%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-fixed-dim rounded-full" style="width: 91%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm px-1">
+<span>Language Default:</span>
+<span class="font-semibold text-primary">Hindi / English / Dialect</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">sensors</span> Ping Node
+            </button>
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+</button>
+</div>
+</div>
+<!-- Reception Desk 01: Assisted Omni-Channel -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md xl:col-span-1.5 hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[22px]">desktop_mac</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Reception Desk 01</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span> Online
+                    </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Central Hub · Omni-Channel Assisted POS</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container/50 text-secondary font-label-sm text-label-sm font-semibold">Dual Screen</span>
+</div>
+<!-- Hardware Configuration -->
+<div class="p-3 rounded-xl bg-surface-container-low flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Hardware Architecture:</span>
+<span class="font-semibold text-on-surface">Dual Screen POS (Staff + Patient)</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Biometric Scanner:</span>
+<span class="font-semibold text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">fingerprint</span> ABHA Iris / Fingerprint Sync
+                </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Printer Setup:</span>
+<span class="font-medium text-on-surface">Heavy-duty Desktop Thermal (98% Roll)</span>
+</div>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-high/60 flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Assigned Staff Session:</span>
+<span class="font-semibold text-primary">K. Sharma (Desk Lead · Shift 1)</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">print</span> Test Slip Print
+            </button>
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Reception Desk 02: Assisted Omni-Channel -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md xl:col-span-1.5 hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[22px]">desktop_windows</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Reception Desk 02</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span> Online
+                    </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Express &amp; Senior Citizen Counter</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container/50 text-secondary font-label-sm text-label-sm font-semibold">Dual Screen</span>
+</div>
+<!-- Hardware Configuration -->
+<div class="p-3 rounded-xl bg-surface-container-low flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Hardware Architecture:</span>
+<span class="font-semibold text-on-surface">Dual Screen POS + Optical QR Gun</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Biometric Scanner:</span>
+<span class="font-semibold text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">fingerprint</span> ABHA Biometric Ready
+                </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Printer Setup:</span>
+<span class="font-medium text-on-surface">Desktop Thermal ESC/POS (87% Roll)</span>
+</div>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-high/60 flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Assigned Staff Session:</span>
+<span class="font-semibold text-primary">P. Verma (Patient Coordinator)</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">print</span> Test Slip Print
+            </button>
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3 & 4: Two-Column Deep Setup Engine -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Workflow Customization Engine (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Kiosk Flow & Workflow Customization Engine Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between border-b-0 pb-1">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">account_tree</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Kiosk Flow &amp; Workflow Customization Engine</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Patient self-service capabilities, verification gates &amp; routing logic</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-lg bg-secondary-container/40 text-secondary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span> AI-assisted, staff-reviewed
+            </span>
+</div>
+<!-- Self-Service Feature Toggles List -->
+<div class="flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm text-outline font-bold uppercase tracking-wider">Self-Service Modes &amp; Gateways</span>
+<!-- Toggle 1: Appointment QR -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[24px] text-primary mt-0.5">qr_code_2</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Appointment QR / Booking ID Scan</span>
+<span class="px-2 py-0.5 rounded-md bg-tertiary-fixed-dim/30 text-tertiary font-label-sm text-label-sm">Instant 1-Step</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                    Scans Arogya WhatsApp booking QR or SMS Token ID. Instantly generates physical queue token and pushes live slot alert to consulting doctor.
+                  </p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 2: New Patient Registration ABDM ABHA -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[24px] text-secondary mt-0.5">badge</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">New Patient Registration with ABDM ABHA Creation</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Mobile OTP</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                    Allows walk-in patients to create 14-digit ABHA ID via Aadhaar / Mobile OTP. Links Arogya UHID seamlessly with ABDM M3 Gateway.
+                  </p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 3: Find Doctor & Chambers -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[24px] text-primary mt-0.5">person_search</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Find Doctor &amp; Department Directory</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm">Live Chambers</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                    Interactive floor map &amp; live doctor availability board. Displays current queue delay estimates and next consult slot.
+                  </p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 4: Guided Symptom Intake & Auto-Routing -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[24px] text-tertiary-container mt-0.5">clinical_notes</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Guided Symptom Intake &amp; Specialty Auto-Routing</span>
+<span class="px-2 py-0.5 rounded-md bg-primary-fixed text-primary font-label-sm text-label-sm font-semibold">Staff Guardrail</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                    Presents pictorial symptom selector (Chest, Abdominal, Ortho, Pediatric). Suggests clinic, but mandates Triage Nurse signoff before OPD slip generation.
+                  </p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<!-- Language Pack & Dialects Configuration -->
+<div class="flex flex-col gap-space-sm pt-2">
+<span class="font-label-sm text-label-sm text-outline font-bold uppercase tracking-wider">Multi-Lingual Touchscreen Interface Packs</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="p-3 rounded-xl bg-primary-container text-on-primary flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[20px]">language</span>
+<div>
+<div class="font-label-md text-label-md font-bold">English (IN)</div>
+<div class="font-label-sm text-label-sm text-on-primary-container">Primary System Lang</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low text-on-surface flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[20px] text-secondary">translate</span>
+<div>
+<div class="font-label-md text-label-md font-bold">हिंदी (Hindi)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Devanagari UI Pack</div>
+</div>
+</div>
+<input checked="" class="w-4 h-4 rounded text-primary" type="checkbox"/>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low text-on-surface flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[20px] text-secondary">record_voice_over</span>
+<div>
+<div class="font-label-md text-label-md font-bold">Marwari / Dialect</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Voice Prompt Audio</div>
+</div>
+</div>
+<input checked="" class="w-4 h-4 rounded text-primary" type="checkbox"/>
+</div>
+</div>
+</div>
+<!-- Inactivity Timeout Slider -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">timer</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Touchscreen Inactivity Session Timeout</span>
+</div>
+<span class="font-currency-bold text-currency-bold text-primary font-bold px-2 py-0.5 rounded bg-surface-container" id="timeout-display">45 Seconds</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Resets UI to welcoming home screen with a 10s audio chime countdown alert to safeguard unattended patient ABHA data.
+            </p>
+<input class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" id="timeout-slider" max="90" min="15" step="5" type="range" value="45"/>
+<div class="flex justify-between font-label-sm text-label-sm text-outline px-1">
+<span>15s (Strict)</span>
+<span>30s</span>
+<span class="font-bold text-primary">45s (NABH Recommended)</span>
+<span>60s</span>
+<span>90s (Extended)</span>
+</div>
+</div>
+</div>
+<!-- Reception Desk Assisted Policies & Fast-track -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">shield_person</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Reception Desk Assisted Policies &amp; Fast-Track</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Human-in-the-loop overrides, supervisor PIN protocols &amp; triage bumps</p>
+</div>
+</div>
+<!-- Queue Override Authorization Level -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Manual Queue Priority Override</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Allows reception staff to insert urgent walk-in patients ahead of booked slots.
+                </p>
+</div>
+<span class="px-2.5 py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+                Requires Lead PIN
+              </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-2">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface">Desk Lead PIN Auth</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Mandatory (4-digit)</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface">Audit Trail Logged</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">HIS Immutable DB</span>
+</div>
+</div>
+</div>
+<!-- Emergency Auto-Bump Clinical Rules -->
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-outline font-bold uppercase tracking-wider">Automated Fast-Track Bump Rules (Zero-Delay)</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<div class="p-3 rounded-xl bg-error-container/40 flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-error font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">pulmonology</span>
+<span>SpO2 &lt; 94%</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Immediate Red Triage · Direct Red Bed allocation</span>
+</div>
+<div class="p-3 rounded-xl bg-error-container/40 flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-error font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">cardiology</span>
+<span>Chest Pain / Angina</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Stat ECG Trigger · Notify ER Resident</span>
+</div>
+<div class="p-3 rounded-xl bg-secondary-container/40 flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">elderly</span>
+<span>Geriatric &gt; 75 Yrs</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Automated Top 3 Slot Placement in General OPD</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Slip Designer & Edge Telemetry (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Token Slip Print Format Designer -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-xl bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">receipt</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Token Slip Print Designer</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Thermal ESC/POS 80mm Canvas</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Ready
+            </span>
+</div>
+<!-- Thermal Slip Preview Paper Graphic -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col items-center">
+<div class="w-full max-w-[280px] bg-surface-container-lowest p-5 rounded-lg shadow-md font-mono text-on-surface flex flex-col gap-2.5 text-center text-body-sm select-none">
+<!-- Slip Header -->
+<div class="border-b-0 pb-2">
+<div class="font-bold text-headline-sm leading-tight text-primary">Arogya City Hospital</div>
+<div class="text-[10px] text-on-surface-variant mt-0.5">Civil Lines Metro, South Block · NABH Tertiary</div>
+<div class="text-[9px] text-on-surface-variant mt-0.5">ABHA Health Facility ID: IN0829104</div>
+</div>
+<!-- Barcode / QR Simulation -->
+<div class="flex justify-center py-1">
+<div class="w-24 h-24 bg-surface-container-lowest p-1 rounded flex items-center justify-center shadow-inner">
+<!-- Inline SVG QR Code Representation -->
+<svg class="w-full h-full text-on-surface" fill="currentColor" viewbox="0 0 100 100">
+<rect fill="none" height="28" rx="2" stroke="currentColor" stroke-width="6" width="28" x="5" y="5"></rect>
+<rect height="10" width="10" x="14" y="14"></rect>
+<rect fill="none" height="28" rx="2" stroke="currentColor" stroke-width="6" width="28" x="67" y="5"></rect>
+<rect height="10" width="10" x="76" y="14"></rect>
+<rect fill="none" height="28" rx="2" stroke="currentColor" stroke-width="6" width="28" x="5" y="67"></rect>
+<rect height="10" width="10" x="14" y="76"></rect>
+<rect height="8" width="8" x="42" y="10"></rect>
+<rect height="6" width="6" x="52" y="24"></rect>
+<rect height="18" width="18" x="40" y="40"></rect>
+<rect height="10" width="10" x="65" y="45"></rect>
+<rect height="8" width="8" x="45" y="68"></rect>
+<rect height="6" width="20" x="70" y="70"></rect>
+<rect height="12" width="12" x="80" y="80"></rect>
+</svg>
+</div>
+</div>
+<!-- Big Token Number -->
+<div class="py-1">
+<div class="text-[11px] uppercase tracking-wider text-on-surface-variant font-sans font-semibold">Consultation Token No.</div>
+<div class="text-[34px] font-bold text-primary tracking-wider leading-none mt-1">OPD-B42</div>
+<div class="text-[11px] text-tertiary font-sans font-semibold mt-1">Priority: Normal · Estimated Wait: ~14 Mins</div>
+</div>
+<!-- Consultation Details -->
+<div class="bg-surface-container-low p-2 rounded text-left text-[11px] space-y-1">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Doctor:</span>
+<span class="font-bold">Dr. Ananya Rao</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Dept:</span>
+<span>Cardiology (OPD Wing B)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Chamber:</span>
+<span class="font-bold text-primary">Chamber 204 (2nd Floor)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">UHID:</span>
+<span class="font-mono">ACH-2024-91820</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Time:</span>
+<span>Today, 10:48 AM</span>
+</div>
+</div>
+<!-- Footer with SMS Notice -->
+<div class="text-[9px] text-on-surface-variant space-y-0.5 pt-1">
+<div>Directions: Lift B to Level 2 → Turn Right</div>
+<div class="font-sans text-[10px] text-primary font-medium">SMS token updates dispatched to registered mobile</div>
+<div>Please be seated near Chamber 204 digital display</div>
+</div>
+</div>
+</div>
+<!-- Designer Controls -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Hospital Brand Header Text</label>
+<input class="h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest outline-none" type="text" value="Arogya City Hospital"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<label class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary" type="checkbox"/>
+<span class="font-label-md text-label-md text-on-surface">Print Dynamic QR</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary" type="checkbox"/>
+<span class="font-label-md text-label-md text-on-surface">Chamber Directions</span>
+</label>
+</div>
+<label class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">sms</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">SMS / WhatsApp Fallback Dispatch</span>
+</div>
+<input checked="" class="w-4 h-4 rounded text-primary" type="checkbox"/>
+</label>
+<button class="h-11 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save &amp; Propagate Slip Format</span>
+</button>
+</div>
+</div>
+<!-- Live Edge Telemetry Diagnostics Panel -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-xl bg-tertiary-container text-on-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">monitor_heart</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Edge Telemetry Diagnostics</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Real-time daemon ping &amp; peripheral testing</p>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim animate-ping"></span>
+</div>
+<!-- Diagnostic Interactive Hub -->
+<div class="flex flex-col gap-space-sm">
+<div class="p-3 rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Target Diagnostic Terminal</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Select Node</span>
+</div>
+<select class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm outline-none">
+<option value="term01">Terminal 01 - Main Lobby (192.168.1.101)</option>
+<option value="term02">Terminal 02 - Emergency Wing (192.168.1.102)</option>
+<option value="term03">Terminal 03 - OPD Wing B (192.168.1.103)</option>
+<option value="desk01">Reception Desk 01 POS (192.168.1.111)</option>
+<option value="desk02">Reception Desk 02 POS (192.168.1.112)</option>
+</select>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<button class="p-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary flex flex-col items-center justify-center gap-1.5 transition-colors" id="btn-diag-ping">
+<span class="material-symbols-outlined text-[20px]">wifi_tethering</span>
+<span class="font-label-sm text-label-sm font-bold">Ping ICMP Test</span>
+</button>
+<button class="p-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-secondary flex flex-col items-center justify-center gap-1.5 transition-colors" id="btn-diag-print">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+<span class="font-label-sm text-label-sm font-bold">Printer Test Slip</span>
+</button>
+<button class="p-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-tertiary flex flex-col items-center justify-center gap-1.5 transition-colors" id="btn-diag-calib">
+<span class="material-symbols-outlined text-[20px]">center_focus_strong</span>
+<span class="font-label-sm text-label-sm font-bold">Scanner Calibrate</span>
+</button>
+</div>
+<!-- Console Log Simulation -->
+<div class="p-3 rounded-xl bg-surface-container-highest/60 font-mono text-[11px] text-on-surface-variant space-y-1 max-h-36 overflow-y-auto" id="diagnostic-console">
+<div class="flex items-center justify-between text-tertiary font-semibold">
+<span>[10:48:12] Gateway Daemon Active</span>
+<span>Port 8443 SSL</span>
+</div>
+<div>[10:48:15] Terminal 01: Heartbeat ACK received (12ms)</div>
+<div>[10:48:16] Terminal 02: Emergency Mode telemetry active</div>
+<div>[10:48:18] Terminal 03: Thermal sensor 34°C, Platen closed</div>
+<div>[10:48:20] Desk 01: ABHA Biometric RD service PID verified</div>
+<div class="text-secondary font-medium">[10:48:22] ABDM M3 Token Bridge connected · All 5 nodes synchronized</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interactions for the configuration panel
+  document.addEventListener('DOMContentLoaded', () => {
+    // Inactivity timeout slider label updater
+    const timeoutSlider = document.getElementById('timeout-slider');
+    const timeoutDisplay = document.getElementById('timeout-display');
+    if (timeoutSlider && timeoutDisplay) {
+      timeoutSlider.addEventListener('input', (e) => {
+        timeoutDisplay.textContent = `${e.target.value} Seconds`;
+      });
+    }
+
+    // Diagnostic console logger helpers
+    const consoleBox = document.getElementById('diagnostic-console');
+    const appendLog = (msg, colorClass = '') => {
+      if (!consoleBox) return;
+      const now = new Date().toTimeString().split(' ')[0];
+      const div = document.createElement('div');
+      if (colorClass) div.className = colorClass;
+      div.textContent = `[${now}] ${msg}`;
+      consoleBox.appendChild(div);
+      consoleBox.scrollTop = consoleBox.scrollHeight;
+    };
+
+    // Ping All Edge Terminals Button
+    const btnPing = document.getElementById('btn-ping-terminals');
+    if (btnPing) {
+      btnPing.addEventListener('click', () => {
+        btnPing.classList.add('opacity-70');
+        appendLog('Broadcasting broadcast ARP/ICMP ping to 192.168.1.100/24 subnet...', 'text-primary font-semibold');
+        setTimeout(() => {
+          appendLog('5/5 Nodes responded: T01 (12ms), T02 (9ms), T03 (15ms), D01 (4ms), D02 (5ms)', 'text-tertiary font-bold');
+          btnPing.classList.remove('opacity-70');
+        }, 600);
+      });
+    }
+
+    // OTA Update Button
+    const btnOta = document.getElementById('btn-ota-update');
+    if (btnOta) {
+      btnOta.addEventListener('click', () => {
+        appendLog('Initiating OTA UI Bundle check for version 4.2.2-patch...', 'text-secondary font-semibold');
+        setTimeout(() => {
+          appendLog('OTA Manifest cached: All Kiosks are running latest production release v4.2.1-Edge.', 'text-tertiary');
+        }, 700);
+      });
+    }
+
+    // Individual Diagnostics triggers
+    const btnDiagPing = document.getElementById('btn-diag-ping');
+    if (btnDiagPing) {
+      btnDiagPing.addEventListener('click', () => {
+        appendLog('Pinging selected node... Latency: 11ms · Jitter: 0.8ms · 0% packet loss', 'text-primary');
+      });
+    }
+
+    const btnDiagPrint = document.getElementById('btn-diag-print');
+    if (btnDiagPrint) {
+      btnDiagPrint.addEventListener('click', () => {
+        appendLog('Triggered ESC/POS hardware self-test print sequence to thermal printhead.', 'text-secondary');
+      });
+    }
+
+    const btnDiagCalib = document.getElementById('btn-diag-calib');
+    if (btnDiagCalib) {
+      btnDiagCalib.addEventListener('click', () => {
+        appendLog('Triggered optical QR reader illumination & focal recalibration.', 'text-tertiary');
+      });
+    }
+  });
+</script></main></div></body></html>

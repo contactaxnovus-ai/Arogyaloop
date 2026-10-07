@@ -1,0 +1,12 @@
+node_modules
+**/node_modules
+dist
+**/dist
+.git
+.gitignore
+.pnpm-store
+*.log
+ux-kiosk-review.png
+reference
+IMPLEMENTATION_PLAN.md
+UX_VALIDATION.md

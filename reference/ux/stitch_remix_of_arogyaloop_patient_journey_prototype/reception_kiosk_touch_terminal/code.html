@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ArogyaLoop OPD Self-Service Kiosk</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-variant": "#d3e4fe",
+            "on-primary": "#ffffff",
+            "inverse-on-surface": "#eaf1ff",
+            "surface-dim": "#cbdbf5",
+            "secondary-fixed": "#9eefff",
+            "inverse-surface": "#213145",
+            "on-primary-fixed": "#001e2d",
+            "on-secondary-fixed": "#001f24",
+            "secondary-container": "#92edff",
+            "on-error": "#ffffff",
+            "primary-container": "#0b4f6c",
+            "on-secondary": "#ffffff",
+            "tertiary-container": "#005539",
+            "on-error-container": "#93000a",
+            "tertiary-fixed": "#6ffbbe",
+            "primary-fixed": "#c5e7ff",
+            "on-secondary-fixed-variant": "#004e59",
+            "outline-variant": "#c0c7ce",
+            "on-primary-container": "#8ac0e1",
+            "on-tertiary-fixed": "#002113",
+            "inverse-primary": "#97cdef",
+            "background": "#f8f9ff",
+            "primary-fixed-dim": "#97cdef",
+            "surface-container": "#e5eeff",
+            "outline": "#71787e",
+            "tertiary-fixed-dim": "#4edea3",
+            "surface-container-highest": "#d3e4fe",
+            "surface-bright": "#f8f9ff",
+            "primary": "#00374e",
+            "on-tertiary-fixed-variant": "#005236",
+            "on-primary-fixed-variant": "#054c69",
+            "error": "#ba1a1a",
+            "on-secondary-container": "#006d7b",
+            "tertiary": "#003c27",
+            "secondary-fixed-dim": "#77d4e5",
+            "surface-tint": "#2a6482",
+            "secondary": "#006876",
+            "on-tertiary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "surface": "#f8f9ff",
+            "on-tertiary-container": "#3dd197",
+            "on-background": "#0b1c30",
+            "on-surface": "#0b1c30",
+            "on-surface-variant": "#41484d",
+            "surface-container-low": "#eff4ff",
+            "surface-container-high": "#dce9ff",
+            "error-container": "#ffdad6"
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-none">
+<!-- ================= TOP KIOSK HEADER ================= -->
+<header class="bg-surface-container-lowest border-b border-outline-variant/30 px-6 lg:px-12 py-3.5 shadow-sm sticky top-0 z-40">
+<div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+<!-- Hospital & Solution Identity -->
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-primary-container text-on-primary flex items-center justify-center shadow-md shrink-0">
+<span class="material-symbols-outlined text-[28px]">local_hospital</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-bold text-lg md:text-xl text-primary tracking-tight">ArogyaLoop</span>
+<span class="text-xs text-on-surface-variant font-medium">by Axnovus</span>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container-high text-primary tracking-wide">KIOSK #03</span>
+</div>
+<div class="text-xs md:text-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+<span>Arogya City Hospital, Jaipur • OPD Wing Self-Service</span>
+</div>
+</div>
+</div>
+<!-- Live Badge, Language Toggle, Audio Assist & ABDM Status -->
+<div class="flex items-center gap-3">
+<!-- ABDM Discreet Badge -->
+<div class="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container-low text-secondary font-medium text-xs border border-outline-variant/30" title="Ayushman Bharat Digital Mission compliant gateway active">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>ABDM: Integration in progress</span>
+</div>
+<!-- Live Clock & Date -->
+<div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container-low text-on-surface text-xs font-semibold">
+<span class="material-symbols-outlined text-secondary text-[16px]">schedule</span>
+<span id="kiosk-live-clock">10:30 AM IST</span>
+<span class="text-outline-variant">|</span>
+<span class="text-on-surface-variant font-normal">24 Oct</span>
+</div>
+<!-- Language Switcher Pill -->
+<div class="inline-flex p-1 rounded-xl bg-surface-container border border-outline-variant/30">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-bold text-xs shadow-sm transition-all" id="lang-en" onclick="setLanguage('en')" type="button">English</button>
+<button class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-semibold text-xs transition-all" id="lang-hi" onclick="setLanguage('hi')" type="button">हिन्दी</button>
+<button class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-semibold text-xs transition-all" id="lang-hng" onclick="setLanguage('hng')" type="button">Hinglish</button>
+</div>
+<!-- Voice Guidance Assist -->
+<button aria-label="Activate Voice Guidance" class="w-10 h-10 rounded-xl bg-surface-container hover:bg-secondary-container/50 text-secondary flex items-center justify-center transition-all shadow-sm group border border-outline-variant/30" id="voice-btn" onclick="toggleVoiceAssist()" type="button">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">volume_up</span>
+</button>
+</div>
+</div>
+</header>
+<!-- ================= MAIN TOUCH INTERFACE BODY ================= -->
+<main class="flex-1 flex flex-col justify-center max-w-7xl mx-auto w-full px-6 lg:px-12 py-6">
+<!-- Welcoming Apex Greeting -->
+<div class="text-center max-w-3xl mx-auto mb-8 lg:mb-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/40 text-on-secondary-container text-xs font-bold uppercase tracking-wider mb-3">
+<span class="material-symbols-outlined text-[15px]">touch_app</span>
+<span>Self-Service Touch Terminal • त्वरित स्वयंसेवा कियोस्क</span>
+</div>
+<h1 class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-on-surface tracking-tight leading-tight mb-2.5" id="hero-title">
+        Welcome to Arogya City Hospital
+      </h1>
+<p class="text-base sm:text-lg text-secondary font-semibold mb-2" id="hero-subtitle-hi">
+        आरोग्य सिटी हॉस्पिटल में आपका स्वागत है
+      </p>
+<p class="text-sm sm:text-base text-on-surface-variant leading-relaxed" id="hero-desc">
+        Touch an option below to proceed. Get instant appointment slips, find the right doctor based on your symptoms, or register as a new patient.
+      </p>
+</div>
+<!-- THE 3 PRIMARY TOUCH CARDS (HERO GRID) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch mb-8">
+<!-- CARD 1: I HAVE AN APPOINTMENT -->
+<div class="group relative bg-surface-container-lowest rounded-3xl p-7 lg:p-8 border border-outline-variant/40 shadow-sm hover:shadow-xl hover:border-secondary transition-all duration-300 flex flex-col justify-between cursor-pointer ring-0 active:scale-[0.99]" onclick="openAppointmentScanModal()">
+<div>
+<!-- Icon & Accent Badge -->
+<div class="flex items-start justify-between mb-6">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-low text-primary flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary transition-all duration-300 shadow-sm">
+<span class="material-symbols-outlined text-[34px]">qr_code_scanner</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container text-primary font-bold text-[11px] tracking-wider uppercase">
+              Fast Check-In / तुरंत पर्ची
+            </span>
+</div>
+<!-- Card Titles -->
+<h2 class="text-xl lg:text-2xl font-bold text-on-surface group-hover:text-primary transition-colors mb-1">
+            I have an Appointment
+          </h2>
+<p class="text-sm font-semibold text-secondary mb-3">
+            मेरी पहले से बुकिंग है
+          </p>
+<!-- Description -->
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed mb-6">
+            Scan appointment QR code from your SMS / WhatsApp receipt or enter your 10-digit mobile number / 6-digit booking ID to print your OPD token slip immediately.
+          </p>
+</div>
+<!-- Action Button -->
+<button class="w-full py-3.5 px-4 rounded-xl bg-surface-container group-hover:bg-primary text-primary group-hover:text-on-primary font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-sm" type="button">
+<span>Scan QR or Enter Booking ID</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- CARD 2: FIND A DOCTOR & CHECK SYMPTOMS (PRIMARY PROMINENCE) -->
+<div class="group relative bg-surface-container-lowest rounded-3xl p-7 lg:p-8 border-2 border-primary/20 shadow-md hover:shadow-2xl hover:border-primary transition-all duration-300 flex flex-col justify-between cursor-pointer ring-0 active:scale-[0.99] relative overflow-hidden" onclick="openFindDoctorModal()">
+<!-- AI Triage Highlight Ribbon -->
+<div class="absolute top-0 right-0 bg-primary-container text-on-primary text-[10px] font-extrabold uppercase px-4 py-1 rounded-bl-xl tracking-wider flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">auto_awesome</span>
+<span>AI-Assisted Triage</span>
+</div>
+<div>
+<!-- Icon & Accent Badge -->
+<div class="flex items-start justify-between mb-6">
+<div class="w-16 h-16 rounded-2xl bg-secondary-container/40 text-secondary flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300 shadow-sm">
+<span class="material-symbols-outlined text-[34px]">stethoscope</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-container/50 text-on-secondary-container font-bold text-[11px] tracking-wider uppercase mt-4">
+              लक्षण आधारित
+            </span>
+</div>
+<!-- Card Titles -->
+<h2 class="text-xl lg:text-2xl font-bold text-on-surface group-hover:text-primary transition-colors mb-1">
+            Find a Doctor &amp; Symptoms
+          </h2>
+<p class="text-sm font-semibold text-secondary mb-3">
+            डॉक्टर खोजें एवं लक्षण जांचें
+          </p>
+<!-- Description -->
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed mb-6">
+            Not sure which specialist to consult? Enter your symptoms or health concern. We match you with the right OPD department and doctor.
+          </p>
+</div>
+<!-- Action Button -->
+<button class="w-full py-3.5 px-4 rounded-xl bg-secondary group-hover:bg-primary-container text-on-secondary font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-md" type="button">
+<span>Find Doctor by Symptoms</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- CARD 3: REGISTER NEW PATIENT -->
+<div class="group relative bg-surface-container-lowest rounded-3xl p-7 lg:p-8 border border-outline-variant/40 shadow-sm hover:shadow-xl hover:border-primary transition-all duration-300 flex flex-col justify-between cursor-pointer ring-0 active:scale-[0.99]" onclick="openRegisterModal()">
+<div>
+<!-- Icon & Accent Badge -->
+<div class="flex items-start justify-between mb-6">
+<div class="w-16 h-16 rounded-2xl bg-primary-container/10 text-primary flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary transition-all duration-300 shadow-sm">
+<span class="material-symbols-outlined text-[34px]">person_add_alt</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-bold text-[11px] tracking-wider uppercase">
+              New Registration / नया पंजीकरण
+            </span>
+</div>
+<!-- Card Titles -->
+<h2 class="text-xl lg:text-2xl font-bold text-on-surface group-hover:text-primary transition-colors mb-1">
+            Register New Patient
+          </h2>
+<p class="text-sm font-semibold text-secondary mb-3">
+            नया मरीज पंजीकरण
+          </p>
+<!-- Description -->
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed mb-6">
+            First time visiting Arogya Hospital? Create your digital hospital card (UHID) in under 60 seconds with verified mobile number and basic details.
+          </p>
+</div>
+<!-- Action Button -->
+<button class="w-full py-3.5 px-4 rounded-xl bg-surface-container group-hover:bg-primary text-primary group-hover:text-on-primary font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-sm" type="button">
+<span>Register New Patient</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Quick Walk-in Live Metrics Indicator -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto w-full">
+<div class="bg-surface-container-lowest/80 border border-outline-variant/30 rounded-2xl px-4 py-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">group</span>
+<div>
+<div class="text-[11px] text-on-surface-variant font-medium">OPD Waiting</div>
+<div class="text-sm font-bold text-on-surface">34 Patients (~14 min)</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest/80 border border-outline-variant/30 rounded-2xl px-4 py-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">medical_services</span>
+<div>
+<div class="text-[11px] text-on-surface-variant font-medium">On-Duty Doctors</div>
+<div class="text-sm font-bold text-on-surface">18 OPD Specialists</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest/80 border border-outline-variant/30 rounded-2xl px-4 py-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified</span>
+<div>
+<div class="text-[11px] text-on-surface-variant font-medium">Digital EMR</div>
+<div class="text-sm font-bold text-on-surface">ABDM Ready</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest/80 border border-outline-variant/30 rounded-2xl px-4 py-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">mic</span>
+<div>
+<div class="text-[11px] text-on-surface-variant font-medium">Assisted Mode</div>
+<div class="text-sm font-bold text-on-surface">Voice Enabled</div>
+</div>
+</div>
+</div>
+</main>
+<!-- ================= CLEAN BOTTOM ASSISTANCE BAR ================= -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/30 px-6 lg:px-12 py-3.5 z-40">
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+<!-- Attendant & Staff Help -->
+<div class="flex items-center gap-2 text-on-surface text-xs sm:text-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">support_agent</span>
+<span>Need physical assistance? Visit <strong>Counter 4</strong> or call duty staff:</span>
+</div>
+<!-- Quick Action Assistance Buttons -->
+<div class="flex items-center gap-2.5">
+<button class="px-3.5 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-bold text-xs flex items-center gap-1.5 transition-colors border border-outline-variant/30" onclick="triggerCallAttendant()" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">notifications_active</span>
+<span>Call Attendant 🔔</span>
+</button>
+<button class="px-3.5 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-bold text-xs flex items-center gap-1.5 transition-colors border border-outline-variant/30" onclick="triggerWheelchair()" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">accessible</span>
+<span>Request Wheelchair ♿</span>
+</button>
+<span class="hidden md:inline text-xs text-on-surface-variant pl-2">
+          Emergency Desk: Ext. #102
+        </span>
+</div>
+</div>
+</footer>
+<!-- ========================================================================= -->
+<!-- MODAL 1: APPOINTMENT FAST CHECK-IN                                        -->
+<!-- ========================================================================= -->
+<div class="hidden fixed inset-0 z-50 overflow-y-auto bg-on-surface/50 backdrop-blur-sm flex items-center justify-center p-4" id="modal-appointment-scan">
+<div class="bg-surface-container-lowest rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden flex flex-col border border-outline-variant/30 animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header -->
+<div class="p-6 bg-surface-container-low flex items-center justify-between border-b border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-2xl bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">event_available</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-on-surface">Appointment Fast Check-In</h3>
+<p class="text-xs text-secondary font-semibold">अपॉइंटमेंट टोकन स्कैनर एवं पर्ची प्रिंट</p>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" onclick="closeAllModals()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Quick Fill Demo Bar -->
+<div class="px-6 py-2.5 bg-surface-container/40 flex items-center justify-between text-xs border-b border-outline-variant/20">
+<span class="text-on-surface-variant">Demo patient: Meera Sharma (Dr. Ananya Rao)</span>
+<button class="text-secondary font-bold hover:underline flex items-center gap-1" onclick="quickFillAppointment('9829012345', 'B-1048')" type="button">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Pre-fill Token B-1048</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-6 space-y-5">
+<!-- Barcode Scan Simulator -->
+<div class="p-5 rounded-2xl bg-surface-container-low flex flex-col items-center justify-center text-center border border-dashed border-outline-variant relative overflow-hidden">
+<span class="material-symbols-outlined text-[54px] text-primary">qr_code_scanner</span>
+<span class="text-xs font-semibold text-on-surface mt-1">Hold SMS / WhatsApp QR below the kiosk scanner</span>
+<span class="text-[11px] text-on-surface-variant">Scanner ready...</span>
+<div class="absolute inset-x-0 h-0.5 bg-secondary top-1/2 -translate-y-1/2 animate-pulse opacity-70"></div>
+</div>
+<div class="flex items-center gap-3 text-xs text-outline-variant">
+<div class="h-px bg-outline-variant flex-1"></div>
+<span class="text-on-surface-variant font-medium">OR ENTER MANUALLY</span>
+<div class="h-px bg-outline-variant flex-1"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-bold text-on-surface mb-1" for="appt-mobile">Registered Mobile</label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 text-xs text-on-surface-variant font-bold">+91</span>
+<input class="w-full h-11 pl-11 pr-3 rounded-xl bg-surface-container-low border border-outline-variant/30 text-on-surface text-sm font-semibold focus:outline-none focus:border-secondary" id="appt-mobile" maxlength="10" placeholder="98290 12345" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface mb-1" for="appt-token-input">Booking ID / Token</label>
+<input class="w-full h-11 px-3 rounded-xl bg-surface-container-low border border-outline-variant/30 text-on-surface text-sm font-semibold uppercase focus:outline-none focus:border-secondary" id="appt-token-input" placeholder="e.g. B-1048" type="text"/>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-6 bg-surface-bright border-t border-outline-variant/20 flex items-center justify-end gap-3">
+<button class="px-5 h-11 rounded-xl text-on-surface-variant font-semibold text-sm hover:bg-surface-container transition-colors" onclick="closeAllModals()" type="button">
+          Cancel
+        </button>
+<button class="px-6 h-11 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-bold text-sm shadow-md flex items-center gap-2 transition-all" onclick="handleAppointmentPrintSlip()" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Verify &amp; Print OPD Slip</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 2: FIND A DOCTOR & CHECK SYMPTOMS (PATIENT LOOKUP)                 -->
+<!-- ========================================================================= -->
+<div class="hidden fixed inset-0 z-50 overflow-y-auto bg-on-surface/50 backdrop-blur-sm flex items-center justify-center p-4" id="modal-find-doctor">
+<div class="bg-surface-container-lowest rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden flex flex-col border border-outline-variant/30 animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header -->
+<div class="p-6 bg-surface-container-low flex items-center justify-between border-b border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-2xl bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">person_search</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-on-surface">Find Doctor &amp; Triage</h3>
+<p class="text-xs text-secondary font-semibold">मरीज सत्यापन एवं लक्षण जांच (Step 1 of 2)</p>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" onclick="closeAllModals()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Quick Preset Demo Bar -->
+<div class="px-6 py-2.5 bg-surface-container/40 flex items-center justify-between text-xs border-b border-outline-variant/20">
+<span class="text-on-surface-variant">Looking for quick test case?</span>
+<button class="text-secondary font-bold hover:underline flex items-center gap-1" onclick="quickFillFindDoctor('Meera Sharma', '9829012345')" type="button">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Fill 'Meera Sharma'</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-6 space-y-4">
+<!-- Patient Name -->
+<div>
+<label class="block text-xs font-bold text-on-surface mb-1" for="find-patient-name">
+            Patient Full Name / पूरा नाम <span class="text-error font-bold">*</span>
+</label>
+<input class="w-full h-11 px-3.5 rounded-xl bg-surface-container-low border border-outline-variant/30 text-on-surface text-sm font-semibold focus:outline-none focus:border-secondary transition-all" id="find-patient-name" placeholder="e.g. Meera Sharma" type="text"/>
+<div class="hidden text-error text-xs font-semibold mt-1 flex items-center gap-1" id="find-name-error">
+<span class="material-symbols-outlined text-[14px]">error</span>
+<span>Please enter patient full name.</span>
+</div>
+</div>
+<!-- Mobile Number -->
+<div>
+<label class="block text-xs font-bold text-on-surface mb-1" for="find-patient-mobile">
+            Mobile Number / मोबाइल नंबर <span class="text-error font-bold">*</span>
+</label>
+<div class="relative">
+<span class="absolute left-3.5 top-2.5 text-xs text-on-surface-variant font-bold">+91</span>
+<input class="w-full h-11 pl-12 pr-3.5 rounded-xl bg-surface-container-low border border-outline-variant/30 text-on-surface text-sm font-semibold focus:outline-none focus:border-secondary transition-all" id="find-patient-mobile" maxlength="10" placeholder="98290 12345" type="tel"/>
+</div>
+<p class="text-[11px] text-on-surface-variant mt-1">
+            Strictly 10 digits Indian mobile (starts with 6, 7, 8, 9 — no leading 0)
+          </p>
+<div class="hidden text-error text-xs font-semibold mt-1 flex items-center gap-1" id="find-mobile-error">
+<span class="material-symbols-outlined text-[14px]">error</span>
+<span id="find-mobile-error-text">Valid 10-digit mobile required (cannot start with 0).</span>
+</div>
+</div>
+<div class="p-3.5 rounded-2xl bg-surface-container text-on-surface-variant text-xs flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">info</span>
+<span>We instantly check Rajasthan State Health &amp; Arogya EMR records to load previous medical history and past consults.</span>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-6 bg-surface-bright border-t border-outline-variant/20 flex items-center justify-end gap-3">
+<button class="px-5 h-11 rounded-xl text-on-surface-variant font-semibold text-sm hover:bg-surface-container transition-colors" onclick="closeAllModals()" type="button">
+          Cancel
+        </button>
+<button class="px-6 h-11 rounded-xl bg-secondary hover:bg-primary-container text-on-secondary font-bold text-sm shadow-md flex items-center gap-2 transition-all" onclick="handleFindDoctorLookup()" type="button">
+<span class="material-symbols-outlined text-[18px]">search</span>
+<span>Find Patient &amp; Continue</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 3: REGISTER NEW PATIENT                                            -->
+<!-- ========================================================================= -->
+<div class="hidden fixed inset-0 z-50 overflow-y-auto bg-on-surface/50 backdrop-blur-sm flex items-center justify-center p-4" id="modal-register-patient">
+<div class="bg-surface-container-lowest rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden flex flex-col border border-outline-variant/30 animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header -->
+<div class="p-6 bg-surface-container-low flex items-center justify-between border-b border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-2xl bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">person_add</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-on-surface">New Patient Registration</h3>
+<p class="text-xs text-secondary font-semibold">नया मरीज पंजीकरण फार्म (Under 60s)</p>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" onclick="closeAllModals()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Quick Preset Demo Bar -->
+<div class="px-6 py-2.5 bg-surface-container/40 flex items-center justify-between text-xs border-b border-outline-variant/20">
+<span class="text-on-surface-variant">Duplicate Detection Demo?</span>
+<button class="text-secondary font-bold hover:underline flex items-center gap-1" onclick="quickFillRegister('Meera Sharma', '9829012345', 'female', '46')" type="button">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Fill 'Meera Sharma'</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-6 space-y-4">
+<!-- Full Name (Mandatory) -->
+<div>
+<label class="block text-xs font-bold text-on-surface mb-1" for="reg-full-name">
+            Full Name / पूरा नाम <span class="text-error font-bold">*</span>
+</label>
+<input class="w-full h-11 px-3.5 rounded-xl bg-surface-container-low border border-outline-variant/30 text-on-surface text-sm font-semibold focus:outline-none focus:border-primary transition-all" id="reg-full-name" placeholder="Patient's official legal name" type="text"/>
+<div class="hidden text-error text-xs font-semibold mt-1 flex items-center gap-1" id="reg-name-error">
+<span class="material-symbols-outlined text-[14px]">error</span>
+<span>Full Name is mandatory.</span>
+</div>
+</div>
+<!-- Mobile Number (Mandatory) -->
+<div>
+<label class="block text-xs font-bold text-on-surface mb-1" for="reg-mobile">
+            Mobile Number / मोबाइल नंबर <span class="text-error font-bold">*</span>
+</label>
+<div class="relative">
+<span class="absolute left-3.5 top-2.5 text-xs text-on-surface-variant font-bold">+91</span>
+<input class="w-full h-11 pl-12 pr-3.5 rounded-xl bg-surface-container-low border border-outline-variant/30 text-on-surface text-sm font-semibold focus:outline-none focus:border-primary transition-all" id="reg-mobile" maxlength="10" placeholder="98290 12345" type="tel"/>
+</div>
+<p class="text-[11px] text-on-surface-variant mt-1">
+            10 digits, cannot start with 0 (strictly 6, 7, 8, 9)
+          </p>
+<div class="hidden text-error text-xs font-semibold mt-1 flex items-center gap-1" id="reg-mobile-error">
+<span class="material-symbols-outlined text-[14px]">error</span>
+<span id="reg-mobile-error-text">Mobile must be 10 digits and cannot start with 0.</span>
+</div>
+</div>
+<!-- Sex / Gender (Mandatory touch cards) -->
+<div>
+<label class="block text-xs font-bold text-on-surface mb-1">
+            Sex / Gender / लिंग <span class="text-error font-bold">*</span>
+</label>
+<div class="grid grid-cols-3 gap-2" id="gender-selection">
+<button class="h-11 rounded-xl bg-surface-container-low border border-outline-variant/30 text-on-surface text-xs font-bold flex items-center justify-center gap-1.5 hover:bg-surface-container transition-all" id="btn-gender-female" onclick="selectGender('female')" type="button">
+<span class="material-symbols-outlined text-[18px]">female</span>
+<span>Female</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low border border-outline-variant/30 text-on-surface text-xs font-bold flex items-center justify-center gap-1.5 hover:bg-surface-container transition-all" id="btn-gender-male" onclick="selectGender('male')" type="button">
+<span class="material-symbols-outlined text-[18px]">male</span>
+<span>Male</span>
+</button>
+<button class="h-11 rounded-xl bg-surface-container-low border border-outline-variant/30 text-on-surface text-xs font-bold flex items-center justify-center gap-1.5 hover:bg-surface-container transition-all" id="btn-gender-other" onclick="selectGender('other')" type="button">
+<span class="material-symbols-outlined text-[18px]">transgender</span>
+<span>Other</span>
+</button>
+</div>
+<input id="selected-gender" type="hidden" value=""/>
+<div class="hidden text-error text-xs font-semibold mt-1 flex items-center gap-1" id="reg-gender-error">
+<span class="material-symbols-outlined text-[14px]">error</span>
+<span>Please select a gender option.</span>
+</div>
+</div>
+<!-- Age (Optional) -->
+<div>
+<label class="block text-xs font-bold text-on-surface mb-1" for="reg-age">
+            Age in Years / उम्र <span class="text-on-surface-variant font-normal text-[11px]">(Optional)</span>
+</label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 rounded-xl bg-surface-container-low border border-outline-variant/30 text-on-surface text-sm font-semibold focus:outline-none focus:border-primary transition-all" id="reg-age" max="120" min="0" placeholder="e.g. 46" type="number"/>
+<span class="absolute right-3.5 top-2.5 text-xs text-on-surface-variant font-medium">Years</span>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-6 bg-surface-bright border-t border-outline-variant/20 flex items-center justify-between">
+<button class="text-secondary text-xs font-bold flex items-center gap-1 hover:underline" onclick="quickFillRandomNewPatient()" type="button">
+<span class="material-symbols-outlined text-[16px]">shuffle</span>
+<span>Generate Unique Patient</span>
+</button>
+<div class="flex items-center gap-3">
+<button class="px-4 h-11 rounded-xl text-on-surface-variant font-semibold text-sm hover:bg-surface-container transition-colors" onclick="closeAllModals()" type="button">
+            Cancel
+          </button>
+<button class="px-6 h-11 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-bold text-sm shadow-md flex items-center gap-2 transition-all" onclick="handleRegisterSubmit()" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Register &amp; Proceed</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 4: MATCH LOCATED RECORD (MEERA SHARMA FOUND)                       -->
+<!-- ========================================================================= -->
+<div class="hidden fixed inset-0 z-50 overflow-y-auto bg-on-surface/50 backdrop-blur-sm flex items-center justify-center p-4" id="modal-match-located">
+<div class="bg-surface-container-lowest rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden flex flex-col border border-outline-variant/30 animate-in fade-in zoom-in-95 duration-200">
+<div class="p-6 bg-surface-container-low flex items-center gap-3 border-b border-outline-variant/20">
+<div class="w-12 h-12 rounded-2xl bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">how_to_reg</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-on-surface">Existing Patient Located!</h3>
+<p class="text-xs text-secondary font-semibold">पूर्व-पंजीकृत रिकॉर्ड मिल गया है (Arogya Master Index)</p>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<!-- Patient Summary Box -->
+<div class="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="text-lg font-bold text-primary">Meera Sharma</span>
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-xs font-bold">UHID: AL-2026-1048</span>
+</div>
+<div class="text-xs text-on-surface-variant font-medium">
+            46 Y / Female • Mobile: +91 98290 12345
+          </div>
+<div class="pt-2 border-t border-outline-variant/20 grid grid-cols-2 gap-2 text-xs text-on-surface">
+<div>
+<span class="text-outline">Past History:</span>
+<span class="font-semibold block">Fatigue, Mild Thyroid</span>
+</div>
+<div>
+<span class="text-outline">Last Consult:</span>
+<span class="font-semibold block">Dr. Mehta (Gen Med)</span>
+</div>
+</div>
+</div>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+          Selecting this profile carries forward Meera Sharma's ongoing medications and history directly into the Symptom Guided Intake screen.
+        </p>
+</div>
+<div class="p-6 bg-surface-bright border-t border-outline-variant/20 flex items-center justify-end gap-3">
+<button class="px-4 h-11 rounded-xl text-on-surface-variant font-semibold text-sm hover:bg-surface-container transition-colors" onclick="closeAllModals()" type="button">
+          Back
+        </button>
+<button class="px-6 h-11 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-bold text-sm shadow-md flex items-center gap-2 transition-all" onclick="navigateToGuidedIntake('AL-2026-1048', 'Meera Sharma')" type="button">
+<span>Use Profile &amp; Go to Symptom Triage</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 5: DUPLICATE DETECTION WARNING                                      -->
+<!-- ========================================================================= -->
+<div class="hidden fixed inset-0 z-50 overflow-y-auto bg-on-surface/50 backdrop-blur-sm flex items-center justify-center p-4" id="modal-duplicate-alert">
+<div class="bg-surface-container-lowest rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden flex flex-col border border-outline-variant/30 animate-in fade-in zoom-in-95 duration-200">
+<div class="p-6 bg-error-container text-on-error-container flex items-center gap-3">
+<div class="w-12 h-12 rounded-2xl bg-error text-on-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">warning</span>
+</div>
+<div>
+<h3 class="text-xl font-bold">Existing Patient Record Found!</h3>
+<p class="text-xs">डुप्लिकेट पंजीकरण रोकथाम (ABDM Guard)</p>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<p class="text-sm text-on-surface leading-relaxed">
+          A patient profile already exists for <strong id="dup-name">Meera Sharma</strong> with mobile <strong id="dup-phone">+91 98290 12345</strong>. Creating a duplicate UHID is prevented:
+        </p>
+<div class="p-4 rounded-2xl bg-surface-container border border-outline-variant/30">
+<div class="flex items-center justify-between mb-2">
+<span class="text-base font-bold text-primary" id="dup-uhid">UHID: AL-2026-1048</span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold">ABDM Verified</span>
+</div>
+<div class="text-xs text-on-surface-variant space-y-1">
+<div><span class="text-outline">Patient:</span> <strong class="text-on-surface" id="dup-patient-title">Meera Sharma</strong> (46 Y / Female)</div>
+<div><span class="text-outline">Prior Records:</span> Thyroid Profile, Fatigue, Dr. Mehta consult</div>
+</div>
+</div>
+</div>
+<div class="p-6 bg-surface-bright border-t border-outline-variant/20 flex flex-col gap-2.5">
+<button class="w-full h-12 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-bold text-sm shadow-md flex items-center justify-center gap-2 transition-all" onclick="navigateToGuidedIntake('AL-2026-1048', 'Meera Sharma')" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Use Existing Profile &amp; Find Doctor</span>
+</button>
+<button class="w-full h-11 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors" onclick="openRegisterModal()" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Correct Details / अलग जानकारी दर्ज करें</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 6: NEW UNIQUE PATIENT SUCCESS                                       -->
+<!-- ========================================================================= -->
+<div class="hidden fixed inset-0 z-50 overflow-y-auto bg-on-surface/50 backdrop-blur-sm flex items-center justify-center p-4" id="modal-new-success">
+<div class="bg-surface-container-lowest rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden flex flex-col border border-outline-variant/30 animate-in fade-in zoom-in-95 duration-200">
+<div class="p-6 bg-tertiary-container text-on-tertiary flex items-center gap-3">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+</div>
+<div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed text-[11px] font-bold">New Digital Health Card Created</span>
+<h3 class="text-xl font-bold mt-1" id="success-reg-uhid">UHID: AL-2026-9421</h3>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 flex flex-col gap-1 text-xs">
+<div class="text-base font-bold text-primary" id="success-reg-name">Kavita Rathore</div>
+<div class="text-on-surface-variant font-medium" id="success-reg-meta">Female • 32 Years • Mobile +91 98291 44821</div>
+<div class="mt-2 text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">send_to_mobile</span>
+<span>Digital card link sent via SMS</span>
+</div>
+</div>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+          Your hospital card is active. Proceed now to check symptoms or select your OPD specialist.
+        </p>
+</div>
+<div class="p-6 bg-surface-bright border-t border-outline-variant/20 flex items-center justify-end gap-3">
+<button class="px-4 h-11 rounded-xl text-on-surface-variant font-semibold text-sm hover:bg-surface-container transition-colors" onclick="closeAllModals()" type="button">
+          Print Card Only
+        </button>
+<button class="px-6 h-11 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-bold text-sm shadow-md flex items-center gap-2 transition-all" onclick="proceedFromSuccessToGuidedIntake()" type="button">
+<span>Proceed to Guided Intake</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 7: INSTANT SLIP PRINTED CONFIRMATION (CARD 1 FLOW)                  -->
+<!-- ========================================================================= -->
+<div class="hidden fixed inset-0 z-50 overflow-y-auto bg-on-surface/50 backdrop-blur-sm flex items-center justify-center p-4" id="modal-slip-printed">
+<div class="bg-surface-container-lowest rounded-3xl w-full max-w-md shadow-2xl overflow-hidden flex flex-col border border-outline-variant/30 animate-in fade-in zoom-in-95 duration-200">
+<div class="p-6 bg-secondary text-on-secondary flex items-center gap-3">
+<span class="material-symbols-outlined text-[32px]">receipt_long</span>
+<div>
+<h3 class="text-lg font-bold">OPD Slip Dispensed!</h3>
+<p class="text-xs">पर्ची नीचे ट्रे से प्राप्त करें</p>
+</div>
+</div>
+<div class="p-6 space-y-3 text-center">
+<div class="w-16 h-16 rounded-full bg-secondary-container/40 text-secondary mx-auto flex items-center justify-center">
+<span class="material-symbols-outlined text-[36px] animate-bounce">south</span>
+</div>
+<div class="text-base font-bold text-on-surface">Token #B-14 Dispensed</div>
+<div class="text-xs text-on-surface-variant">
+          Meera Sharma (UHID: AL-2026-1048)<br/>
+          Attending: <strong>Dr. Ananya Rao</strong> • Room 204
+        </div>
+<p class="text-xs text-secondary font-semibold pt-2">
+          Please collect your printed paper receipt from the dispenser tray below.
+        </p>
+</div>
+<div class="p-4 bg-surface-bright flex justify-center">
+<button class="w-full py-3 rounded-xl bg-primary text-on-primary font-bold text-xs" onclick="closeAllModals()" type="button">
+          Done / Return to Home
+        </button>
+</div>
+</div>
+</div>
+<!-- ================= JAVASCRIPT LOGIC ================= -->
+<script>
+    // Known test record for duplicate prevention & demo continuity
+    const KNOWN_RECORD = {
+      name: 'Meera Sharma',
+      phone: '9829012345',
+      uhid: 'AL-2026-1048',
+      age: '46',
+      gender: 'female',
+      doctor: 'Dr. Ananya Rao'
+    };
+
+    // Live Clock Simulation
+    function updateClock() {
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      const clockEl = document.getElementById('kiosk-live-clock');
+      if (clockEl) {
+        clockEl.textContent = `${hours}:${minutes} ${ampm} IST`;
+      }
+    }
+    setInterval(updateClock, 30000);
+    updateClock();
+
+    // Mobile Validation: Strictly 10 digits, cannot start with 0 (6, 7, 8, 9)
+    function isValidIndianMobile(mobile) {
+      const clean = (mobile || '').replace(/\D/g, '');
+      const regex = /^[6-9]\d{9}$/;
+      return regex.test(clean);
+    }
+
+    // Language Toggle
+    function setLanguage(lang) {
+      const btnEn = document.getElementById('lang-en');
+      const btnHi = document.getElementById('lang-hi');
+      const btnHng = document.getElementById('lang-hng');
+      const heroTitle = document.getElementById('hero-title');
+      const heroHi = document.getElementById('hero-subtitle-hi');
+      const heroDesc = document.getElementById('hero-desc');
+
+      [btnEn, btnHi, btnHng].forEach(btn => {
+        btn.className = "px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-semibold text-xs transition-all";
+      });
+
+      if (lang === 'hi') {
+        btnHi.className = "px-3.5 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-bold text-xs shadow-sm transition-all";
+        heroTitle.textContent = "आरोग्य सिटी हॉस्पिटल में आपका स्वागत है";
+        heroHi.textContent = "Welcome to Arogya City OPD";
+        heroDesc.textContent = "आगे बढ़ने के लिए नीचे दिए गए विकल्प को स्पर्श करें। तुरंत पर्ची प्राप्त करें, लक्षण जांचें या नया मरीज पंजीकरण करें।";
+      } else if (lang === 'hng') {
+        btnHng.className = "px-3.5 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-bold text-xs shadow-sm transition-all";
+        heroTitle.textContent = "Arogya City OPD Mein Swagat Hai";
+        heroHi.textContent = "Touch any option below to proceed";
+        heroDesc.textContent = "Apna booking slip print karein, symptoms check karke doctor khojein ya naya patient register karein.";
+      } else {
+        btnEn.className = "px-3.5 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-bold text-xs shadow-sm transition-all";
+        heroTitle.textContent = "Welcome to Arogya City Hospital";
+        heroHi.textContent = "आरोग्य सिटी हॉस्पिटल में आपका स्वागत है";
+        heroDesc.textContent = "Touch an option below to proceed. Get instant appointment slips, find the right doctor based on your symptoms, or register as a new patient.";
+      }
+    }
+
+    // Voice Guidance Audio Assist
+    function toggleVoiceAssist() {
+      const btn = document.getElementById('voice-btn');
+      const isSpeaking = btn.classList.contains('bg-secondary');
+      if (isSpeaking) {
+        btn.className = "w-10 h-10 rounded-xl bg-surface-container hover:bg-secondary-container/50 text-secondary flex items-center justify-center transition-all shadow-sm group border border-outline-variant/30";
+        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      } else {
+        btn.className = "w-10 h-10 rounded-xl bg-secondary text-on-secondary flex items-center justify-center transition-all shadow-md group animate-pulse border border-secondary";
+        if ('speechSynthesis' in window) {
+          const text = "Welcome to Arogya City Hospital Jaipur OPD Kiosk. Please touch an option: I have an appointment, Find a doctor by symptoms, or Register new patient.";
+          const utter = new SpeechSynthesisUtterance(text);
+          utter.rate = 0.95;
+          utter.onend = () => {
+            btn.className = "w-10 h-10 rounded-xl bg-surface-container hover:bg-secondary-container/50 text-secondary flex items-center justify-center transition-all shadow-sm group border border-outline-variant/30";
+          };
+          window.speechSynthesis.speak(utter);
+        }
+      }
+    }
+
+    // Modal Control Helpers
+    function closeAllModals() {
+      const modalIds = [
+        'modal-appointment-scan',
+        'modal-find-doctor',
+        'modal-register-patient',
+        'modal-match-located',
+        'modal-duplicate-alert',
+        'modal-new-success',
+        'modal-slip-printed'
+      ];
+      modalIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.add('hidden');
+      });
+    }
+
+    // CARD 1: Appointment Modal
+    function openAppointmentScanModal() {
+      closeAllModals();
+      document.getElementById('modal-appointment-scan').classList.remove('hidden');
+    }
+
+    function quickFillAppointment(phone, token) {
+      document.getElementById('appt-mobile').value = phone;
+      document.getElementById('appt-token-input').value = token;
+    }
+
+    function handleAppointmentPrintSlip() {
+      closeAllModals();
+      document.getElementById('modal-slip-printed').classList.remove('hidden');
+    }
+
+    // CARD 2: Find a Doctor & Symptoms
+    function openFindDoctorModal() {
+      closeAllModals();
+      document.getElementById('find-name-error').classList.add('hidden');
+      document.getElementById('find-mobile-error').classList.add('hidden');
+      document.getElementById('modal-find-doctor').classList.remove('hidden');
+    }
+
+    function quickFillFindDoctor(name, phone) {
+      document.getElementById('find-patient-name').value = name;
+      document.getElementById('find-patient-mobile').value = phone;
+      document.getElementById('find-name-error').classList.add('hidden');
+      document.getElementById('find-mobile-error').classList.add('hidden');
+    }
+
+    function handleFindDoctorLookup() {
+      const name = (document.getElementById('find-patient-name').value || '').trim();
+      const mobile = (document.getElementById('find-patient-mobile').value || '').replace(/\D/g, '');
+
+      let hasError = false;
+      if (!name) {
+        document.getElementById('find-name-error').classList.remove('hidden');
+        hasError = true;
+      } else {
+        document.getElementById('find-name-error').classList.add('hidden');
+      }
+
+      if (!isValidIndianMobile(mobile)) {
+        document.getElementById('find-mobile-error').classList.remove('hidden');
+        hasError = true;
+      } else {
+        document.getElementById('find-mobile-error').classList.add('hidden');
+      }
+
+      if (hasError) return;
+
+      closeAllModals();
+      // Match against known patient Meera Sharma or exact phone
+      if (name.toLowerCase().includes('meera') || mobile === KNOWN_RECORD.phone) {
+        document.getElementById('modal-match-located').classList.remove('hidden');
+      } else {
+        // Transfer into register modal with prefilled data
+        openRegisterModal();
+        document.getElementById('reg-full-name').value = name;
+        document.getElementById('reg-mobile').value = mobile;
+      }
+    }
+
+    // CARD 3: Register New Patient
+    function openRegisterModal() {
+      closeAllModals();
+      document.getElementById('reg-name-error').classList.add('hidden');
+      document.getElementById('reg-mobile-error').classList.add('hidden');
+      document.getElementById('reg-gender-error').classList.add('hidden');
+      document.getElementById('modal-register-patient').classList.remove('hidden');
+    }
+
+    function selectGender(gender) {
+      document.getElementById('selected-gender').value = gender;
+      ['female', 'male', 'other'].forEach(g => {
+        const btn = document.getElementById(`btn-gender-${g}`);
+        if (g === gender) {
+          btn.className = "h-11 rounded-xl bg-primary text-on-primary text-xs font-bold flex items-center justify-center gap-1.5 shadow-sm transition-all";
+        } else {
+          btn.className = "h-11 rounded-xl bg-surface-container-low border border-outline-variant/30 text-on-surface text-xs font-bold flex items-center justify-center gap-1.5 hover:bg-surface-container transition-all";
+        }
+      });
+      document.getElementById('reg-gender-error').classList.add('hidden');
+    }
+
+    function quickFillRegister(name, phone, gender, age) {
+      document.getElementById('reg-full-name').value = name;
+      document.getElementById('reg-mobile').value = phone;
+      document.getElementById('reg-age').value = age;
+      selectGender(gender);
+    }
+
+    function quickFillRandomNewPatient() {
+      const names = ['Kavita Rathore', 'Devendra Singh', 'Pooja Agarwal', 'Vikram Choudhary'];
+      const chosenName = names[Math.floor(Math.random() * names.length)];
+      const randomPhone = '9829' + Math.floor(100000 + Math.random() * 900000);
+      document.getElementById('reg-full-name').value = chosenName;
+      document.getElementById('reg-mobile').value = randomPhone;
+      document.getElementById('reg-age').value = Math.floor(24 + Math.random() * 40);
+      selectGender('female');
+    }
+
+    function handleRegisterSubmit() {
+      const name = (document.getElementById('reg-full-name').value || '').trim();
+      const mobile = (document.getElementById('reg-mobile').value || '').replace(/\D/g, '');
+      const gender = document.getElementById('selected-gender').value;
+      const age = document.getElementById('reg-age').value || '34';
+
+      let hasError = false;
+      if (!name) {
+        document.getElementById('reg-name-error').classList.remove('hidden');
+        hasError = true;
+      } else {
+        document.getElementById('reg-name-error').classList.add('hidden');
+      }
+
+      if (!isValidIndianMobile(mobile)) {
+        document.getElementById('reg-mobile-error').classList.remove('hidden');
+        hasError = true;
+      } else {
+        document.getElementById('reg-mobile-error').classList.add('hidden');
+      }
+
+      if (!gender) {
+        document.getElementById('reg-gender-error').classList.remove('hidden');
+        hasError = true;
+      } else {
+        document.getElementById('reg-gender-error').classList.add('hidden');
+      }
+
+      if (hasError) return;
+
+      // Duplicate Check Logic
+      const isDuplicate = (
+        name.toLowerCase().includes('meera') ||
+        mobile === KNOWN_RECORD.phone
+      );
+
+      closeAllModals();
+
+      if (isDuplicate) {
+        document.getElementById('dup-name').textContent = KNOWN_RECORD.name;
+        document.getElementById('dup-phone').textContent = '+91 ' + KNOWN_RECORD.phone;
+        document.getElementById('dup-uhid').textContent = 'UHID: ' + KNOWN_RECORD.uhid;
+        document.getElementById('dup-patient-title').textContent = KNOWN_RECORD.name;
+        document.getElementById('modal-duplicate-alert').classList.remove('hidden');
+      } else {
+        const newUHID = 'AL-2026-' + Math.floor(7000 + Math.random() * 2000);
+        document.getElementById('success-reg-uhid').textContent = 'UHID: ' + newUHID;
+        document.getElementById('success-reg-name').textContent = name;
+        document.getElementById('success-reg-meta').textContent = `${gender.toUpperCase()} • ${age} Years • Mobile +91 ${mobile}`;
+        document.getElementById('modal-new-success').classList.remove('hidden');
+      }
+    }
+
+    function proceedFromSuccessToGuidedIntake() {
+      const uhid = document.getElementById('success-reg-uhid').textContent.replace('UHID: ', '');
+      const name = document.getElementById('success-reg-name').textContent;
+      navigateToGuidedIntake(uhid, name);
+    }
+
+    function navigateToGuidedIntake(uhid, name) {
+      closeAllModals();
+      alert(`Proceeding to Guided Intake with ${name} (${uhid}).`);
+    }
+
+    // Physical Kiosk Attendant Actions
+    function triggerCallAttendant() {
+      alert("Staff attendant alerted! An OPD coordinator is walking over to Kiosk #03.");
+    }
+
+    function triggerWheelchair() {
+      alert("Wheelchair requested! Patient transport staff dispatched to Kiosk #03.");
+    }
+  </script>
+</body></html>

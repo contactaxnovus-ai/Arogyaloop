@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-lowest":"#ffffff","on-error-container":"#93000a","secondary-container":"#92edff","secondary-fixed":"#9eefff","on-secondary":"#ffffff","on-tertiary-fixed":"#002113","primary-container":"#0b4f6c","error-container":"#ffdad6","on-tertiary-container":"#3dd197","surface-tint":"#2a6482","primary":"#00374e","tertiary":"#003c27","secondary-fixed-dim":"#77d4e5","surface-container-highest":"#d3e4fe","on-surface-variant":"#41484d","surface-container-high":"#dce9ff","on-secondary-fixed-variant":"#004e59","on-tertiary-fixed-variant":"#005236","primary-fixed":"#c5e7ff","tertiary-fixed":"#6ffbbe","surface-dim":"#cbdbf5","on-primary-fixed":"#001e2d","on-tertiary":"#ffffff","background":"#f8f9ff","on-secondary-container":"#006d7b","inverse-surface":"#213145","error":"#ba1a1a","on-surface":"#0b1c30","on-secondary-fixed":"#001f24","surface":"#f8f9ff","on-primary-container":"#8ac0e1","on-error":"#ffffff","tertiary-container":"#005539","secondary":"#006876","outline-variant":"#c0c7ce","tertiary-fixed-dim":"#4edea3","surface-container-low":"#eff4ff","inverse-primary":"#97cdef","surface-variant":"#d3e4fe","surface-bright":"#f8f9ff","primary-fixed-dim":"#97cdef","on-primary-fixed-variant":"#054c69","on-primary":"#ffffff","outline":"#71787e","surface-container":"#e5eeff","on-background":"#0b1c30","inverse-on-surface":"#eaf1ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","space-sm":"0.5rem","margin-desktop":"2rem","gutter":"1rem","gutter-desktop":"1.5rem","margin":"1rem","space-lg":"1.5rem","space-md":"1rem","space-xl":"2rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"currency-bold":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["22px",{"lineHeight":"28px","fontWeight":"600"}],"currency-bold":["15px",{"lineHeight":"20px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"30px","letterSpacing":"0em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(11,79,108,0.06)]"><div class="h-[88px] px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><div class="w-11 h-11 rounded-xl bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[24px]">local_hospital</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight font-bold">Arogya City Hospital</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">NABH Accredited Tertiary Center · ABDM Enabled</span></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm shadow-sm"><span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim ring-2 ring-tertiary/20 animate-pulse"></span><span class="font-semibold text-primary">ABDM Live Sync:</span><span class="text-secondary font-medium">Connected (M3 Bridge)</span></div><div class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-secondary-container/40 text-secondary font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px]">auto_awesome</span><span>AI-assisted, staff-reviewed</span></div><div class="flex items-center gap-space-sm pl-space-sm bg-surface-container-low px-3 py-1.5 rounded-xl cursor-pointer hover:bg-surface-container transition-colors"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Dr. Ananya Rao</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-tight flex items-center justify-end gap-1"><span>OPD Physician · Shift A</span><span class="material-symbols-outlined text-[14px]">expand_more</span></div></div><div class="w-9 h-9 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-md text-label-md font-bold ring-2 ring-primary-fixed">AR</div></div></div></div></header><aside class="fixed left-0 top-[88px] h-[calc(100vh-88px)] w-64 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md shadow-[1px_0_6px_rgba(11,79,108,0.03)]"><nav class="space-y-1 px-3 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm"><div class="px-3 pb-2 text-[10px] font-label-sm tracking-wider uppercase text-outline font-bold">Clinical &amp; Front Desk</div><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="reception-omni-channel-hub" href="#">Reception Omni-Channel Hub</a><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="doctor-clinical-workspace" href="#">Doctor Clinical Workspace</a><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="pathology-diagnostics" href="#">Pathology Diagnostics</a><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="pharmacy-dispensing" href="#">Pharmacy Dispensing</a><div class="px-3 pt-3 pb-2 text-[10px] font-label-sm tracking-wider uppercase text-outline font-bold">Revenue &amp; Operations</div><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="central-billing-accounts" href="#">Central Billing &amp; Accounts</a><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="admin-operations-hub" href="#">Admin Operations Hub</a><a class="block px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="hospital-system-settings-application-setup" href="#">Hospital System Settings / Application Setup</a></nav><div class="px-4 py-3 mx-3 bg-surface-container-low rounded-lg space-y-1 shrink-0"><div class="font-label-sm text-label-sm text-on-surface-variant">Hospital Network Status</div><div class="font-body-sm text-body-sm text-secondary font-semibold flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-tertiary-container">verified</span>HIS/FHIR Live Gateway</div></div></aside><div class="pl-64"><main class="relative min-h-screen bg-background p-space-md lg:p-gutter-desktop pt-[88px]"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-lg pt-28 pb-space-xl">
+<!-- Top Action and Context Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold">Admin Module</span>
+<span class="text-outline text-label-sm font-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary">verified</span>
+            NABH Standard CQI.4 &amp; NABL ISO 15189 Ready
+          </span>
+<span class="text-outline text-label-sm font-label-sm">•</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">auto_awesome</span>
+            AI-assisted, staff-reviewed
+          </span>
+</div>
+<div class="flex items-baseline gap-3">
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight font-bold">Hospital Master Setup / अस्पताल व्यवस्थापन</span>
+<span class="font-label-md text-label-md text-outline">v4.8.2-prod</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Configure diagnostic automated analyzer bidirectionality, critical panic alert limits, tube accessioning SLAs, and pharmacy dispensing guardrails for Arogya City.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="h-11 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-lg text-label-lg flex items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-[18px]">network_check</span>
+<span>LIS Analyzer Check</span>
+</button>
+<button class="h-11 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-lg text-label-lg flex items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-[18px]">cloud_sync</span>
+<span>Sync NABL Directory</span>
+</button>
+<button class="h-11 px-4 rounded-lg bg-secondary text-on-secondary hover:bg-secondary/90 font-label-lg text-label-lg flex items-center gap-2 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px]">add_box</span>
+<span>+ Add Hardware / Rack</span>
+</button>
+<button class="h-11 px-5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg flex items-center gap-2 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Master Rules</span>
+</button>
+</div>
+</div>
+<!-- Navigation Stepper / Tabs -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 bg-surface-container-low p-2 rounded-xl">
+<button class="flex items-center gap-2.5 px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors shrink-0">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold text-[11px]">1</span>
+<span>Facility &amp; Department Masters</span>
+</button>
+<button class="flex items-center gap-2.5 px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors shrink-0">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold text-[11px]">2</span>
+<span>Doctor Roster &amp; Chambers</span>
+</button>
+<button class="flex items-center gap-2.5 px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors shrink-0">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold text-[11px]">3</span>
+<span>Tariff &amp; Billing Master</span>
+</button>
+<button class="flex items-center gap-2.5 px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors shrink-0">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold text-[11px]">4</span>
+<span>Kiosk &amp; Reception Config</span>
+</button>
+<button class="flex items-center gap-2.5 px-4 py-2.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm shrink-0">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[11px]">5</span>
+<span class="font-bold">Pathology &amp; Pharmacy Master</span>
+<span class="w-2 h-2 rounded-full bg-tertiary ml-1"></span>
+</button>
+</div>
+<!-- Section 1: Pathology & Diagnostics Master -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">biotech</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">1. Pathology Diagnostic Engine &amp; Laboratory Suite</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">नैदानिक प्रयोगशाला और विश्लेषक इंटरफ़ेस सेटिंग्स</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+            3/3 Analyzers Connected
+          </span>
+<span class="px-3 py-1 rounded-full bg-secondary-container/50 text-secondary font-label-sm text-label-sm font-semibold">
+            ASTM / HL7 bi-directional LIS active
+          </span>
+</div>
+</div>
+<!-- Instruments Fleet Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Analyzer 01 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-surface-container text-primary font-label-md text-label-md font-bold flex items-center justify-center">#01</span>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Sysmex XN-1000</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hematology Automation Line</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Calibrated
+              </span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1.5 font-label-sm text-label-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Interface Protocol</span>
+<span class="font-bold text-on-surface">ASTM/HL7 Bi-directional</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Optical Barcode Reader</span>
+<span class="font-bold text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Enabled
+                </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>QC Verification</span>
+<span class="font-medium text-on-surface">Passed today, 06:00 AM IST</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mapped Assays / Tests:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">CBC</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Hemogram</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Platelets</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Peripheral Smear</span>
+</div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>ComPort: COM4 (9600-8-N-1)</span>
+<button class="text-primary hover:underline font-semibold flex items-center gap-1">Configure IP</button>
+</div>
+</div>
+<!-- Analyzer 02 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-surface-container text-primary font-label-md text-label-md font-bold flex items-center justify-center">#02</span>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Roche Cobas c311</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Clinical Chemistry Analyzer</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Online
+              </span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1.5 font-label-sm text-label-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Interface Protocol</span>
+<span class="font-bold text-on-surface">HL7 TCP/IP (192.168.10.42)</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Host Query Mode</span>
+<span class="font-bold text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sync_alt</span> Real-time ASTM
+                </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Daily Calibration</span>
+<span class="font-medium text-on-surface">Valid (Expires in 16 hrs)</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mapped Assays / Tests:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">LFT Profile</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">KFT / Renal</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Lipid Profile</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Blood Sugar (FBS/PP)</span>
+</div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Buffer: 120 samples/hr</span>
+<button class="text-primary hover:underline font-semibold flex items-center gap-1">Calibrate Now</button>
+</div>
+</div>
+<!-- Analyzer 03 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-surface-container text-primary font-label-md text-label-md font-bold flex items-center justify-center">#03</span>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Bio-Rad D-10 HPLC</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">High Performance Liquid Chrom.</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Standby
+              </span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1.5 font-label-sm text-label-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Interface Protocol</span>
+<span class="font-bold text-on-surface">RS232 Serial Emulation</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Cartridge Reagents</span>
+<span class="font-bold text-on-surface">248 Tests Remaining</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>NGSP Standard</span>
+<span class="font-medium text-on-surface">Certified Standard</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mapped Assays / Tests:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">HbA1c Glycated Hb</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Variant Hemoglobin</span>
+</div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Standby (Thermal Loop OK)</span>
+<button class="text-primary hover:underline font-semibold flex items-center gap-1">Start Prime</button>
+</div>
+</div>
+</div>
+<!-- Critical Panic Alert Thresholds & Barcode Rule Matrix -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Critical Panic Alert Ranges (STAT Trigger) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">e911_emergency</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">STAT Panic Alert Notification Thresholds</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">महत्वपूर्ण रिपोर्ट अलार्म सीमा (Immediate SMS &amp; Doctor App Push)</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded bg-error-container/40 text-error font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">notifications_active</span> Auto-Broadcast Active
+            </span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface font-label-md text-label-md">
+<th class="py-2.5 px-3">Analyte / Biomarker</th>
+<th class="py-2.5 px-3">Standard Reference</th>
+<th class="py-2.5 px-3 text-error font-bold">Panic Low</th>
+<th class="py-2.5 px-3 text-error font-bold">Panic High</th>
+<th class="py-2.5 px-3">Dispatch Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-2.5 px-3 font-semibold text-primary">
+                    Hemoglobin (Hb)
+                    <span class="block text-[11px] text-outline font-normal">हीमोग्लोबिन • EDTA Blood</span>
+</td>
+<td class="py-2.5 px-3">12.0 - 17.5 g/dL</td>
+<td class="py-2.5 px-3">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-currency-bold text-currency-bold">&lt; 7.0 g/dL</span>
+</td>
+<td class="py-2.5 px-3">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-currency-bold text-currency-bold">&gt; 20.0 g/dL</span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1 text-[11px] font-semibold text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-error">sms_failed</span>
+<span>Doctor Workspace STAT + SMS</span>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-2.5 px-3 font-semibold text-primary">
+                    Platelet Count
+                    <span class="block text-[11px] text-outline font-normal">प्लेटलेट्स • EDTA Tube</span>
+</td>
+<td class="py-2.5 px-3">150,000 - 450,000 /cumm</td>
+<td class="py-2.5 px-3">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-currency-bold text-currency-bold">&lt; 20,000 /cumm</span>
+</td>
+<td class="py-2.5 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-outline font-body-sm text-body-sm">&gt; 1,000,000</span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1 text-[11px] font-semibold text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-error">emergency_share</span>
+<span>HDU/ICU Nurse Station Ping</span>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-2.5 px-3 font-semibold text-primary">
+                    Serum Potassium (K+)
+                    <span class="block text-[11px] text-outline font-normal">पोटेशियम • Serum Separator</span>
+</td>
+<td class="py-2.5 px-3">3.5 - 5.1 mEq/L</td>
+<td class="py-2.5 px-3">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-currency-bold text-currency-bold">&lt; 2.5 mEq/L</span>
+</td>
+<td class="py-2.5 px-3">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-currency-bold text-currency-bold">&gt; 6.2 mEq/L</span>
+</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1 text-[11px] font-semibold text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-error">ring_volume</span>
+<span>Direct IVR Call to Attending Doctor</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span>
+              Panic values trigger an immediate popup on the Clinical EMR header and an encrypted SMS alert.
+            </span>
+<button class="font-bold text-primary hover:underline">+ Add Biomarker</button>
+</div>
+</div>
+<!-- Specimen Tube & Barcode Prefix Rules -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">qr_code_2</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Specimen Vacutainer &amp; Barcode Rules</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">नमूना ट्यूब और बारकोड नियम</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold">SLA: 30 Min Turnaround</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Lavender -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-4 h-9 rounded-full bg-[#9370DB] shadow-sm"></span>
+<div>
+<div class="font-label-md text-label-md text-primary font-bold">Lavender Top (K2/K3 EDTA)</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Whole blood for CBC, ESR, HbA1c</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-currency-bold text-currency-bold text-on-surface bg-surface-container-lowest px-2 py-1 rounded">LAB-EDTA-</span>
+<span class="block text-[10px] text-tertiary font-bold">Auto-Accession OK</span>
+</div>
+</div>
+<!-- Red -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-4 h-9 rounded-full bg-[#E53E3E] shadow-sm"></span>
+<div>
+<div class="font-label-md text-label-md text-primary font-bold">Red / Yellow Top (Plain Serum / SST)</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Clot activator for LFT, KFT, Serology</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-currency-bold text-currency-bold text-on-surface bg-surface-container-lowest px-2 py-1 rounded">LAB-SER-</span>
+<span class="block text-[10px] text-tertiary font-bold">Auto-Accession OK</span>
+</div>
+</div>
+<!-- Grey -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-4 h-9 rounded-full bg-[#A0AEC0] shadow-sm"></span>
+<div>
+<div class="font-label-md text-label-md text-primary font-bold">Grey Top (Sodium Fluoride / Oxalate)</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Plasma for Fasting / PP Glucose</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-currency-bold text-currency-bold text-on-surface bg-surface-container-lowest px-2 py-1 rounded">LAB-GLU-</span>
+<span class="block text-[10px] text-tertiary font-bold">Auto-Accession OK</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Label Generator: Zebra ZD421 (203 DPI)</span>
+<span class="font-bold text-primary cursor-pointer hover:underline">Print Test Strip</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Pharmacy Formulary & Dispensing Counters -->
+<div class="flex flex-col gap-space-md pt-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">medication</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">2. Pharmacy Formulary, Dispensing Counters &amp; Storage Logic</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">फार्मेसी फॉर्मूलरी, काउंटर आवंटन और दवा सुरक्षा विन्यास</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">ac_unit</span>
+            Cold Chain: 4.2°C (Optimal)
+          </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+            FEFO Protocol Active
+          </span>
+</div>
+</div>
+<!-- Counter Allocation Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Counter 01 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline font-bold uppercase">Counter 01</span>
+<span class="font-label-lg text-label-lg text-primary font-bold">Priority OPD Dispense</span>
+</div>
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+            Fast-track counter for OPD clinics, emergency discharge, and geriatric queue precedence.
+          </div>
+<div class="bg-surface-container-low p-2 rounded-lg flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Logged Operator:</span>
+<span class="font-bold text-on-surface">P. Sharma (Reg. Ph)</span>
+</div>
+</div>
+<!-- Counter 02 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline font-bold uppercase">Counter 02</span>
+<span class="font-label-lg text-label-lg text-primary font-bold">Cashless &amp; TPA Desk</span>
+</div>
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+            Integrated Ayushman Bharat (AB-PMJAY), CGHS, and private corporate cashless claims desk.
+          </div>
+<div class="bg-surface-container-low p-2 rounded-lg flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Pre-Auth Bridge:</span>
+<span class="font-bold text-tertiary">Live Auto-Approval</span>
+</div>
+</div>
+<!-- Counter 03 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline font-bold uppercase">Counter 03</span>
+<span class="font-label-lg text-label-lg text-primary font-bold">Refills &amp; Chronic Care</span>
+</div>
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+            Recurring 30/90-day medication packs, counseling chamber, and automated adherence sync.
+          </div>
+<div class="bg-surface-container-low p-2 rounded-lg flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">SMS Reminder:</span>
+<span class="font-bold text-on-surface">Enabled (T-3 Days)</span>
+</div>
+</div>
+<!-- Counter 04 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline font-bold uppercase">Counter 04</span>
+<span class="font-label-lg text-label-lg text-primary font-bold">IPD Discharge Pharmacy</span>
+</div>
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+            Dedicated bedside discharge medicine clearance, take-home dose counseling, and nurse sign-off.
+          </div>
+<div class="bg-surface-container-low p-2 rounded-lg flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Ward Handover:</span>
+<span class="font-bold text-secondary">Pneumatic Tube 2</span>
+</div>
+</div>
+</div>
+<!-- AI Drug Guardrails, Physical Racks, & Expiry Rules Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Drug Interaction & AI Safety Guardrails -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Clinical Drug Safety &amp; AI Guardrail Hierarchy</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">दवा परस्पर क्रिया और सुरक्षा स्तर विन्यास</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container/50 text-secondary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+              AI Drug Safety Module
+            </span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Level 1 -->
+<div class="p-3 bg-error-container/30 rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<span class="px-2 py-0.5 rounded bg-error text-on-error font-label-sm text-label-sm font-bold uppercase mt-0.5">Level 1</span>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-bold">Hard Clinical Block (Strict Halt)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                    Fatal drug-drug interactions (e.g. Sildenafil + Nitrates, Clopidogrel + Omeprazole high-risk combo). System freezes dispense button; requires Physician prescription revision.
+                  </div>
+</div>
+</div>
+<span class="shrink-0 px-2.5 py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold self-start sm:self-auto">Zero Override</span>
+</div>
+<!-- Level 2 -->
+<div class="p-3 bg-surface-container-low rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold uppercase mt-0.5">Level 2</span>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-bold">Pharmacist Clinical Override</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                    Moderate contraindication or cumulative toxicity (e.g. Dual NSAID + ACE inhibitors). Requires Registered Pharmacist OTP authentication and mandatory clinical rationale entry.
+                  </div>
+</div>
+</div>
+<span class="shrink-0 px-2.5 py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm font-bold self-start sm:self-auto">Pharmacist OTP</span>
+</div>
+<!-- Level 3 -->
+<div class="p-3 bg-surface-container-low rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold uppercase mt-0.5">Level 3</span>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-bold">Informational / Administration Timing Warning</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                    Food-drug timing &amp; absorption spacing (e.g. Iron supplements and Levothyroxine must have a 4-hour gap). Printed on label wrapper automatically.
+                  </div>
+</div>
+</div>
+<span class="shrink-0 px-2.5 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold self-start sm:self-auto">Label Alert</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<div class="font-label-md text-label-md text-primary font-bold">Generic Substitution Policy (जनरिक दवा प्रतिस्थापन)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                Permit branded generic replacement when primary brand is out-of-stock, subject to informed patient verbal consent &amp; matching salt composition.
+              </div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</div>
+</div>
+<!-- Physical Rack & Cold Chain + FEFO Batch Rules -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">warehouse</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Physical Storage Racks &amp; Cold Chain</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">भौतिक रैक स्थान और कोल्ड चेन</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-bold">IoT Monitored</span>
+</div>
+<!-- Rack Layout -->
+<div class="flex flex-col gap-2">
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-primary font-bold">Rack A1 – A6</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Tablets, Capsules &amp; Antibiotics</span>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">1,420 SKUs</span>
+<span class="block text-[10px] text-tertiary font-bold">Fast-Pick Active</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-primary font-bold">Rack B1 – B4</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Nutraceuticals, Syrups &amp; Tonics</span>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">680 SKUs</span>
+<span class="block text-[10px] text-outline font-semibold">Ambient 24°C</span>
+</div>
+</div>
+<!-- Cold Chain IoT -->
+<div class="p-3 rounded-lg bg-secondary-container/20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">severe_cold</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-primary font-bold">Refrigerator #01 (Cold Chain)</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Insulins, Vaccines &amp; Biologics (2°C – 8°C)</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-display-lg text-display-lg text-secondary font-bold leading-none">4.2°C</span>
+<span class="block text-[10px] text-tertiary font-bold flex items-center justify-end gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> IoT Sensor #CC-901 OK
+                  </span>
+</div>
+</div>
+</div>
+<!-- Expiry & FEFO Config -->
+<div class="p-3 bg-surface-container-low rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Expiry &amp; Dispensing Optimization</span>
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold">FEFO Priority</span>
+</div>
+<div class="grid grid-cols-2 gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<div class="p-2 bg-surface-container-lowest rounded">
+<span class="block text-outline">Warning Window</span>
+<span class="font-bold text-on-surface">Expiring within 90 days</span>
+</div>
+<div class="p-2 bg-surface-container-lowest rounded">
+<span class="block text-outline">Auto-Quarantine</span>
+<span class="font-bold text-error">15 days before expiry</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline">Warehouse sync interval: 15 mins</span>
+<button class="font-label-sm text-label-sm text-secondary font-bold hover:underline">Download Rack Manifest</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Save Footer Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[24px] text-tertiary">check_circle</span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">All Master Changes Audited</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">NABH Traceability: Changes logged with User ID Dr. Ananya Rao (Shift A)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="flex-1 sm:flex-none h-11 px-5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-lg text-label-lg transition-colors">
+          Discard Draft
+        </button>
+<button class="flex-1 sm:flex-none h-11 px-6 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Publish &amp; Deploy Master Rules</span>
+</button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

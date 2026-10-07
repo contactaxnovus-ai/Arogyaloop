@@ -1,0 +1,15 @@
+{
+  "workflowId": "opd-general-demo",
+  "stages": [
+    { "id": "kiosk", "label": "Reception Kiosk", "owner": "Patient / Reception" },
+    { "id": "intake", "label": "Guided Intake", "owner": "Reception" },
+    { "id": "reception", "label": "Reception Desk", "owner": "Receptionist" },
+    { "id": "doctor", "label": "Doctor Workspace", "owner": "Doctor" },
+    { "id": "pathology", "label": "Pathology Lab", "owner": "Lab technician" },
+    { "id": "pharmacy", "label": "Pharmacy & Billing", "owner": "Pharmacist / Cashier" },
+    { "id": "patient", "label": "Patient Follow-up", "owner": "Care coordinator" },
+    { "id": "operations", "label": "Operations Overview", "owner": "Operations manager" }
+  ],
+  "pathologyStatuses": ["Requested", "Sample collected", "Report ready"],
+  "requiredHumanReviews": ["intake routing", "consultation orders", "pharmacist review", "payment recording", "follow-up scheduling"]
+}
